@@ -18,7 +18,7 @@ CREATE TABLE StudentsGroup (
     course varchar(60) NOT NULL,
     telegram_link varchar(100),
     telegram_id integer,
-    admin_id smallint NOT NULL REFERENCES Student(student_id) ON UPDATE CASCADE
+    admin_id int NOT NULL REFERENCES Student(student_id) ON UPDATE CASCADE
     CHECK (members_limit BETWEEN 2 AND 100)
 );
 
