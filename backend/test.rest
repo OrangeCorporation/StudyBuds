@@ -26,6 +26,17 @@ Content-Type: application/json
     "groupId": 2
 }
 
+###
+POST http://localhost:8000/change-status
+Content-Type: application/json
+
+{
+    "adminId": 123,
+    "joinRequestId": 999,
+    "isAccepted": true
+}
+
+
 
 ###
 

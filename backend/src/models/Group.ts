@@ -18,6 +18,10 @@ const StudentGroup = sequelize.define(
             type: DataTypes.INTEGER,
             field: 'members_limit'
         },
+        currentMembersCnt: {
+            type: DataTypes.INTEGER,
+            field: 'current_members_cnt'
+        },
         isPublic: {
             type: DataTypes.BOOLEAN,
             field: 'is_public',
