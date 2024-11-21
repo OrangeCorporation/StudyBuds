@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_buds/screens/login/login.dart';
+import 'package:study_buds/screens/login/basic_search.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Quicksand',
         useMaterial3: false,
       ),
-      home: const Login(title: "Login"),
+      //home: const Login(title: "Login"),
+      home: BasicSearch(),
     );
   }
 }
