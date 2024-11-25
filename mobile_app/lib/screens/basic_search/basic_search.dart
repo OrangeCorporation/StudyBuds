@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-import 'package:study_buds/widgets/group_card.dart'; // Import GroupCard
 import 'package:study_buds/models/group.dart';
+import 'package:study_buds/network/http_service.dart';
+import 'package:study_buds/widgets/group_card.dart'; // Import GroupCard
 
 
 
@@ -34,29 +32,41 @@ class _BasicSearchState extends State<BasicSearchPage> {
 
   // Perform an API call when the user presses Enter
   Future<void> _performSearch(String query) async {
-    final url =
-        Uri.parse('http://10.0.2.2:5000/groups/basic_search/adm/6139355');
+    final httpService = HttpService();
+    print('-------- ${httpService.baseUrl}');
+    // final url =
+    //     Uri.parse('http://10.0.2.2:5000/groups/basic_search/adm/6139355');
     try {
-      final response =
-          await http.get(url, headers: {'Content-Type': 'application/json'});
+      // final response =
+          // await http.get(url, headers: {'Content-Type': 'application/json'});
 
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
+      // if (response.statusCode == 200) {
+      //   final data = jsonDecode(response.body);
+      final result = await httpService.sendRequest<List<Group>>(
+        requestType: RequestType.GET,
+        path: "/groups/basic_search",
+        queryParams: {'' : ''},
+        fromJson: (json) {
+          final List<dynamic> data = [];
+          return data.map((item) => Group.fromJson(item)).toList();
+        },
+      );
 
+      print('result');
         // Map the dynamic response to a list of Group objects
-        setState(() {
-          _searchResults = List<Group>.from(data.map((item) {
-            var gr = Group.fromJson(item);
-            print(";;;");
-            print(gr.isPublic);
-            print(";;;");
-            return gr; // Return the Group object so it's added to the list
-          }));
-        });
-        print('_searchResults: $_searchResults'); // Print the search results
-      } else {
-        print('Error: ${response.statusCode}');
-      }
+        // setState(() {
+        //   _searchResults = List<Group>.from(data.map((item) {
+        //     var gr = Group.fromJson(item);
+        //     print(";;;");
+        //     print(gr.isPublic);
+        //     print(";;;");
+        //     return gr; // Return the Group object so it's added to the list
+        //   }));
+        // });
+        // print('_searchResults: $_searchResults'); // Print the search results
+      // } else {
+      //   print('Error: ${response.statusCode}');
+      // }
     } catch (e) {
       print('Error: $e');
     }
