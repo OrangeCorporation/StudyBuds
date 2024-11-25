@@ -5,7 +5,7 @@ import 'package:study_buds/screens/login/login.dart';
 import 'package:study_buds/screens/basic_search/basic_search.dart';
 import 'package:study_buds/utils/push_notification.dart';
 
-void main() async{
+void main() async {
   // enableFlutterDriverExtension();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
