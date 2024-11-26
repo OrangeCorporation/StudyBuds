@@ -9,7 +9,7 @@ class GroupCard extends StatelessWidget {
   GroupCard({required this.group});
 
   Future<void> joinGroup(int studentId, int groupId) async {
-    final url = Uri.parse('http://10.0.2.2:5000/groups/join');
+    final url = Uri.parse('http://192.168.0.33:5000/groups/join');
     try {
       final response = await http.post(
         url,
