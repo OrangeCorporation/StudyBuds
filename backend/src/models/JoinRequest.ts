@@ -1,29 +1,73 @@
-import { DataTypes } from 'sequelize';
+import { DataTypes, Model, Optional } from 'sequelize';
 import sequelize from '../config/database';
 
-const JoinRequest = sequelize.define(
-    'JoinRequest',
+export interface JoinRequestAttributes {
+    id: number;
+    group_id: number;
+    student_id: number;
+    status: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
+
+export interface JoinRequestCreationAttributes extends Optional<JoinRequestAttributes, 'id' | 'status' | 'createdAt' | 'updatedAt'> {}
+
+class JoinRequest extends Model<JoinRequestAttributes, JoinRequestCreationAttributes> implements JoinRequestAttributes {
+    public id!: number;
+    public group_id!: number;
+    public student_id!: number;
+    public status!: string;
+    public readonly createdAt!: Date;
+    public readonly updatedAt!: Date;
+}
+
+JoinRequest.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
             autoIncrement: true,
+            primaryKey: true,
         },
-        groupId: {
+        group_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             field: 'group_id',
+            references: {
+                model: 'student_group',
+                key: 'id',
+            },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
         },
-        studentId: {
+        student_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             field: 'student_id',
+            references: {
+                model: 'Student',
+                key: 'student_id',
+            },
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
         },
         status: {
-            type: DataTypes.STRING(20),
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: 'Pending',
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            field: 'created_at',
+            defaultValue: DataTypes.NOW,
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            field: 'updated_at',
+            defaultValue: DataTypes.NOW,
         },
     },
     {
+        sequelize,
         tableName: 'join_request',
         schema: 'studybuds',
         timestamps: true,

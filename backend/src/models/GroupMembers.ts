@@ -4,13 +4,13 @@ import sequelize from '../config/database';
 const GroupMembers = sequelize.define(
     'GroupMembers',
     {
-        studentId: {
+        student_id: {
             type: DataTypes.SMALLINT,
             allowNull: false,
             field: 'student_id',
             primaryKey: true
         },
-        groupId: {
+        group_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             field: 'group_id',

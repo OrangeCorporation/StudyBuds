@@ -1,9 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 import '../models/group.dart';
 
 class GroupCard extends StatelessWidget {
   final Group group;
   GroupCard({required this.group});
+
+  Future<void> joinGroup(int studentId, int groupId) async {
+    final url = Uri.parse('http://10.0.2.2:5000/groups/join');
+    try {
+      final response = await http.post(
+        url,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({
+          'studentId': studentId,
+          'groupId': groupId,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        // Success
+        Fluttertoast.showToast(
+          msg: group.isPublic
+              ? 'Successfully joined the group!'
+              : 'Join request sent successfully!',
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          backgroundColor: Colors.green,
+          textColor: Colors.white,
+        );
+      } else {
+        // Failure
+        final responseBody = jsonDecode(response.body);
+        Fluttertoast.showToast(
+          msg: responseBody['message'] ?? 'Failed to join the group.',
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+        );
+      }
+    } catch (error) {
+      // Error
+      Fluttertoast.showToast(
+        msg: 'An error occurred. Please try again later.',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +128,8 @@ class GroupCard extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button action
+                  // Hardcoded studentId (replace with actual studentId)
+                  joinGroup(234, group.id); // Replace 234 with actual studentId
                 },
                 child: Text(group.isPublic ? 'Join' : 'Send a join request'),
               ),

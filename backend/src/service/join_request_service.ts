@@ -1,9 +1,10 @@
 import JoinRequest from "../models/JoinRequest";
+import Student from "../models/Student";
 
 export async function createJoinRequest(studentId, groupId) {
     const joinGroup = await JoinRequest.create({
-        studentId: studentId,
-        groupId: groupId,
+        student_id: studentId,
+        group_id: groupId,
         status: "Pending"
     });
     return joinGroup;
@@ -32,3 +33,15 @@ export async function updateJoinRequestStatus(joinRequestId, status) {
         }
     );
 }
+
+export const getAllJoinRequests = async () => {
+    try {
+        return await JoinRequest.findAll({
+            attributes: ['student_id', 'group_id', 'status'],
+        });
+
+    } catch (error) {
+        console.error('Error fetching join requests:', error);
+        throw new Error('Failed to fetch join requests.');
+    }
+};
