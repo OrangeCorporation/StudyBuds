@@ -128,8 +128,7 @@ class GroupCard extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: ElevatedButton(
                 onPressed: () {
-                  // Hardcoded studentId (replace with actual studentId)
-                  joinGroup(234, group.id); // Replace 234 with actual studentId
+                  // Handle button action
                 },
                 child: Text(group.isPublic ? 'Join' : 'Send a join request'),
               ),
