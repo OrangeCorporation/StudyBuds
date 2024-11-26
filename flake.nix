@@ -1,7 +1,7 @@
 {
   description = "Flutter 3.13.x";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     android-nixpkgs.url = "github:tadfisher/android-nixpkgs";
   };
@@ -18,7 +18,8 @@
         androidSdk = android-nixpkgs.sdk.${system} (
           sdkPkgs: with sdkPkgs; [
             cmdline-tools-latest
-            build-tools-30-0-3
+            # build-tools-30-0-3
+            build-tools-33-0-1
             # build-tools-33-0-2
             # build-tools-34-0-0
             platform-tools
@@ -30,7 +31,7 @@
             # platforms-android-31
             # platforms-android-32
             platforms-android-33
-            # platforms-android-34
+            platforms-android-34
           ]
         );
       in
@@ -40,25 +41,38 @@
             ANDROID_HOME = "${androidSdk}/share/android-sdk";
             # ANDROID_SDK_HOME = "${androidSdk}/share/android-sdk";
             # GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/share/android-sdk/build-tools/34.0.0/aapt2";
-            CHROME_EXECUTABLE="${pkgs.chromium}/bin/chromium";
+            CHROME_EXECUTABLE = "${pkgs.chromium}/bin/chromium";
             buildInputs = [
               flutter
               androidSdk # The customized SDK that we've made above
               jdk17
             ];
-            packages = [ nodePackages.pnpm nodejs just nodePackages.vega-lite pkgs.yq pkgs.docker pkgs.docker-compose pkgs.ffmpeg ];
-            shellHook=''
-            echo ${pkgs.flutter-unwrapped}/packages/flutter_tools/gradle
-            if [ ! -w "${pkgs.flutter-unwrapped}/packages/flutter_tools/gradle" ]
-            then
-                sudo chmod o+w "${pkgs.flutter-unwrapped}/packages/flutter_tools/gradle"
-            fi
-            if [ ! -e /var/run/docker.sock ]
-            then
-                # sudo ls
-                # sudo podman system service -t0 unix:///var/run/docker.sock &
-            fi
-            DOCKER_HOST=unix:///var/run/docker.sock
+            packages = [
+              nodePackages.pnpm
+              nodejs
+              just
+              nodePackages.vega-lite
+              yq
+              docker
+              docker-compose
+              ffmpeg
+              uv
+              scrcpy
+              linux-wifi-hotspot
+              hostapd
+            ];
+            shellHook = ''
+              echo ${pkgs.flutter}/packages/flutter_tools/gradle
+              if [ ! -w "${pkgs.flutter}/packages/flutter_tools/gradle" ]
+              then
+                  # sudo chmod o+w "${pkgs.flutter}/packages/flutter_tools/gradle"
+              fi
+              if [ ! -e /var/run/docker.sock ]
+              then
+                  # sudo ls
+                  # sudo podman system service -t0 unix:///var/run/docker.sock &
+              fi
+              DOCKER_HOST=unix:///var/run/docker.sock
             '';
           };
       });

@@ -50,3 +50,4 @@ mobile_app/android/app/release
 #useless files
 .idea
 .DS_Store
+.env

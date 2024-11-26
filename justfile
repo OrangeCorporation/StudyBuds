@@ -58,3 +58,18 @@ emulator:
 
 emulator-stop:
     docker stop android-container
+
+build-apk:
+    cd mobile_app && flutter build apk --dart-define API_URL=$API_URL
+
+install-apk: build-apk
+    adb install mobile_app/build/app/outputs/apk/release/app-release.apk
+
+screenshare:
+    scrcpy
+
+hotspot:
+    sudo $(which create_ap) wlp0s20f3 wlp0s20f3 islandwifi island01 --freq-band 2.4 -g 192.168.137.1 --no-dnsmasq --daemon && sleep 5 && sudo dnsmasq --interface=ap0 --bind-interfaces --dhcp-range=192.168.137.2,192.168.137.255 -z -H hosts
+
+stop-hotspot:
+    sudo pkill create_ap && sudo pkill dnsmasq

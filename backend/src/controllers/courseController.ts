@@ -10,7 +10,7 @@ export const getCourses = async (req: Request, res: Response): Promise<void> => 
         });
 
         // Step 2: Fetch courses from the external API using the token
-        const response = await axios.get('http://unigeapi:8000/courses', {
+        const response = await axios.get(`${process.env.UNIGEAPI_URL}/courses`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

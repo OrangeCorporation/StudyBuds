@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
+import 'package:study_buds/main.dart';
 
 class AuthUtils {
   static final _storage = FlutterSecureStorage();
@@ -8,7 +9,7 @@ class AuthUtils {
   static Future<void> authenticateWithUnige(BuildContext context) async {
     try {
       final result = await FlutterWebAuth2.authenticate(
-          url: "https://127.0.0.1:8080/simplesaml", //Backend Login URL
+          url: "$API_URL/login", //Backend Login URL
           callbackUrlScheme: "myapp");
 
       final Uri uri = Uri.parse(result);

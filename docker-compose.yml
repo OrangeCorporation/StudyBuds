@@ -60,6 +60,7 @@ services:
             IDP_METADATA: http://unigelogin:8080/simplesaml/saml2/idp/metadata.php
             IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://127.0.0.1:8080/simplesaml/saml2/idp/SSOService.php}
             UNIGE_TOKEN: ${UNIGE_TOKEN:-changeme}
+            UNIGEAPI_URL: ${UNIGEAPI_URL:-http://127.0.0.1:8000}
         depends_on:
             - postgres
 

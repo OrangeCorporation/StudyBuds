@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:study_buds/main.dart';
 import 'package:study_buds/widgets/custom_filled_button.dart';
 import 'package:study_buds/widgets/custom_text_button.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -29,7 +30,7 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
   }
 
   Future<void> fetchCourses() async {
-    final url = Uri.parse('http://192.168.0.33:5000/courses/all');
+    final url = Uri.parse('$API_URL/courses/all');
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {
@@ -81,7 +82,7 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
       return;
     }
 
-    final url = Uri.parse('http://192.168.0.33:5000/groups/create');
+    final url = Uri.parse('$API_URL/groups/create');
     final headers = {'Content-Type': 'application/json'};
     final body = jsonEncode({
       'name': nameController.text,
