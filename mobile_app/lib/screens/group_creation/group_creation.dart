@@ -29,7 +29,7 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
   }
 
   Future<void> fetchCourses() async {
-    final url = Uri.parse('http://10.0.2.2:5000/courses/all');
+    final url = Uri.parse('http://192.168.0.33:5000/courses/all');
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {
@@ -81,7 +81,7 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
       return;
     }
 
-    final url = Uri.parse('http://10.0.2.2:5000/groups/create');
+    final url = Uri.parse('http://192.168.0.33:5000/groups/create');
     final headers = {'Content-Type': 'application/json'};
     final body = jsonEncode({
       'name': nameController.text,

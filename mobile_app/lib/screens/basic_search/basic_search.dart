@@ -35,7 +35,7 @@ class _BasicSearchState extends State<BasicSearchPage> {
   // Perform an API call when the user presses Enter
   Future<void> _performSearch(String query) async {
     final url =
-        Uri.parse('http://10.0.2.2:5000/groups/basic_search/adm/6139355');
+        Uri.parse('http://192.168.0.33:5000/groups/basic_search/adm/6139355');
     try {
       final response =
           await http.get(url, headers: {'Content-Type': 'application/json'});
