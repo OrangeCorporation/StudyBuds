@@ -24,6 +24,7 @@ services:
         build: ./mobile_app
         volumes:
             - apk:/app/build/app/outputs/flutter-apk
+            - apk-build-cache:/app/build
     acceptance-tests:
         build: ./test
         environment:
@@ -41,7 +42,7 @@ services:
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
         volumes:
             - ./backend/server_db/sql_scripts:/docker-entrypoint-initdb.d
-            - ./backend/server_db/data:/var/lib/postgresql/data
+            - postgres_data:/var/lib/postgresql/data
             - ./backend/server_db/migrations:/migrations
         ports:
             - "5432:5432"
@@ -58,6 +59,7 @@ services:
             JWT_SECRET: ${JWT_SECRET:-changeme}
             IDP_METADATA: http://unigelogin:8080/simplesaml/saml2/idp/metadata.php
             IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://127.0.0.1:8080/simplesaml/saml2/idp/SSOService.php}
+            UNIGE_TOKEN: ${UNIGE_TOKEN:-changeme}
         depends_on:
             - postgres
 
@@ -103,3 +105,5 @@ services:
 volumes:
     apk:
     unigedata:
+    apk-build-cache:
+    postgres_data:

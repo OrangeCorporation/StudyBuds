@@ -6,21 +6,11 @@ export const getCourses = async (req: Request, res: Response): Promise<void> => 
     try {
         // Step 1: Dynamically generate the token
         const token = await new Promise<string>((resolve, reject) => {
-            exec('docker-compose run --rm unigeapi python -m main', (error, stdout, stderr) => {
-                if (error) {
-                    console.error('Error generating token:', error);
-                    reject('Failed to generate token');
-                } else if (stderr) {
-                    console.error('Error output during token generation:', stderr);
-                    reject(stderr);
-                } else {
-                    resolve(stdout.trim());
-                }
-            });
+            resolve(process.env.UNIGE_TOKEN!)
         });
 
         // Step 2: Fetch courses from the external API using the token
-        const response = await axios.get('http://127.0.0.1:8000/courses', {
+        const response = await axios.get('http://unigeapi:8000/courses', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

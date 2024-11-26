@@ -2,7 +2,7 @@ import StudentService from '../service/student_service';
 
 export async function getProfileService(studentId) {
     try {
-        const response = await fetch(`http://localhost:8000/student/${studentId}`, {
+        const response = await fetch(`http://unigeapi:8000/student/${studentId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
