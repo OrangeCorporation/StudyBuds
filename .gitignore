@@ -51,3 +51,5 @@ mobile_app/android/app/release
 .idea
 .DS_Store
 .env
+/package.json
+/package-lock.json
