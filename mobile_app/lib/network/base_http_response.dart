@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart';
 
+//  parse raw HTTP responses into structured BaseHttpResponse objects.
 class BaseHttpResponseBuilder<T> {
   final T Function(Map<String, dynamic> jsonObject)? _dataFactory;
 

@@ -1,8 +1,8 @@
 /*
-Rationale for This Structure
-Separation of Concerns: Each component has a clear responsibility (e.g., models, network handling, API requests).
-Scalability: Easy to add new requests, responses, or models without disrupting the existing structure.
-Reusability: Common utilities (e.g., BaseHttpRequest, NetworkService) are centralized and reusable.
+In this folder files define specific API requests that extend the abstract
+framework defined in the folder lib/network
+
+
 */
 
 import '../../network/base_http_request.dart';
@@ -15,8 +15,41 @@ class BasicSearchRequest
   BasicSearchRequest({required String query, required int studentId})
       : super(
           httpVerb: HttpVerb.GET,
-          endPoint:
-              "http://10.0.2.2:5000/groups/basic_search/$query/$studentId",
+          endPoint: "$API_URL/groups/basic_search/$query/$studentId",
           responseBuilder: GroupSearchResponseBuilder(),
         );
 }
+
+/*  Example of usage
+
+void performBasicSearch(String query, int studentId) async {
+  // Create the request
+  final searchRequest = BasicSearchRequest(query: query, studentId: studentId);
+
+  try {
+    // Send the request and await the response
+    final response = await searchRequest.send();
+
+    if (response.requestFailed) {
+      print("Search request failed. Status Code: ${response.statusCode}");
+    } else {
+      // Access the list of groups
+      final List<Group> groups = response.data ?? [];
+      print("Search succeeded! Found ${groups.length} groups.");
+
+      for (final group in groups) {
+        print("Group: ${group.name}, Course: ${group.course}");
+      }
+    }
+  } catch (e) {
+    print("An error occurred during the search: $e");
+  }
+}
+
+void main() {
+  performBasicSearch("math", 12345);
+}
+
+
+
+*/

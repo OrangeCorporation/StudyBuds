@@ -4,10 +4,11 @@ enum HttpVerb { get, post }
 
 class NetworkService {
   static final NetworkService instance = NetworkService._internal();
-  final String _baseUrl = "http://10.0.2.2:5000";
+  final String _baseUrl = API_URL;
 
   NetworkService._internal();
 
+  // send the http request and returns the http response
   Future<http.Response> sendHTTPRequest(
       String endPoint, HttpVerb httpVerb, Map<String, dynamic> parameters) {
     final Uri url = Uri.parse("$_baseUrl$endPoint");
