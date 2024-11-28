@@ -43,7 +43,7 @@ services:
       - ./backend/server_db/sql_scripts:/docker-entrypoint-initdb.d
       - ./backend/server_db/data:/var/lib/postgresql/data
       - ./backend/server_db/migrations:/migrations
-    network_mode: host
+
   backend:
     build: ./backend
     ports:
@@ -57,17 +57,7 @@ services:
       - ./unige:/certs:ro
 
     command: >
-      --base-url http://127.0.0.1:8082
-      --backend-url http://localhost:3000
-      --bind :8082
-      --entity-id saml-poc
-      --idp-metadata-url=http://localhost:8080/simplesaml/saml2/idp/metadata.php
-      --attribute-header-mappings uid=x-webauth-user
-      --attribute-header-mappings email=x-webauth-email
-      --attribute-header-mappings eduPersonAffiliation=x-webauth-group
-      --sp-cert-path /certs/cert.pem
-      --sp-key-path /certs/key.pem
-      --allow-idp-initiated
+      --base-url http://127.0.0.1:8082 --backend-url http://localhost:3000 --bind :8082 --entity-id saml-poc --idp-metadata-url=http://localhost:8080/simplesaml/saml2/idp/metadata.php --attribute-header-mappings uid=x-webauth-user --attribute-header-mappings email=x-webauth-email --attribute-header-mappings eduPersonAffiliation=x-webauth-group --sp-cert-path /certs/cert.pem --sp-key-path /certs/key.pem --allow-idp-initiated
     depends_on:
       wait:
         condition: service_completed_successfully
