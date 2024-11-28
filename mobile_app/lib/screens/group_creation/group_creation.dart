@@ -128,15 +128,14 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
       appBar: AppBar(
         title: const Text(
           'Create a Study Group',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
+          style: TextStyle(fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
-        toolbarHeight: 80, // Add more space to the top
+        foregroundColor: Theme.of(context).primaryColor,
       ),
       body: SingleChildScrollView(
-        //want color to white
         child: Center(
           child: Container(
             width: MediaQuery.of(context).size.width * 0.85, // Adjust width dynamically
@@ -276,42 +275,6 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
                     iconData: Icons.add,
                   ),
                 ),
-                const SizedBox(height: 16),
-                Center(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min, // Ensures the row takes up only as much space as needed
-                      children: [
-                        Container(
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[800], // Background color of the circle
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Icon(
-                            Icons.close, // Close icon
-                            color: Colors.white, // Icon color
-                            size: 16, // Icon size
-                          ),
-                        ),
-                        const SizedBox(width: 8), // Space between the icon and the text
-                        const Text(
-                          'Cancel',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-
               ],
             ),
           ),

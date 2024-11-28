@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       - name: Download old artifact
         run: mkdir ./tmp && cd ./tmp && gh run download -n sprint_burndown_chart && echo 'date,value' > data.csv
         env:

@@ -128,7 +128,9 @@ class Login extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/home');
+                        },
                         label: const Text("Continue as a guest"),
                         icon: const Icon(Icons.login_rounded),
                         style: ButtonStyle(

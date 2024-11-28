@@ -8,7 +8,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-COPY . .
+COPY server.ts tsconfig.json ./
+COPY ./src ./src
 
 EXPOSE 3000
 

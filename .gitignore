@@ -45,3 +45,8 @@ app.*.map.json
 mobile_app/android/app/debug
 mobile_app/android/app/profile
 mobile_app/android/app/release
+
+
+#useless files
+.idea
+.DS_Store
