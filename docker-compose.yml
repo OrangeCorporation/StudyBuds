@@ -1,38 +1,37 @@
 services:
-    burndown:
-        build: ./scripts/burndown
-        volumes:
-            - ${BURNDOWN_DATA:-./burndown}:/data
-        environment:
-            INPUT: /data/data.csv
-            OUTPUT: /data/plot.svg
-            GH_TOKEN: ${GH_TOKEN:-lol}
+  burndown:
+    build: ./scripts/burndown
+    volumes:
+      - ${BURNDOWN_DATA:-./burndown}:/data
+    environment:
+      INPUT: /data/data.csv
+      OUTPUT: /data/plot.svg
+      GH_TOKEN: ${GH_TOKEN:-lol}
 
-    emulator:
-        image: docker.io/budtmo/docker-android:emulator_11.0
-        ports:
-            - "6080:6080"
-        environment:
-            EMULATOR_DEVICE: "Samsung Galaxy S10"
-            WEB_VNC: true
-            APPIUM: true
-        devices:
-            - /dev/kvm
-        volumes:
-            - apk:/apk:ro
-    build-apk:
-        build: ./mobile_app
-        volumes:
-            - apk:/app/build/app/outputs/flutter-apk
-    acceptance-tests:
-        build: ./test
-        environment:
-            APPIUM_OS: android
-            APK: /apk/app-debug.apk
-            DEVICE: ""
-            APPIUM_HOST: "emulator"
-            APPIUM_PORT: "4723"
-
+  emulator:
+    image: docker.io/budtmo/docker-android:emulator_11.0
+    ports:
+      - "6080:6080"
+    environment:
+      EMULATOR_DEVICE: "Samsung Galaxy S10"
+      WEB_VNC: true
+      APPIUM: true
+    devices:
+      - /dev/kvm
+    volumes:
+      - apk:/apk:ro
+  build-apk:
+    build: ./mobile_app
+    volumes:
+      - apk:/app/build/app/outputs/flutter-apk
+  acceptance-tests:
+    build: ./test
+    environment:
+      APPIUM_OS: android
+      APK: /apk/app-debug.apk
+      DEVICE: ""
+      APPIUM_HOST: "emulator"
+      APPIUM_PORT: "4723"
 
   # the .env should be created manually by each of you in backend/server_db/.env
   # command to run just postgres: docker-compose --env-file backend/server_db/.env up -d postgres
@@ -44,76 +43,23 @@ services:
       - ./backend/server_db/sql_scripts:/docker-entrypoint-initdb.d
       - ./backend/server_db/data:/var/lib/postgresql/data
       - ./backend/server_db/migrations:/migrations
-
+    ports:
+      - "5432:5432"
   backend:
     build: ./backend
     ports:
       - "5000:5000"
-
-    # the .env should be created manually by each of you in backend/server_db/.env
-    # command to run just postgres: docker-compose --env-file backend/server_db/.env up -d postgres
-    postgres:
-        image: postgres
-        environment:
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
-        volumes:
-            - ./backend/server_db/sql_scripts:/docker-entrypoint-initdb.d
-            - ./backend/server_db/data:/var/lib/postgresql/data
-            - ./backend/server_db/migrations:/migrations
-        ports:
-            - "5432:5432"
-    backend:
-        build: ./backend
-        ports:
-            - "5000:5000"
-        environment:
-            POSTGRES_USER: ${POSTGRES_USER:-postgres}
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
-            POSTGRES_HOST: ${POSTGRES_HOST:-postgres}
-            POSTGRES_PORT: ${POSTGRES_PORT:-5432}
-            POSTGRES_DB: ${POSTGRES_DB:-postgres}
-            JWT_SECRET: ${JWT_SECRET:-changeme}
-            IDP_METADATA: http://unigelogin:8080/simplesaml/saml2/idp/metadata.php
-            IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://127.0.0.1:8080/simplesaml/saml2/idp/SSOService.php}
-        depends_on:
-            - postgres
-
-    unigelogin:
-        build:
-            dockerfile: ./unigelogin.dockerfile
-            context: ./unige
-        environment:
-            SIMPLESAMLPHP_SP_ENTITY_ID: saml-poc
-            SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: ${BACKEND_CALLBACK:-http://127.0.0.1:5000/login/}
-            DATA: /data/data.json
-        ports:
-            - "8080:8080"
-        volumes:
-            - unigedata:/data:ro
-        depends_on:
-            yaml:
-                condition: service_completed_successfully
-
-    yaml:
-        build:
-            dockerfile: ./yaml.dockerfile
-            context: ./unige
-        volumes:
-            - ./unige:/in:ro
-            - unigedata:/out
-        environment:
-            IN: /in/data.yml
-            OUT: /out/data.json
-
-
-    command: >
-      --base-url http://127.0.0.1:8082 --backend-url http://localhost:3000 --bind :8082 --entity-id saml-poc --idp-metadata-url=http://localhost:8080/simplesaml/saml2/idp/metadata.php --attribute-header-mappings uid=x-webauth-user --attribute-header-mappings email=x-webauth-email --attribute-header-mappings eduPersonAffiliation=x-webauth-group --sp-cert-path /certs/cert.pem --sp-key-path /certs/key.pem --allow-idp-initiated
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_HOST: ${POSTGRES_HOST:-postgres}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
+      JWT_SECRET: ${JWT_SECRET:-changeme}
+      IDP_METADATA: http://unigelogin:8080/simplesaml/saml2/idp/metadata.php
+      IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://127.0.0.1:8080/simplesaml/saml2/idp/SSOService.php}
     depends_on:
-      wait:
-        condition: service_completed_successfully
-  wait:
-    image: alpine
-    command: sleep 1
+      - postgres
 
   unigelogin:
     build:
@@ -121,9 +67,10 @@ services:
       context: ./unige
     environment:
       SIMPLESAMLPHP_SP_ENTITY_ID: saml-poc
-      SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: "http://127.0.0.1:8082/saml/acs"
+      SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: ${BACKEND_CALLBACK:-http://127.0.0.1:5000/login/}
       DATA: /data/data.json
-    network_mode: host
+    ports:
+      - "8080:8080"
     volumes:
       - unigedata:/data:ro
     depends_on:
@@ -141,17 +88,6 @@ services:
       IN: /in/data.yml
       OUT: /out/data.json
 
-  testserver:
-    init: true
-    image: docker.io/php:8.2-cli
-    command: php -S 127.0.0.1:3000
-    ports:
-      - "3000:3000"
-    network_mode: host
-    working_dir: /app
-    volumes:
-      - ./unige:/app:ro
-
   # docker compose run --rm unigeapi python -m main
   # to get the authorization token
   unigeapi:
@@ -164,18 +100,6 @@ services:
       SECRET_KEY: ${SECRET_KEY:-changeme}
       DATABASE: /data/data.yml
 
-    # docker compose run --rm unigeapi python -m main
-    # to get the authorization token
-    unigeapi:
-        build: unige
-        ports:
-            - "8000:8000"
-        volumes:
-            - ./unige:/data:ro
-        environment:
-            SECRET_KEY: ${SECRET_KEY:-changeme}
-            DATABASE: /data/data.yml
-
 volumes:
-    apk:
-    unigedata:
+  apk:
+  unigedata:
