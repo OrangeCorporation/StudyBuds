@@ -6,8 +6,6 @@ import 'dart:convert';
 import 'package:study_buds/widgets/group_card.dart'; // Import GroupCard
 import 'package:study_buds/models/group.dart';
 
-
-
 void main() {
   runApp(MyApp());
 }
@@ -35,8 +33,7 @@ class _BasicSearchState extends State<BasicSearchPage> {
 
   // Perform an API call when the user presses Enter
   Future<void> _performSearch(String query) async {
-    final url =
-        Uri.parse('$API_URL/groups/basic_search/$query/6139355');
+    final url = Uri.parse('$API_URL/groups/basic_search/$query/6139355');
     try {
       final response =
           await http.get(url, headers: {'Content-Type': 'application/json'});

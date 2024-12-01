@@ -56,3 +56,21 @@ CREATE TABLE notification (
     created_at timestamp DEFAULT CURRENT_TIMESTAMP,
     updated_at timestamp DEFAULT CURRENT_TIMESTAMP
 );
+
+
+INSERT INTO student(student_id, telegram_account)
+VALUES(4812579, 0);
+
+
+
+INSERT INTO student(student_id, telegram_account)
+VALUES(6139355, 55);
+
+INSERT INTO student_group(name, description, members_limit, is_public, course, telegram_link, telegram_id, admin_id)
+VALUES('group_bbb', 'a group description', 10, true, 'ADM', 'teffd', 44, 6139355);
+
+INSERT INTO student_group(name, description, members_limit, is_public, course, telegram_link, telegram_id, admin_id)
+VALUES('group_aaa', 'a group description', 10, true, 'ADM', 'teffd', 44, 6139355);
+
+INSERT INTO join_request(group_id, student_id, status)
+VALUES (1, 4812579, 'DECLINED');
