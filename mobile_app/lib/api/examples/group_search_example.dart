@@ -29,5 +29,5 @@ void performBasicSearch(String query, int studentId) async {
 }
 
 void main() {
-  performBasicSearch("math", 12345);
+  performBasicSearch("adm", 4812579);
 }
