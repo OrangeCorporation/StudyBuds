@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart'
@@ -21,7 +22,8 @@ class NetworkService {
       return http.get(url);
     } else if (httpVerb == HttpVerb.POST) {
       return http.post(url,
-          headers: {"Content-Type": "application/json"}, body: parameters);
+          headers: {"Content-Type": "application/json"},
+          body: jsonEncode(parameters));
     } else {
       throw Exception("Unsupported HTTP verb");
     }

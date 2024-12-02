@@ -17,8 +17,7 @@ class GroupCreationRequest
     required int studentId,
   }) : super(
           httpVerb: HttpVerb.POST,
-          endPoint:
-              "${String.fromEnvironment('API_URL', defaultValue: 'http://127.0.0.1:5000')}/groups/create",
+          endPoint: "/groups/create",
           responseBuilder: GroupCreationResponseBuilder(),
           parameters: {
             'name': name,
