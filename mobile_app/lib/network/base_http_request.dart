@@ -49,11 +49,6 @@ abstract class BaseHttpRequest<B extends BaseHttpResponseBuilder<T>, T> {
 
   // converts the http response to a base http response object through the _responseBuilder
   BaseHttpResponse<T> _onSendResult(Response response) {
-    print("Raw HTTP response received:");
-    print("Status Code: ${response.statusCode}");
-    print("Headers: ${response.headers}");
-    print("Body: ${response.body}");
-
     _responseArrived = true;
     return _responseBuilder.generateResponse(
       response,

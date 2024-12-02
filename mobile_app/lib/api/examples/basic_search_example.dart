@@ -3,13 +3,14 @@ import 'dart:io';
 
 import '../requests/basic_search_request.dart'; // Import to access environment variables
 
-// $env:API_URL="http://10.0.2.2:5000"
+// you can use "dart ./grou_search_example.dart" to run this example
 
 void performBasicSearch(String query, int studentId) async {
   // Create the request
   final searchRequest = BasicSearchRequest(query: query, studentId: studentId);
   print("--+++++++++++++++++++++++");
-  print(String.fromEnvironment('API_URL', defaultValue: '10.0.2.2:5000'));
+  print(
+      String.fromEnvironment('API_URL', defaultValue: 'http://127.0.0.1:5000'));
   print("----++++++++++++++++++++");
   try {
     // Send the request and await the response
