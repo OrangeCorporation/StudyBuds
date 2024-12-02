@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart';
 
-//  parse raw HTTP responses into structured BaseHttpResponse objects.
+/// Parses raw HTTP responses into structured BaseHttpResponse objects.
 class BaseHttpResponseBuilder<T> {
-  final T Function(Map<String, dynamic> jsonObject)? _dataFactory;
+  final T Function(dynamic jsonObject)? _dataFactory;
 
-  BaseHttpResponseBuilder({T Function(Map<String, dynamic>)? dataFactory})
+  BaseHttpResponseBuilder({T Function(dynamic)? dataFactory})
       : _dataFactory = dataFactory;
 
   BaseHttpResponse<T> generateResponse(Response? response,
@@ -22,7 +22,11 @@ class BaseHttpResponseBuilder<T> {
     print("Response body: ${response.body}");
 
     try {
+      // Parse the response into a dynamic JSON structure (can be Map or List)
+      print("vvvvv");
       final parsedJson = jsonDecode(response.body);
+      print(parsedJson);
+      print("vvvvv");
       return BaseHttpResponse<T>(
         requestFailed: false,
         requestParams: requestParams,
@@ -40,6 +44,7 @@ class BaseHttpResponseBuilder<T> {
   }
 }
 
+/// Represents a structured HTTP response.
 class BaseHttpResponse<T> {
   bool requestFailed;
   Map<String, dynamic> requestParams;

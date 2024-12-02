@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 class Group {
   final String name;
@@ -12,8 +13,17 @@ class Group {
     required this.course,
     required this.description,
     required this.members,
-    required this.isPublic
+    required this.isPublic,
   });
+
+  // Static method to parse a JSON string into a list of Group instances
+  static List<Group> fromJsonList(List<dynamic> jsonArray) {
+    print("qui");
+    print(jsonArray);
+    List<Group> res = jsonArray.map((model) => Group.fromJson(model)).toList();
+    print("qui");
+    return res;
+  }
 
   // Factory constructor to create a Group from JSON
   factory Group.fromJson(Map<String, dynamic> json) {
@@ -21,16 +31,8 @@ class Group {
       name: json['name'] ?? 'No Name',
       course: json['course'] ?? 'No Course',
       description: json['description'] ?? 'No Description',
-      members: int.parse(json['member_count']) ?? 0,
-      isPublic: json['is_public'] ?? false,
+      members: (json['member_count'] as int?) ?? 0, // Safe casting
+      isPublic: (json['is_public'] as bool?) ?? false, // Safe casting
     );
   }
 }
-
-  // Static method to parse a JSON string into a list of Group instances
-//   static List<Group> fromJsonList(String jsonString) {
-//     final List<dynamic> jsonList = json.decode(jsonString);
-//     print(jsonList);
-//     return jsonList.map((json) => Group.fromJson(json)).toList();
-//   }
-// }

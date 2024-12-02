@@ -13,7 +13,7 @@ import '../../api/responses/group_search_response_builder.dart';
 import '../../network/network_service.dart';
 
 class BasicSearchRequest
-    extends BaseHttpRequest<GroupSearchResponseBuilder, List<Group>> {
+    extends BaseHttpRequest<GroupSearchResponseBuilder, List<dynamic>> {
   BasicSearchRequest({required String query, required int studentId})
       : super(
           httpVerb: HttpVerb.GET,
