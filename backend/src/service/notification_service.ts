@@ -54,15 +54,12 @@ export const sendPushNotification = async ( studentId: number, joinRequestId: nu
         if (!template) {
             throw new Error(`Invalid notification type: ${notificationType}`);
         }
-
         const message = {
             notification: template,
             token,
         };
-    
         const response = await admin.messaging().send(message);
         console.log('Notification sent successfully:', response);
-    
         await saveNotification(studentId, joinRequestId, notificationType);
         } catch (error) {
         console.error('Failed to send push notification:', error.message);

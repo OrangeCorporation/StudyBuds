@@ -51,7 +51,7 @@ services:
     backend:
         build: ./backend
         ports:
-            - "5000:5000"
+            - "3000:3000"
         environment:
             POSTGRES_USER: ${POSTGRES_USER:-postgres}
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
@@ -63,8 +63,8 @@ services:
             IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://127.0.0.1:8080/simplesaml/saml2/idp/SSOService.php}
             UNIGE_TOKEN: ${UNIGE_TOKEN:-changeme}
             UNIGEAPI_URL: ${UNIGEAPI_URL:-http://127.0.0.1:8000}
-        depends_on:
-            - postgres
+        # depends_on:
+        #     - postgres
 
     unigelogin:
         build:
