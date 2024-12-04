@@ -4,6 +4,7 @@ import 'dart:developer';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:study_buds/network/request/save_firebase_token_request.dart';
 import 'package:study_buds/utils/shared_preference_helper.dart';
 
 class PushNotificationService {
@@ -57,25 +58,12 @@ class PushNotificationService {
     var token = await SharedPreferencesHelper.getPushNotificationToken();
     if(token == null)
       return;
-
-    // TODO: send update notification token request
-    // var response = await UpdateNotificationTokenRequest(token: token).send();
-    var response;
+    print('-------- notification token ${token}');
+    var response = await SaveFirebaseTokenRequest(token: token, studentId: 10).send();
+    print('------------- response status: ${response.statusCode}');
+    print('--------------- message: ${response.data}');
     if(response.statusCode == 200)
       print("TOKEN SAVED");
-  }
-
-  Future<bool> deleteNotificationTokenFromServer() async{
-    var token = await SharedPreferencesHelper.getPushNotificationToken();
-    if(token == null)
-      return true;
-
-    // TODO:  send delete notification token request
-    // var response = await DeleteNotificationTokenRequest(token: token).send();
-    var response;
-    if(response.statusCode == 200)
-      print("TOKEN DELETED");
-    return response.statusCode == 200;
   }
 
 }
