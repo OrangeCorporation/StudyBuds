@@ -1,9 +1,9 @@
 import express from 'express';
-import indexRouter from './src/routes/index';
+import admin from 'firebase-admin';
 import sequelize from './src/config/database';
 import { errorHandler } from './src/middlewares/error_handler';
+import indexRouter from './src/routes/index';
 import { getErrorMessage } from './src/utils/api_error';
-
 
 const app = express();
 
@@ -25,6 +25,14 @@ sequelize.authenticate()
 
 // Error handling middleware
 app.use(errorHandler)
+
+// firebase notification configuration
+var serviceAccount = require("./studybuds-firebase.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
+
 
 // Start the server
 const PORT = Number.parseInt(process.env["SERVER_PORT"]??"5000");

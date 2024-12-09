@@ -9,6 +9,7 @@ class Group {
   final bool isPublic;
   final String telegramLink;
   final int studentId;
+  final String? status;
 
   Group({
     this.id,
@@ -18,7 +19,8 @@ class Group {
     required this.members,
     required this.isPublic,
     required this.telegramLink,
-    required this.studentId
+    required this.studentId,
+    this.status
   });
 
   // Static method to parse a JSON string into a list of Group instances
@@ -55,7 +57,8 @@ class Group {
       members: parseInt(json['member_count']),
       isPublic: json['is_public'] == true,
       studentId: parseInt(json['student_id']),
-      telegramLink: json['telegram_link'] ?? ''
+      telegramLink: json['telegram_link'] ?? '',
+      status: json['status'] ?? null,
     );
   }
 }

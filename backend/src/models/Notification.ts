@@ -3,7 +3,7 @@ import { Column, Model, Table } from "sequelize-typescript";
 import sequelize from "../config/database";
 
 export enum NotificationType {
-  JOIN_REQUEST = "joinRequest",
+  JOIN_REQUEST = "join_request",
   ACCEPT = "accept",
   REJECT = "reject",
 }

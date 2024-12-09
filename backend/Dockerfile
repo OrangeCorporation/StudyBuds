@@ -10,6 +10,7 @@ RUN npm install
 
 COPY server.ts tsconfig.json ./
 COPY ./src ./src
+COPY studybuds-firebase.json ./studybuds-firebase.json
 
 EXPOSE 3000
 

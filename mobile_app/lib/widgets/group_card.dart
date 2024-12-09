@@ -116,7 +116,8 @@ class GroupCard extends StatelessWidget {
                       ),
                       Container(margin: EdgeInsets.symmetric(horizontal: 5)),
                       CustomFilledButton(
-                        label: buttonLabel ??
+                        isEnabled: group.status == null,
+                        label: group.status != null ? group.status! :
                             (group.isPublic
                                 ? 'Join the group'
                                 : 'Send a join request'),

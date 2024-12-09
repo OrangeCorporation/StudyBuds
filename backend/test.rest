@@ -9,12 +9,12 @@ GET http://localhost:8000/notification/list/7856
 
 
 ###
-POST http://localhost:8000/notification/save
+POST http://localhost:8000/notification/test
 Content-Type: application/json
 
 {
-    "studentId": 7856,
-    "token": "dhajsfs1"
+    "msg": "test",
+    "token": "f-yTYh7SSAeuW-6H2GsDcN:APA91bHF6UbeEAZ9ezGFwrm3-0H4gnbmowv9e5J5cqSXXKPYyd6bE0S_4hzyXbYy4Jky7117ynfMdkf2IeI_v4n9YA82_vmlnqwoprFXfVDyjkdsZdW4wMM"
 }
 
 ###

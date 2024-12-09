@@ -7,6 +7,7 @@ class CustomFilledButton extends StatelessWidget {
   final Color? foregroundColor;
   final Color? backgroundColor;
   final double? fontSize;
+  final bool isEnabled;
 
   /// Creates a [CustomFilledButton] widget.
   ///
@@ -28,6 +29,7 @@ class CustomFilledButton extends StatelessWidget {
     this.foregroundColor = Colors.white,
     this.backgroundColor,
     this.fontSize = 14,
+    this.isEnabled = true,
   });
 
   @override
@@ -35,23 +37,26 @@ class CustomFilledButton extends StatelessWidget {
     final buttonBackgroundColor =
         backgroundColor ?? Theme.of(context).primaryColor;
 
+    final disabledBackgroundColor = Colors.grey.shade400;
+    final disabledForegroundColor = Colors.grey.shade600;
+
     return iconData != null
         ? FilledButton.icon(
-            onPressed: onPressed,
+            onPressed: isEnabled ? onPressed : null,
             icon: Icon(
               iconData,
               size: fontSize! + 4,
-              color: foregroundColor,
+              color: isEnabled ? foregroundColor : disabledForegroundColor,
             ),
             label: Text(
               label,
               style: TextStyle(
-                color: foregroundColor,
+                color: isEnabled ? foregroundColor : disabledForegroundColor,
                 fontSize: fontSize,
               ),
             ),
             style: ButtonStyle(
-              backgroundColor: WidgetStateProperty.all(buttonBackgroundColor),
+              backgroundColor:  isEnabled ? WidgetStateProperty.all(buttonBackgroundColor) : WidgetStateProperty.all(disabledBackgroundColor),
               shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6.0),
@@ -62,7 +67,7 @@ class CustomFilledButton extends StatelessWidget {
         : FilledButton(
             onPressed: onPressed,
             style: ButtonStyle(
-              backgroundColor: WidgetStateProperty.all(buttonBackgroundColor),
+              backgroundColor: isEnabled ? WidgetStateProperty.all(buttonBackgroundColor) : WidgetStateProperty.all(disabledBackgroundColor),
               shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6.0),
@@ -72,7 +77,7 @@ class CustomFilledButton extends StatelessWidget {
             child: Text(
               label,
               style: TextStyle(
-                color: foregroundColor,
+                color: isEnabled ? foregroundColor : disabledForegroundColor,
                 fontSize: fontSize,
               ),
             ),
