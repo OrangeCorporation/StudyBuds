@@ -5,7 +5,6 @@ import notification from "./notification_routes";
 import profileRoutes from "./profile_routes";
 import studentRoutes from "./student_routes";
 import loginRoutes from "./login_routes";
-import { asyncWrapper } from "../utils/wrapper";
 
 const router: Router = Router();
 
