@@ -49,13 +49,13 @@ class CustomFilledButton extends StatelessWidget {
 
     final buttonStyle = ButtonStyle(
       backgroundColor:  isEnabled ? WidgetStateProperty.all(buttonBackgroundColor) : WidgetStateProperty.all(disabledBackgroundColor),
-      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6.0),
-        ),
-      ),
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6.0),
+                ),
+              ),
       fixedSize: width != null && height != null
-          ? MaterialStateProperty.all(Size(width!, height!))
+          ? WidgetStateProperty.all(Size(width!, height!))
           : null,
     );
     final buttonContent = rotationAngle == 0

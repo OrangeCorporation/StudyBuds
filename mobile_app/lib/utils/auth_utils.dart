@@ -17,8 +17,8 @@ class AuthUtils {
 
       if (token != null) {
         await _storage.write(key: 'session_token', value: token);
-        //TODO Push the home page
         //token is saved, Push the home page, (Go to home page)
+        Navigator.pushReplacementNamed(context, '/home');
       } else {
         //show error
         _showError(context, 'Authentication Failed: Token not received');
@@ -31,7 +31,7 @@ class AuthUtils {
 
   static Future<void> logout(BuildContext context) async {
     await _storage.delete(key: 'session_token');
-    //TODO push back to the login page
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   static void _showError(BuildContext context, String message) {

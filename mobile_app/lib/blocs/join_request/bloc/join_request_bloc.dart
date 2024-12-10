@@ -25,3 +25,4 @@ class JoinRequestBloc extends Bloc<JoinRequestEvent, JoinRequestState> {
     });
   }
 }
+

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_buds/utils/auth_utils.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key, required this.title});
@@ -71,7 +72,8 @@ class Login extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FilledButton.icon(
-                        onPressed: () {},
+                        onPressed: () =>
+                            AuthUtils.authenticateWithUnige(context),
                         icon: const Icon(
                           Icons.person_rounded,
                           size: 18,

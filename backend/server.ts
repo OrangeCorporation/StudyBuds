@@ -30,9 +30,6 @@ app.use(errorHandler)
 
 // firebase notification configuration
 var serviceAccount = require("./studybuds-116d5.json");
-// console.log(getEnvironmentVariable("FB_PKEY"));
-console.log({"private_key": getEnvironmentVariable("FB_PKEY"), ...serviceAccount})
-
 admin.initializeApp({
     credential: admin.credential.cert({"private_key": getEnvironmentVariable("FB_PKEY"), ...serviceAccount})
 });

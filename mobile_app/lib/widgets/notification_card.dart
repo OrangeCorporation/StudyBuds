@@ -88,7 +88,7 @@ class NotificationCard extends StatelessWidget {
                         builder: (BuildContext context) {
                           return BlocProvider(
                             create: (_) => JoinRequestBloc(),
-                            child: NotificationPopup(
+                              child: NotificationPopup(
                               acceptButtonLabel: 'Accept',
                               rejectButtonLabel: 'Reject',
                               notification: notification,
