@@ -1,7 +1,7 @@
-import { Request, Response } from 'express';
+import { Request } from 'express';
 import StudentService from '../service/student_service';
-import { validateInt } from '../utils/validation_error';
 import { NotFoundError } from '../utils/api_error';
+import { validateInt } from '../utils/validation_error';
 
 export async function getAllStudents(req: Request){
     return await StudentService.getAllStudents();
@@ -19,10 +19,10 @@ export async function getStudent(req: Request){
 };
 
 export async function editTelegramId(req: Request){
-    const studentId = validateInt(req.params, "id");
-    const telegramId = validateInt(req.params, "telegram_id");
+    const studentId = validateInt(req.body, "studentId");
+    const telegramId = validateInt(req.body, "telegramAccount");
     const student = await StudentService.editTelegramIdService(studentId, telegramId);
-    return student
+    return {"id": student.studentId, "telegram_account": student.telegramAccount}
 };
 
 

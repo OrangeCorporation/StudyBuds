@@ -3,7 +3,7 @@ import { getProfileService } from "../service/profile_service";
 import { validateInt } from "../utils/validation_error";
 
 export async function getProfileById(req: Request) {
-  const studentId = validateInt(req.params, "id");
+  const studentId = validateInt(req.params, "studentId");
 
   const result = await getProfileService(studentId);
   // Remove the 'courses' field

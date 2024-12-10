@@ -1,9 +1,11 @@
 import 'package:teledart/teledart.dart';
 import 'package:teledart/telegram.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TelegramBot {
   static final String botToken = String.fromEnvironment('BOT_TOKEN', defaultValue: '7678057207:AAGLJ147MEXp2G8uujUnuPQQRoGRqvuKO70');
 
+  static final String botLink = "https://t.me/study_buds_bot";
   static late final Telegram telegram = Telegram(botToken);
 
   static Future<void> getTelegramId() async {
@@ -59,6 +61,18 @@ class TelegramBot {
       final chat = await telegram.getChatMemberCount('@$groupUsername');
     } catch (e) {
       print('Error: Group does not exist or cannot be accessed error: $e');
+    }
+  }
+
+  static Future<void> launchTelegramBot() async {
+    final Uri botUri = Uri.parse(botLink);
+
+    if (await canLaunchUrl(botUri)) {
+      await launchUrl(botUri, mode: LaunchMode.externalApplication);
+    } else {
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text('Could not open Telegram bot')),
+      // );
     }
   }
 }

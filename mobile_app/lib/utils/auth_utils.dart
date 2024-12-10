@@ -10,7 +10,8 @@ class AuthUtils {
     try {
       final result = await FlutterWebAuth2.authenticate(
           url: "$API_URL/login", //Backend Login URL
-          callbackUrlScheme: "myapp");
+          callbackUrlScheme: "myapp",
+          options: FlutterWebAuth2Options(useWebview: false));
 
       final Uri uri = Uri.parse(result);
       final token = uri.queryParameters['token'];
