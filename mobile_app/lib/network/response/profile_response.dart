@@ -5,6 +5,6 @@ import 'package:study_buds/network/base_http_response.dart';
 class ProfileResponseBuilder extends BaseHttpResponseBuilder<Profile> {
   ProfileResponseBuilder()
       : super(dataFactory: (jsonObject) {
-          return jsonObject['message'];
+          return Profile.fromJson(jsonObject);
         });
 }

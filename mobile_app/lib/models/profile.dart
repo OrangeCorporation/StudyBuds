@@ -20,7 +20,7 @@ class Profile {
 
   Map<String, dynamic> toJson() {
     return {
-      'id': this.studentId,
+      'studentId': this.studentId,
       'firstName': this.firstName,
       'lastName': this.lastName,
       'telegramAccount': this.telegramAccount
@@ -37,7 +37,7 @@ class Profile {
       studentId: json['id'],
       firstName: json['first_name'] ?? '',
       lastName: json['last_name'] ?? '',
-      telegramAccount: parseInt(json['telegram_account']),
+      telegramAccount: json['telegram_account'],
     );
   }
 }

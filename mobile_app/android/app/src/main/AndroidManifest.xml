@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
+        android:usesCleartextTraffic="true"
         android:label="StudyBuds"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
@@ -26,8 +27,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.flutter_inappwebview.InAppWebViewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" />
+            </intent-filter>
+        </activity>
 
-        <activity
+        <!-- <activity
             android:name="com.linusu.flutter_web_auth_2.CallbackActivity"
             android:exported="true">
             <intent-filter android:label="flutter_web_auth_2">
@@ -38,7 +48,7 @@
                     android:scheme="myapp"
                     android:host="auth" />
             </intent-filter>
-        </activity>
+        </activity> -->
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

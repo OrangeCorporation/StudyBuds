@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:study_buds/firebase_options.dart';
 import 'package:study_buds/screens/login/login.dart';
 import 'package:study_buds/screens/main.dart';
+import 'package:study_buds/screens/profile/profile.dart';
 import 'package:study_buds/utils/push_notification.dart';
 
 const API_URL =
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => const MainScreen(),
         '/login': (context) => const Login(title: "Login"),
+        '/profile': (context) => const ProfileScreen(),
       },
     );
   }
