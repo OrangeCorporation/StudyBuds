@@ -1,6 +1,12 @@
 import admin from 'firebase-admin';
-import Notification, { NotificationType } from '../models/Notification';
 import { getErrorMessage } from '../utils/api_error';
+import { Notification } from '../models/Notification';
+
+export enum NotificationType{
+    JOIN_REQUEST="join_request",
+    ACCEPT="accept",
+    REJECT="reject",
+}
 
 const NOTIFICATION_TEMPLATES:{[key in NotificationType]: {title:string,body:string}}={
     [NotificationType.JOIN_REQUEST]: {

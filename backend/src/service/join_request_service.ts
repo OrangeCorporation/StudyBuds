@@ -1,4 +1,4 @@
-import JoinRequest from "../models/JoinRequest";
+import { JoinRequest } from "../models/JoinRequest";
 
 export async function createJoinRequest(studentId: number, groupId:number) {
     const joinGroup = await JoinRequest.create({

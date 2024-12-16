@@ -1,4 +1,4 @@
-import GroupMembers from "../models/GroupMembers";
+import { GroupMembers } from "../models/GroupMembers";
 
 export async function getCurrentMemberList(groupId:number) {
     const cnt = await GroupMembers.count({

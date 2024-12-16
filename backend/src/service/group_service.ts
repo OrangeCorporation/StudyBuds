@@ -1,48 +1,19 @@
 import { QueryTypes } from "sequelize";
 import sequelize from "../config/database";
-import Group from "../models/Group";
 import { getErrorMessage } from "../utils/api_error";
+import { StudentGroup, StudentGroupAttributes } from "../models/StudentGroup";
 
-interface GroupData {
-  name: string;
-  description?: string;
-  course: string;
-  isPublic: boolean;
-  membersLimit: number;
-  telegramLink?: string;
-  adminId: number; // Maps studentId to adminId
-}
 
 export async function getGroupById(groupId: number) {
-  const data = await Group.findOne({
+  return await StudentGroup.findOne({
     where: {
       id: groupId,
     },
   });
-  return data;
 }
 
-export async function createGroup(groupData: GroupData): Promise<Group> {
-  const {
-    name,
-    description,
-    course,
-    isPublic,
-    membersLimit,
-    telegramLink,
-    adminId,
-  } = groupData;
-  const group = await Group.create({
-    name,
-    description,
-    course,
-    isPublic,
-    membersLimit,
-    telegramLink,
-    adminId,
-  });
-
-  return group;
+export async function createGroup(groupData: StudentGroupAttributes): Promise<StudentGroup> {
+  return await StudentGroup.create(groupData);
 }
 
 export async function basicSearch(text: string, studentId: number) {

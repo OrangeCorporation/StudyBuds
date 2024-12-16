@@ -1,10 +1,9 @@
 import { Request } from 'express';
-import { NotificationType } from '../models/Notification';
 import { getStudentFirebaseToken } from '../service/firebase_token_service';
 import { getCurrentMemberList, joinGroup } from '../service/group_member';
 import { getGroupById } from '../service/group_service';
 import { createJoinRequest, getJoinRequestById, updateJoinRequestStatus } from '../service/join_request_service';
-import { sendPushNotification } from '../service/notification_service';
+import { NotificationType, sendPushNotification } from '../service/notification_service';
 import { getStudentById } from '../service/student_service';
 import { getUnigeProfile } from '../service/unige_service';
 import { NotFoundError, ValidationError } from '../utils/api_error';
@@ -32,18 +31,18 @@ export async function joinTheGroup(req: Request) {
         throw new NotFoundError('Group not found');
     }
 
-    if (group.adminId == studentId) {
+    if (group.adminId === studentId) {
         throw new ValidationError('You are trying to join your group');
     }
 
     const memberCount = await getCurrentMemberList(groupId);
     const membersLimit = group.membersLimit;
-    if (memberCount >= membersLimit) {
+    if (membersLimit !== undefined && memberCount >= membersLimit) {
         throw new ValidationError('The group has reached its member limit.');
     }
 
     const isPublic = group.isPublic;
-    if (isPublic) {
+    if (isPublic===undefined || isPublic) {
         await joinGroup(studentId, groupId);
         return {message: 'Student added to the group successfully'};
     } else {
@@ -74,13 +73,12 @@ export async function changeJoinRequestStatus(req: Request) {
 
     console.log(joinRequestId)
     const joinRequest = await getJoinRequestById(joinRequestId)
-    console.log(`---- ${joinRequest}`)
     if (joinRequest === null) {
         console.log('JoinRequest not found')
         throw new NotFoundError('JoinRequest not found')
     }
 
-    if (joinRequest.status != 'pending'){
+    if (joinRequest.status !== 'pending'){
         console.log('Admin student has already managed the join request');
         throw new ValidationError('You have already managed the request');
     }
@@ -109,7 +107,7 @@ export async function changeJoinRequestStatus(req: Request) {
     // TODO
     const currentLimit = await getCurrentMemberList(groupId);
     const membersLimit = group.membersLimit
-    if (membersLimit < currentLimit + 1) {
+    if (membersLimit !== undefined && membersLimit < currentLimit + 1) {
         console.log('The group is already reached the limit of members')
         throw new ValidationError('The group is already reached the limit of members');
     }

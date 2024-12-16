@@ -4,9 +4,9 @@ import sequelize from './src/config/database';
 import { errorHandler } from './src/middlewares/error_handler';
 import indexRouter from './src/routes/index';
 import { getErrorMessage } from './src/utils/api_error';
-import { getEnvironmentVariable } from './src/utils/config_error';
 import { FB_PKEY } from './src/config/secrets';
 import { readFileSync } from 'fs';
+import { initModels } from './src/models/init-models';
 
 
 const app = express();
@@ -22,6 +22,7 @@ app.use('/', indexRouter);
 sequelize.authenticate()
     .then(() => {
         console.log('Database connected successfully!');
+        initModels(sequelize);
     })
     .catch((error) => {
         console.error('Unable to connect to the database:', getErrorMessage(error));

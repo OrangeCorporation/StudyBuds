@@ -1,20 +1,17 @@
 import { Op } from "sequelize";
-import Group from "../models/Group";
-import GroupMembers from "../models/GroupMembers";
 import assert from "assert";
-
-Group.hasMany(GroupMembers, { foreignKey: "group_id" });
-GroupMembers.hasOne(Group, { foreignKey: "id" });
+import { StudentGroup } from "../models/StudentGroup";
+import { GroupMembers } from "../models/GroupMembers";
 
 interface JoinedGroupList {
-  ownedGroups: Partial<Group>[];
-  joinedGroups: Partial<Group>[];
+  ownedGroups: Partial<StudentGroup>[];
+  joinedGroups: Partial<StudentGroup>[];
 }
 
 async function getAllJoinedGroupList(
   studentId: number,
-): Promise<Partial<Group>[]> {
-  const result = await Group.findAll({
+): Promise<Partial<StudentGroup>[]> {
+  const result = await StudentGroup.findAll({
     attributes: ["id", "name", "description", "course", "isPublic", "adminId"],
     include: {
       model: GroupMembers,
@@ -27,7 +24,7 @@ async function getAllJoinedGroupList(
 }
 
 function splitJoinedGroupList(
-  input: Partial<Group>[],
+  input: Partial<StudentGroup>[],
   studentId: number,
 ): JoinedGroupList {
   const ownedGroups = input

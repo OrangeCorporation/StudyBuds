@@ -53,14 +53,20 @@ admin-format:
 admin-format-check:
     cd backend && pnpm exec prettier --write src test
 
-emulator:
-    docker run --rm -d -p 6080:6080 -p 4723:4723 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true -e APPIUM=true --volume ./frontend/build/app/outputs/apk/debug:/apk:ro --device /dev/kvm --name android-container budtmo/docker-android:emulator_11.0
+system-docker:
+    if [[ ! -e /var/run/docker.sock ]]; then sudo sh -c "$(which dockerd) &! sleep 1 || echo started && chmod 777 /var/run/docker.sock"; fi
 
-emulator-stop:
-    docker stop android-container
+emulator-backend: system-docker
+    unset DOCKER_HOST && docker compose up -d backend postgres
+
+emulator: emulator-backend
+    unset DOCKER_HOST && docker compose down -v emulator && docker compose up -d emulator
 
 build-apk:
-    cd mobile_app && flutter build apk --dart-define API_URL=$API_URL
+    cd mobile_app && flutter build apk --debug --dart-define API_URL=${API_URL:-http://10.0.2.2:5000}
+
+run-apk:
+    cd mobile_app && flutter run --dart-define API_URL=${API_URL:-http://10.0.2.2:5000}
 
 install-apk: build-apk
     adb install mobile_app/build/app/outputs/apk/release/app-release.apk
@@ -75,4 +81,8 @@ stop-hotspot:
     sudo pkill create_ap && sudo pkill dnsmasq
 
 acceptance-test *args='':
-    docker compose up -d --force-recreate postgres && docker compose run --rm --build acceptance-tests {{args}}
+    unset DOCKER_HOST && docker compose up -d --force-recreate postgres && docker compose run --rm --build acceptance-tests {{args}}
+
+models:
+    docker compose up -d --force-recreate postgres && docker compose run --rm --build backend-models
+

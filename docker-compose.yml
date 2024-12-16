@@ -1,150 +1,160 @@
 services:
-    burndown:
-        build: ./scripts/burndown
-        volumes:
-            - ${BURNDOWN_DATA:-./burndown}:/data
-        environment:
-            INPUT: /data/data.csv
-            OUTPUT: /data/plot.svg
-            GH_TOKEN: ${GH_TOKEN:-lol}
+  burndown:
+    build: ./scripts/burndown
+    volumes:
+      - ${BURNDOWN_DATA:-./burndown}:/data
+    environment:
+      INPUT: /data/data.csv
+      OUTPUT: /data/plot.svg
+      GH_TOKEN: ${GH_TOKEN:-lol}
 
-    emulator:
-        init: true
-        build: ./emulator
-        #image: docker.io/budtmo/docker-android:emulator_11.0
-        ports:
-            - "6080:6080"
-            - "4723:4723"
-            - "5555:5555" #for adb
-            - "5554:5554" #for adb
-        environment:
-            EMULATOR_DEVICE: "Samsung Galaxy S10"
-            WEB_VNC: true
-            APPIUM: true
-        devices:
-            - /dev/kvm
-        volumes:
-            - ./build/app/outputs/flutter-apk:/apk:ro
-            - /home/androidusr
-        depends_on:
-            - backend
+  emulator:
+    init: true
+    build: ./emulator
+    #image: docker.io/budtmo/docker-android:emulator_11.0
+    ports:
+      - "6080:6080"
+      - "4723:4723"
+      - "5555:5555" #for adb
+      - "5554:5554" #for adb
+    environment:
+      EMULATOR_DEVICE: "Samsung Galaxy S10"
+      WEB_VNC: true
+      APPIUM: true
+    devices:
+      - /dev/kvm
+    volumes:
+      - ./mobile_app/build/app/outputs/flutter-apk:/apk:ro
+      - /home/androidusr
+    depends_on:
+      - backend
 
-    build-apk:
-        build: ./mobile_app
-        volumes:
-            - ./build/app/outputs/flutter-apk:/app/build/app/outputs/flutter-apk
-            - /app/build
-            - /root/.gradle
-    acceptance-tests:
-        build: ./test
-        environment:
-            APPIUM_OS: android
-            APK: /apk/app-debug.apk
-            DEVICE: "emulator-5554"
-            APPIUM_HOST: "emulator"
-            APPIUM_PORT: "4723"
+  build-apk:
+    build: ./mobile_app
+    volumes:
+      - ./mobile_app/build/app/outputs/flutter-apk:/app/build/app/outputs/flutter-apk
+      - /app/build
+      - /root/.gradle
+    environment:
+      BACKEND_URL: ${BACKEND_URL:-http://10.0.2.2:5000}
+  acceptance-tests:
+    build: ./test
+    environment:
+      APPIUM_OS: android
+      APK: /apk/app-debug.apk
+      DEVICE: "emulator-5554"
+      APPIUM_HOST: "emulator"
+      APPIUM_PORT: "4723"
 
+  # the .env should be created manually by each of you in backend/server_db/.env
+  # command to run just postgres: docker-compose --env-file backend/server_db/.env up -d postgres
+  production-database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
+    volumes:
+      - ./backend/server_db/sql_scripts/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql:ro
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
-    # the .env should be created manually by each of you in backend/server_db/.env
-    # command to run just postgres: docker-compose --env-file backend/server_db/.env up -d postgres
-    production-database:
-        image: postgres
-        environment:
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
-            POSTGRES_USER: ${POSTGRES_USER:-postgres}
-            POSTGRES_DB: ${POSTGRES_DB:-postgres}
-        volumes:
-            - ./backend/server_db/sql_scripts/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql:ro
-            - postgres_data:/var/lib/postgresql/data
-        ports:
-            - "5432:5432"
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      PGDATA: /tmp/data
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./backend/server_db/sql_scripts:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
 
-    postgres:
-        image: postgres
-        environment:
-            POSTGRES_PASSWORD: password
-            POSTGRES_USER: postgres
-            POSTGRES_DB: postgres
-            PGDATA: /tmp/data
-        tmpfs:
-            - /tmp
-        volumes:
-            - ./backend/server_db/sql_scripts/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql:ro
-            - ./backend/server_db/test_data/data.sql:/docker-entrypoint-initdb.d/data.sql:ro
-        ports:
-            - "5432:5432"
+  # migration container
+  migration:
+    image: docker.io/migrate/migrate
+    volumes:
+      - ./backend/server_db/migrations:/migrations
+    command: -database ${DB_URL:-postgres://postgres:password@postgres:5432/postgres?sslmode=disable} -path migrations up
+    depends_on:
+      - postgres
 
-    # migration container
-    migration:
-        image: docker.io/migrate/migrate
-        volumes:
-            - ./backend/server_db/migrations:/migrations
-        command: -database ${DB_URL:-postgres://postgres:password@postgres:5432/postgres?sslmode=disable} -path migrations up
-        depends_on:
-            - postgres
+  backend-models:
+    build: ./backend
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - "rm -f /tmp/null /app/models/* && npx sequelize-auto -h postgres -d postgres -u postgres -x password -e postgres -l ts -o /app/models --cm p --cp c --cf p"
+    volumes:
+      - ./backend/src/models:/app/models
+    depends_on:
+      - postgres
 
-    backend:
-        build: ./backend
-        ports:
-            - "5000:5000"
-        environment:
-            DB_URL: ${DB_URL:-postgres://postgres:password@postgres:5432/postgres}
-            JWT_SECRET: ${JWT_SECRET:-changeme}
-            IDP_METADATA: ${IDP_METADATA:-http://unigelogin:8080/simplesaml/saml2/idp/metadata.php}
-            IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://127.0.0.1:8080/simplesaml/saml2/idp/SSOService.php}
-            UNIGE_TOKEN: ${UNIGE_TOKEN:-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHVkeV9idWRzIn0.RuHH3N-8d0sxukvyVCuq59xnWf-vhkgPmnU30pv1Yo0}
-            UNIGEAPI_URL: ${UNIGEAPI_URL:-http://unigeapi:8000}
-            ENTITY_ID: saml-poc
-            FB_PKEY: ${FB_PKEY:-test}
-        depends_on:
-            - unigeapi
-            - unigelogin
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      DB_URL: ${DB_URL:-postgres://postgres:password@postgres:5432/postgres}
+      JWT_SECRET: ${JWT_SECRET:-changeme}
+      IDP_METADATA: ${IDP_METADATA:-http://unigelogin:8080/simplesaml/saml2/idp/metadata.php}
+      IDP_ENTRYPOINT: ${IDP_ENTRYPOINT:-http://10.0.2.2:8080/simplesaml/saml2/idp/SSOService.php}
+      UNIGE_TOKEN: ${UNIGE_TOKEN:-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHVkeV9idWRzIn0.RuHH3N-8d0sxukvyVCuq59xnWf-vhkgPmnU30pv1Yo0}
+      UNIGEAPI_URL: ${UNIGEAPI_URL:-http://unigeapi:8000}
+      ENTITY_ID: saml-poc
+      FB_PKEY: ${FB_PKEY:-test}
+    depends_on:
+      - unigeapi
+      - unigelogin
 
-    api-testing:
-        build: ./backend/api_testing
-        depends_on:
-            - backend
+  api-testing:
+    build: ./backend/api_testing
+    depends_on:
+      - backend
 
-    unigelogin:
-        build:
-            dockerfile: ./unigelogin.dockerfile
-            context: ./unige
-        environment:
-            SIMPLESAMLPHP_SP_ENTITY_ID: saml-poc
-            SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: ${BACKEND_CALLBACK:-http://127.0.0.1:5000/login/}
-            DATA: /data/data.json
-        ports:
-            - "8080:8080"
-        volumes:
-            - unigedata:/data:ro
-        depends_on:
-            yaml:
-                condition: service_completed_successfully
+  unigelogin:
+    build:
+      dockerfile: ./unigelogin.dockerfile
+      context: ./unige
+    environment:
+      SIMPLESAMLPHP_SP_ENTITY_ID: saml-poc
+      SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: ${BACKEND_CALLBACK:-http://10.0.2.2:5000/login/}
+      DATA: /data/data.json
+    ports:
+      - "8080:8080"
+    volumes:
+      - unigedata:/data:ro
+    depends_on:
+      yaml:
+        condition: service_completed_successfully
 
-    yaml:
-        build:
-            dockerfile: ./yaml.dockerfile
-            context: ./unige
-        volumes:
-            - ./unige:/in:ro
-            - unigedata:/out
-        environment:
-            IN: /in/data.yml
-            OUT: /out/data.json
+  yaml:
+    build:
+      dockerfile: ./yaml.dockerfile
+      context: ./unige
+    volumes:
+      - ./unige:/in:ro
+      - unigedata:/out
+    environment:
+      IN: /in/data.yml
+      OUT: /out/data.json
 
-    # docker compose run --rm unigeapi python -m main
-    # to get the authorization token
-    unigeapi:
-        build: unige
-        ports:
-            - "8000:8000"
-        volumes:
-            - ./unige:/data:ro
-        environment:
-            SECRET_KEY: ${SECRET_KEY:-changeme}
-            DATABASE: /data/data.yml
+  # docker compose run --rm unigeapi python -m main
+  # to get the authorization token
+  unigeapi:
+    build: unige
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./unige:/data:ro
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-changeme}
+      DATABASE: /data/data.yml
 
 volumes:
-    unigedata:
-    postgres_data:
-    emulator-data:
+  unigedata:
+  postgres_data:
+  emulator-data:

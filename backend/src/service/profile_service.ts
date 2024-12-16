@@ -14,5 +14,5 @@ export async function getProfileService(studentId: number): Promise<ProfileData>
   const student = await getStudentById(studentId);
   if (student === null) throw new NotFoundError("Student id not found");
 
-  return { ...data, "telegram_account": student.telegramAccount };
+  return { ...data, telegramAccount: student.telegramAccount };
 }
