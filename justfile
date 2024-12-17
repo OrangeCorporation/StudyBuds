@@ -76,3 +76,11 @@ stop-hotspot:
 
 acceptance-test *args='':
     docker compose up -d --force-recreate postgres && docker compose run --rm --build acceptance-tests {{args}}
+
+appium-server:
+    if ! pgrep appium; then (cd test && npx appium)&!; fi
+
+physical-acceptance-test: appium-server
+    npx cucumber-js --require-module ts-node/register --require 'steps/*.ts'
+
+
