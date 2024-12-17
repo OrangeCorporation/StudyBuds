@@ -161,7 +161,11 @@ class GroupCard extends StatelessWidget {
                               Theme.of(context).colorScheme.primary,
                           label: additionalButtonLabel ?? "See more",
                           onPressed: () {
-                            showGroupDetails(context);
+                            if(additionalButtonLabel == "See more"){
+                              showGroupDetails(context);
+                            } else if(additionalButtonLabel == "Delete the group"){
+                              // TODO: Delete the group
+                            }
                           },
                         ),
                         Container(margin: EdgeInsets.symmetric(horizontal: 5)),
