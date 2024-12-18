@@ -16,6 +16,8 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
+      - name: Prepare .env
+        run: cp ./test/.env.test ./.env
       - name: Compile apk
         run: docker compose up build-apk
       - name: Start the emulator
