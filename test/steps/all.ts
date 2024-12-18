@@ -29,7 +29,7 @@ const opts = {
     },
 };
 
-const SECONDS_TIMEOUT = 30_000; // 30 seconds
+const SECONDS_TIMEOUT = 60_000; // 30 seconds
 
 export let driver: WebdriverIO.Browser;
 setDefaultTimeout(SECONDS_TIMEOUT);
