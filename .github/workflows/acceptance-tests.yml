@@ -21,7 +21,7 @@ jobs:
       - name: Start the emulator
         run: docker compose up -d emulator
       - name: Wait emulator to start
-        run: sleep 60
+        run: docker compose exec emulator adb wait-for-device
       - name: Run tests
         run: docker compose run acceptance-tests
       # - name: Archive result
