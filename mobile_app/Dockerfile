@@ -11,4 +11,4 @@ COPY ./pubspec.yaml ./app
 RUN cd /app && flutter pub get
  
 WORKDIR /app
-CMD ["/bin/sh","-c","flutter build apk --debug --dart-define DRIVER=$DRIVER --dart-define API_URL=$API_URL"]
+CMD ["/bin/sh","-c","flutter build --verbose apk --debug --dart-define DRIVER=$DRIVER --dart-define API_URL=$API_URL"]
