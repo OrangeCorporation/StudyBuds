@@ -10,6 +10,7 @@ import { do_logout } from "../utils/utils";
 
 const osSpecificOps ={
               platformName: "Android",
+              uiautomator2ServerInstallTimeout:"200000ms",
               "appium:deviceName": process.env.DEVICE || "emulator-5554",
               "appium:app": process.env.APK || "../mobile_app/build/app/outputs/flutter-apk/app-debug.apk",
               // __dirname +
