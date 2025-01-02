@@ -10,7 +10,7 @@ class AuthUtils {
   static Future<void> authenticateWithUnige(BuildContext context) async {
     try {
       final result = await FlutterWebAuth2.authenticate(
-          url: "$API_URL/login", //Backend Login URL
+          url: "$API_URL/login", // Backend Login URL
           callbackUrlScheme: "myapp",
           options: FlutterWebAuth2Options(useWebview: false));
 
@@ -19,14 +19,14 @@ class AuthUtils {
 
       if (token != null) {
         await _storage.write(key: 'session_token', value: token);
-        //token is saved, Push the home page, (Go to home page)
+        // Token is saved, Push the home page, (Go to home page)
         Navigator.pushReplacementNamed(context, '/home');
       } else {
-        //show error
+        // Show error
         _showError(context, 'Authentication Failed: Token not received');
       }
     } catch (e) {
-      //show error
+      // Show error
       _showError(context, 'Authentication Failed: $e');
     }
   }
@@ -50,6 +50,11 @@ class AuthUtils {
     await _storage.delete(key: 'session_token');
     // Navigate to the login page
     Navigator.pushReplacementNamed(context, '/login');
+  }
+
+  static Future<bool> isAuthenticated() async {
+    final token = await _storage.read(key: 'session_token');
+    return token != null && token.isNotEmpty;
   }
 
   static void _showError(BuildContext context, String message) {
