@@ -18,12 +18,18 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8000/group
+POST http://localhost:5000/group/create
 Content-Type: application/json
 
 {
-    "studentId": 6342,
-    "groupId": 2
+    "studentId": 10,
+    "course":"capstone",
+    "name": "test",
+    "description": "desc",
+    "isPublic": true,
+    "telegramLink": "dhsjkf",
+    "membersLimit":10
+
 }
 
 
