@@ -34,6 +34,12 @@ export function checkString(obj: GenericIndexSignature, key: string): string {
   return res;
 }
 
+export function checkNonEmptyString(obj:GenericIndexSignature, key: string): string {
+    const result=checkString(obj,key);
+    if(result.length===0)throw new ValidationError(`Field ${key} must not be empty`);
+    return result;
+}
+
 export function checkInt(obj: GenericIndexSignature, key: string): number {
   const res = obj[key];
   if (!isInt(res)) throw new ValidationError(`Field ${key} is not an int`);
