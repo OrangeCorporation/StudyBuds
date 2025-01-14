@@ -40,6 +40,7 @@ services:
             - /home/androidusr
         depends_on:
             - backend
+            - postgres
 
     build-apk:
         build: ./mobile_app
