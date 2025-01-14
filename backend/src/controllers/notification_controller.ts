@@ -1,8 +1,9 @@
 import { Request } from 'express';
-import Notification from '../models/Notification';
+import { getStudentId } from '../middlewares/auth_middleware';
+import { Notification } from '../models/Notification';
 import { getStudentFirebaseToken, saveFbToken, updateFbToken } from '../service/firebase_token_service';
 import { getStudentNotifications, testNotification } from '../service/notification_service';
-import { checkInt, checkString, validateInt } from '../utils/validation_error';
+import { checkString } from '../utils/validation_error';
 
 
 
@@ -11,24 +12,26 @@ export async function getAllNotification(req: Request) {
 };
 
 export async function getStudentsAllNotification(req: Request) {
-    const studentId = validateInt(req.params, "studentId");
+    const studentId = getStudentId(req);
     const result = await getStudentNotifications(studentId)
     console.log(result)
     return result
 };
 
 export async function saveToken(req: Request) {
-
-    const studentId = checkInt(req.body, "studentId");
+    console.log('received');
+    const studentId = getStudentId(req);
     const token = checkString(req.body, "token");
 
     const fbTokenModel = await getStudentFirebaseToken(studentId);
 
     if (fbTokenModel === null) {
         await saveFbToken(studentId, token);
+        console.log('done');
         return { message: "Successfully saved the student's Firebase token" };
     } else {
         await updateFbToken(studentId, token);
+        console.log('done');
         return { message: "Successfully updated the student's Firebase token" };
     }
 };

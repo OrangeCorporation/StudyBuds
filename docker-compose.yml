@@ -8,10 +8,21 @@ services:
             OUTPUT: /data/plot.svg
             GH_TOKEN: ${GH_TOKEN:-lol}
 
+    appium:
+        init: true
+        image: docker.io/appium/appium
+        privileged: true
+        ports:
+            - "4723:4723"
+        environment:
+            APPIUM_ADDITIONAL_PARAMS: --allow-insecure chromedriver_autodownload,adb_shell
+        volumes:
+            - ./mobile_app/build/app/outputs/flutter-apk:/apk:ro
+            - /home/androidusr/.android
+
     emulator:
         init: true
         build: ./emulator
-        #image: docker.io/budtmo/docker-android:emulator_11.0
         ports:
             - "6080:6080"
             - "4723:4723"
@@ -21,11 +32,11 @@ services:
             EMULATOR_DEVICE: "Samsung Galaxy S10"
             WEB_VNC: true
             APPIUM: true
-            APPIUM_ADDITIONAL_ARGS: --allow-insecure chromedriver_autodownload
+            APPIUM_ADDITIONAL_ARGS: --allow-insecure chromedriver_autodownload,adb_shell
         devices:
             - /dev/kvm
         volumes:
-            - ./build/app/outputs/flutter-apk:/apk:ro
+            - ./mobile_app/build/app/outputs/flutter-apk:/apk:ro
             - /home/androidusr
         depends_on:
             - backend
@@ -33,7 +44,7 @@ services:
     build-apk:
         build: ./mobile_app
         volumes:
-            - ./build/app/outputs/flutter-apk:/app/build/app/outputs/flutter-apk
+            - ./mobile_app/build/app/outputs/flutter-apk:/app/build/app/outputs/flutter-apk
             - /app/build
             - /root/.gradle
         environment:
@@ -41,14 +52,17 @@ services:
             DRIVER: ${DRIVER:-false}
 
     acceptance-tests:
-        build: ./test
+        build:
+            context: ./
+            dockerfile: ./test/Dockerfile
         environment:
-            APPIUM_OS: android
-            APK: /apk/app-debug.apk
-            DEVICE: "emulator-5554"
-            APPIUM_HOST: "emulator"
-            APPIUM_PORT: "4723"
-
+            DB_URL: ${DB_URL:-postgres://postgres:password@postgres:5432/postgres}
+            APPIUM_HOST: ${APPIUM_HOST:-emulator}
+            APPIUM_PORT: ${APPIUM_PORT:-4723}
+            APPIUM_DEVICE: ${APPIUM_DEVICE:-emulator-5554}
+            APPIUM_APK: ${APPIUM_APK:-/apk/app-debug.apk}
+            APPIUM_CHROMEDRIVER_PATH: ${APPIUM_CHROMEDRIVER_PATH:-disabled}
+            FAST: ${FAST:-no}
 
     # the .env should be created manually by each of you in backend/server_db/.env
     # command to run just postgres: docker-compose --env-file backend/server_db/.env up -d postgres
@@ -59,10 +73,10 @@ services:
             POSTGRES_USER: ${POSTGRES_USER:-postgres}
             POSTGRES_DB: ${POSTGRES_DB:-postgres}
         volumes:
-            - ./backend/server_db/sql_scripts/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql:ro
             - postgres_data:/var/lib/postgresql/data
         ports:
             - "5432:5432"
+        restart: unless-stopped
 
     postgres:
         image: postgres
@@ -73,20 +87,38 @@ services:
             PGDATA: /tmp/data
         tmpfs:
             - /tmp
-        volumes:
-            - ./backend/server_db/sql_scripts/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql:ro
-            - ./backend/server_db/test_data/data.sql:/docker-entrypoint-initdb.d/data.sql:ro
+            - /var/run
         ports:
             - "5432:5432"
+        read_only: true
 
-    # migration container
+    database-data:
+        build:
+            context: ./
+            dockerfile: ./backend/server_db/test_data/Dockerfile
+        environment:
+            DB_URL: ${DB_URL:-postgres://postgres:password@postgres:5432/postgres}
+        depends_on:
+            migration:
+                condition: service_completed_successfully
+
+    duckdns:
+        image: lscr.io/linuxserver/duckdns:latest
+        environment:
+            SUBDOMAINS: studybuds,unigelogin
+            TOKEN: ${DUCKDNS_TOKEN:-changeme}
+        restart: unless-stopped
+        tmpfs:
+            - /run:exec
+        read_only: true
+
     migration:
         image: docker.io/migrate/migrate
         volumes:
             - ./backend/server_db/migrations:/migrations
-        command: -database ${DB_URL:-postgres://postgres:password@postgres:5432/postgres?sslmode=disable} -path migrations up
-        depends_on:
-            - postgres
+        entrypoint: migrate -database ${DB_URL:-postgres://postgres:password@postgres:5432/postgres}?sslmode=disable -path migrations
+        command: up
+        read_only: true
 
     backend:
         build: ./backend
@@ -104,11 +136,37 @@ services:
         depends_on:
             - unigeapi
             - unigelogin
+        restart: unless-stopped
+        read_only: true
+
+    generate-schema:
+        build:
+            context: ./backend
+            dockerfile: ./schema.dockerfile
+        command:
+        volumes:
+            - ./backend/src/models:/out
+        environment:
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+            POSTGRES_USER: ${POSTGRES_USER:-postgres}
+            POSTGRES_DB: ${POSTGRES_DB:-postgres}
+            POSTGRES_HOST: postgres
+            POSTGRES_PORT: 5432
+            OUT: /out
+        depends_on:
+            - postgres
+        read_only: true
 
     api-testing:
-        build: ./backend/api_testing
+        build:
+            context: .
+            dockerfile: ./backend/api_testing/Dockerfile
         depends_on:
             - backend
+        environment:
+            BACKEND_URL: ${API_URL:-http://backend:5000}
+            DB_URL: ${DB_URL:-postgres://postgres:password@postgres:5432/postgres}
+            JWT_SECRET: ${JWT_SECRET:-changeme}
 
     unigelogin:
         build:
@@ -120,11 +178,17 @@ services:
             DATA: /data/data.json
         ports:
             - "8080:8080"
+        tmpfs:
+            - /var/lock
+            - /var/run
+            - /tmp
         volumes:
             - unigedata:/data:ro
         depends_on:
             yaml:
                 condition: service_completed_successfully
+        restart: unless-stopped
+        read_only: true
 
     yaml:
         build:
@@ -136,6 +200,7 @@ services:
         environment:
             IN: /in/data.yml
             OUT: /out/data.json
+        read_only: true
 
     # docker compose run --rm unigeapi python -m main
     # to get the authorization token
@@ -145,9 +210,24 @@ services:
             - "8000:8000"
         volumes:
             - ./unige:/data:ro
+        tmpfs:
+            - /tmp
         environment:
             SECRET_KEY: ${SECRET_KEY:-changeme}
             DATABASE: /data/data.yml
+        restart: unless-stopped
+        read_only: true
+
+    caddy:
+        image: docker.io/caddy
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./Caddyfile:/etc/caddy/Caddyfile:ro
+            - /data
+        restart: unless-stopped
+        read_only: true
 
 volumes:
     unigedata:

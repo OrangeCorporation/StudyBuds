@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:study_buds/models/profile.dart';
 import 'package:study_buds/telegram/telegram_bot.dart';
+import 'package:study_buds/utils/auth_utils.dart';
 
 import '../../blocs/profile/bloc/profile_bloc.dart';
+import '../../models/student.dart';
+import '../../widgets/custom_filled_button.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   String? telegramAccountId;
-  Profile? profile;
+  Student? student;
   late TextEditingController telegramController;
 
   @override
@@ -44,13 +46,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
         foregroundColor: Theme.of(context).primaryColor,
       ),
       body: BlocProvider(
-        create: (_) => ProfileBloc()..add(FetchProfileDetailsEvent(10)),
+        create: (_) => ProfileBloc()..add(FetchProfileDetailsEvent()),
         child: BlocConsumer<ProfileBloc, ProfileState>(
           listener: (context, state) {
             if (state is ProfileLoaded) {
               setState(() {
-                profile = state.profile;
-                telegramController.text = profile!.telegramAccount.toString();
+                student = state.student;
+                telegramController.text = student!.telegramId.toString();
               });
             }
             if (state is ProfileSaveSuccess) {
@@ -71,7 +73,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               return const Center(child: CircularProgressIndicator());
             }
 
-            if (profile == null) {
+            if (student == null) {
               return const Center(child: Text('No profile data available.'));
             }
 
@@ -88,7 +90,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             key: ValueKey('full_name_text_field'),
                             controller: TextEditingController(
                                 text:
-                                    '${profile!.firstName} ${profile!.lastName}'),
+                                    '${student!.firstName} ${student!.lastName}'),
                             readOnly: true,
                             decoration: InputDecoration(
                               labelText: 'Full Name',
@@ -106,7 +108,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           TextField(
                             key: ValueKey('student_id_text_field'),
                             controller: TextEditingController(
-                                text: profile!.studentId.toString()),
+                                text: student!.id.toString()),
                             readOnly: true,
                             decoration: InputDecoration(
                               labelText: 'Student ID',
@@ -148,7 +150,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ],
                           ),
                           const SizedBox(height: 10),
-                          if (profile?.telegramAccount == null)
                             Center(
                               child: TextButton.icon(
                                 onPressed: TelegramBot.launchTelegramBot,
@@ -173,7 +174,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           context
                               .read<ProfileBloc>()
                               .add(SaveProfileDetailsEvent(
-                                10,
                                 int.parse(telegramAccountId!),
                               ));
                         }
@@ -183,6 +183,48 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                       ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  SizedBox(
+                    width: double.infinity, // Ensure the button takes full width
+                    child: CustomFilledButton(
+                      key: const Key('logout_button'),
+                      isEnabled: true,
+                      label: 'Logout',
+                      backgroundColor: Colors.red, // Red background for "Logout"
+                      foregroundColor: Colors.white, // Light text for contrast
+                      onPressed: () {
+                       // AuthUtils.logout(context);
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                                key: const Key('logout_confirmation_dialog'),
+                                title: const Text('Confirm Logout'),
+                              content: const Text('Are you sure you want to log out?'),
+                              actions: [
+                                TextButton(
+                                  key: const Key('cancel_button'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop(); // Close the dialog
+                                  },
+                                  child: const Text('Cancel'),
+                                ),
+                                TextButton(
+                                  key: const Key('confirm_logout'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop(); // Close the dialog
+                                    AuthUtils.logout(context); // Perform logout
+                                  },
+                                  style: TextButton.styleFrom(foregroundColor: Colors.red),
+                                  child: const Text('Logout'),
+                                ),
+                              ]
+                            );
+                          }
+                        );
+                      },
                     ),
                   ),
                 ],

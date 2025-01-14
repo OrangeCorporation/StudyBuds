@@ -8,6 +8,9 @@ const router: Router = Router();
 router.get('/all', asyncWrapper(getAllStudents)); // Change the path to avoid overlap
 
 // Route to get a student by ID
-router.get('/:id', asyncWrapper(getStudent));
+router.get('', asyncWrapper(getStudent));
+
+
+
 
 export default router;

@@ -3,20 +3,20 @@
   "module": "index.ts",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
-    "bun-types": "latest",
+    "appium": "^2.15.0",
+    "appium-flutter-driver": "^2.11.0",
     "eslint": "^9.13.0",
     "globals": "^15.11.0",
     "prettier": "^3.3.3",
-    "typescript-eslint": "^8.12.2",
-    "appium": "^2.12.1",
-    "appium-flutter-driver": "^2.10.0",
-    "appium-flutter-finder": "^0.2.0"
+    "typescript-eslint": "^8.12.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
+    "appium-flutter-finder": "^0.2.0",
+    "sequelize": "^6.37.5",
     "ts-node": "^10.9.2",
     "webdriverio": "^9.2.12"
   }

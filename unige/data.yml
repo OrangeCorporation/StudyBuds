@@ -8,6 +8,7 @@ courses:
     - ADDITIONAL USEFUL KNOWLEDGE
     - COMPUTATIONAL NEUROENGINEERING
     - COMPUTER GRAPHICS
+    - CAPSTONE
     - TOPICS IN COMPUTER SCIENCE
     - DATA WAREHOUSING
     - INTERNET OF THINGS
@@ -39,1228 +40,3490 @@ students:
       last_name: White
       email: S4919418.@studenti.unige.it
       password: 10
-      courses:
-          - AUGMENTED REALITY
-    - id: 4669615
-      first_name: Kyle
-      last_name: Valencia
-      email: S4669615.@studenti.unige.it
-      password: 2oUBSt
-      courses:
-          - DEEP LEARNING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - MACHINE LEARNING
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      gpa: 18
+      study_plan:
           - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - ADVANCED DATA MANAGEMENT
-    - id: 4071780
-      first_name: Jesus
-      last_name: Conner
-      email: S4071780.@studenti.unige.it
-      password: vCW6At
-      courses:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA WAREHOUSING
+          - COMPUTER GAMES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - COMPUTATIONAL VISION
+          - HIGH PERFORMANCE COMPUTING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - AUGMENTED REALITY
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MULTIAGENT SYSTEMS
           - MACHINE LEARNING
           - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - COMPUTER GRAPHICS
+      exams_to_take:
           - AUGMENTED REALITY
-          - DIGITAL FORENSICS
+          - COMPUTER GRAPHICS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MACHINE LEARNING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL VISION
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - NETWORK ANALYSIS
           - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DEEP LEARNING
+          - HIGH PERFORMANCE COMPUTING
+          - DATA WAREHOUSING
+      courses:
+          - HIGH PERFORMANCE COMPUTING
+          - NETWORK ANALYSIS
+          - DATA WAREHOUSING
+          - CAPSTONE
+    - id: 12
+      first_name: Shelby
+      last_name: Bolton
+      email: S4346002.@studenti.unige.it
+      password: 12
+      gpa: 27
+      study_plan:
+          - COMPUTATIONAL NEUROENGINEERING
+          - MACHINE LEARNING
+          - NATURAL LANGUAGE PROCESSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - PREDICTIVE ANALYTICS PROJECT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HIGH PERFORMANCE COMPUTING
+          - NETWORK ANALYSIS
+          - COMPUTER GRAPHICS
+          - DIGITAL FORENSICS
+          - INTERNET OF THINGS
+          - ADVANCED DATA MANAGEMENT
+          - DATA PROTECTION & PRIVACY
+          - DISTRIBUTED COMPUTING
+          - HUMAN COMPUTER INTERACTION
+      exams_to_take:
+          - MACHINE LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - ADVANCED DATA MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - PREDICTIVE ANALYTICS PROJECT
+          - HIGH PERFORMANCE COMPUTING
+          - NATURAL LANGUAGE PROCESSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - NETWORK ANALYSIS
+          - DATA PROTECTION & PRIVACY
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+      courses:
+          - MACHINE LEARNING
     - id: 42674
-      first_name: Michael
-      last_name: Mccarthy
-      email: S42674.@studenti.unige.it
-      password: 3v6J8t
-      courses:
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DATA VISUALIZATION
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTER GAMES
-          - FINAL DISSERTATION
-    - id: 42675
-      first_name: Joe
-      last_name: Baker
-      email: S42675.@studenti.unige.it
-      password: i7B2qT
-      courses:
-          - AUGMENTED REALITY
-          - FINAL DISSERTATION
-          - COMPUTATIONAL NEUROENGINEERING
-          - COMPUTER GRAPHICS
-          - GEOMETRIC MODELING
-          - IT PROJECT MANAGEMENT
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-    - id: 4858263
-      first_name: Elizabeth
-      last_name: Lane
-      email: S4858263.@studenti.unige.it
-      password: 9HarxV
-      courses:
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DIGITAL FORENSICS
-          - IT PROJECT MANAGEMENT
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - INTERNET OF THINGS
-          - TOPICS IN COMPUTER SCIENCE
-          - ADVANCED DATA MANAGEMENT
-          - MACHINE LEARNING
-          - COMPUTATIONAL VISION
-    - id: 4534119
-      first_name: Karen
-      last_name: Waller
-      email: S4534119.@studenti.unige.it
-      password: 1sMEie
-      courses:
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-    - id: 4730678
-      first_name: Elizabeth
-      last_name: Carter
-      email: S4730678.@studenti.unige.it
-      password: 7BnfjO
-      courses:
-          - GEOMETRIC MODELING
-          - COMPUTATIONAL NEUROENGINEERING
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - HUMAN COMPUTER INTERACTION
-          - COMPUTER GRAPHICS
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - TOPICS IN COMPUTER SCIENCE
-          - AUGMENTED REALITY
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4140349
-      first_name: Michael
-      last_name: Taylor
-      email: S4140349.@studenti.unige.it
-      password: 2ai8Cp
-      courses:
-          - DEEP LEARNING
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - ADVANCED DATA MANAGEMENT
-          - AUGMENTED REALITY
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTATIONAL VISION
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - IT PROJECT MANAGEMENT
-    - id: 4211203
-      first_name: Jamie
-      last_name: Joseph
-      email: S4211203.@studenti.unige.it
-      password: JO3A4u
-      courses:
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - TOPICS IN COMPUTER SCIENCE
-          - MULTIAGENT SYSTEMS
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - ADVANCED DATA MANAGEMENT
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - COMPUTATIONAL NEUROENGINEERING
-    - id: 4919418
-      first_name: Joe
-      last_name: Baker
-      email: S4919418.@studenti.unige.it
-      password: i7B2qT
-      courses:
-          - AUGMENTED REALITY
-          - FINAL DISSERTATION
-          - COMPUTATIONAL NEUROENGINEERING
-          - COMPUTER GRAPHICS
-          - GEOMETRIC MODELING
-          - IT PROJECT MANAGEMENT
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-    - id: 4972507
-      first_name: Sylvia
-      last_name: Morris
-      email: S4972507.@studenti.unige.it
-      password: 6nlZTi
-      courses:
-          - INTERNET OF THINGS
-          - MULTIAGENT SYSTEMS
-          - MACHINE LEARNING
-          - DEEP LEARNING
-          - DATA PROTECTION & PRIVACY
-          - GEOMETRIC MODELING
-    - id: 4544615
-      first_name: Sandra
-      last_name: Johnson
-      email: S4544615.@studenti.unige.it
-      password: X0Cd7P
-      courses:
-          - DATA WAREHOUSING
-          - DATA VISUALIZATION
-          - ADVANCED DATA MANAGEMENT
-          - DEEP LEARNING
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - COMPUTER GAMES
-          - DIGITAL FORENSICS
-    - id: 4236008
-      first_name: Debra
-      last_name: Tapia
-      email: S4236008.@studenti.unige.it
-      password: 4jOZCp
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - MACHINE LEARNING
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - PREDICTIVE ANALYTICS PROJECT
-          - DIGITAL FORENSICS
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-    - id: 4966653
-      first_name: Micheal
-      last_name: Watson
-      email: S4966653.@studenti.unige.it
-      password: 6CpvR9
-      courses:
-          - DEEP LEARNING
-          - DATA WAREHOUSING
-          - GEOMETRIC MODELING
-          - NATURAL LANGUAGE PROCESSING
-          - COMPUTATIONAL VISION
-          - COMPUTER GRAPHICS
-          - PREDICTIVE ANALYTICS PROJECT
-          - DISTRIBUTED COMPUTING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - COMPUTATIONAL NEUROENGINEERING
-    - id: 4454925
-      first_name: Jeffrey
-      last_name: Jensen
-      email: S4454925.@studenti.unige.it
-      password: y4Dzo4
-      courses:
-          - INTERNET OF THINGS
-          - DISTRIBUTED COMPUTING
-          - NETWORK ANALYSIS
-          - AUGMENTED REALITY
-    - id: 4862129
-      first_name: Brandon
-      last_name: Bernard
-      email: S4862129.@studenti.unige.it
-      password: 3bNUsp
-      courses:
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - NATURAL LANGUAGE PROCESSING
-          - DATA PROTECTION & PRIVACY
-    - id: 4652910
-      first_name: Kelsey
-      last_name: Le
-      email: S4652910.@studenti.unige.it
-      password: 3CDmxa
-      courses:
-          - DIGITAL FORENSICS
-          - PREDICTIVE ANALYTICS PROJECT
-          - MULTIAGENT SYSTEMS
-          - HUMAN COMPUTER INTERACTION
-          - DISTRIBUTED COMPUTING
-          - ADVANCED DATA MANAGEMENT
-    - id: 4199024
-      first_name: Joseph
-      last_name: Lyons
-      email: S4199024.@studenti.unige.it
-      password: 5R9PcY
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - NATURAL LANGUAGE PROCESSING
-          - DEEP LEARNING
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - MULTIAGENT SYSTEMS
-    - id: 4422455
-      first_name: Donald
-      last_name: Lee
-      email: S4422455.@studenti.unige.it
-      password: bl7Mb8
-      courses:
-          - AUGMENTED REALITY
-          - GEOMETRIC MODELING
-          - COMPUTATIONAL VISION
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - COMPUTATIONAL NEUROENGINEERING
-          - DATA PROTECTION & PRIVACY
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-    - id: 4214043
-      first_name: Michael
-      last_name: Tapia
-      email: S4214043.@studenti.unige.it
-      password: 63JF8g
-      courses:
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - DEEP LEARNING
-          - INTERNET OF THINGS
-    - id: 4403254
-      first_name: Danny
-      last_name: Cook
-      email: S4403254.@studenti.unige.it
-      password: 7xd7Ke
-      courses:
-          - GEOMETRIC MODELING
-          - ADVANCED DATA MANAGEMENT
-    - id: 4551122
-      first_name: Michael
-      last_name: Alexander
-      email: S4551122.@studenti.unige.it
-      password: 22Jr9V
-      courses:
-          - COMPUTER GAMES
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - NETWORK ANALYSIS
-          - FINAL DISSERTATION
-    - id: 4935831
-      first_name: Christine
-      last_name: Savage
-      email: S4935831.@studenti.unige.it
-      password: 0OUtpD
-      courses:
-          - MACHINE LEARNING
-    - id: 4879601
-      first_name: Carlos
-      last_name: Taylor
-      email: S4879601.@studenti.unige.it
-      password: d60XFv
-      courses:
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - AUGMENTED REALITY
-          - COMPUTER GRAPHICS
-          - FINAL DISSERTATION
-          - ADVANCED DATA MANAGEMENT
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - DIGITAL FORENSICS
-          - DEEP LEARNING
-          - IT PROJECT MANAGEMENT
-    - id: 4261009
-      first_name: Kathy
-      last_name: Hubbard
-      email: S4261009.@studenti.unige.it
-      password: B6G5Dp
-      courses:
-          - FINAL DISSERTATION
-          - GEOMETRIC MODELING
-    - id: 4187862
-      first_name: Mary
-      last_name: Christensen
-      email: S4187862.@studenti.unige.it
-      password: 4FQsLb
-      courses:
-          - HIGH PERFORMANCE COMPUTING
-    - id: 4902432
-      first_name: Brittany
-      last_name: Morgan
-      email: S4902432.@studenti.unige.it
-      password: 4Syxc8
-      courses:
-          - COMPUTER GAMES
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - ADVANCED DATA MANAGEMENT
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-    - id: 4727703
-      first_name: Joseph
-      last_name: Morrison
-      email: S4727703.@studenti.unige.it
-      password: 6A4VJx
-      courses:
-          - MULTIAGENT SYSTEMS
-          - GEOMETRIC MODELING
-          - NETWORK ANALYSIS
-          - AUGMENTED REALITY
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - ADVANCED DATA MANAGEMENT
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4127765
-      first_name: William
-      last_name: Martinez
-      email: S4127765.@studenti.unige.it
-      password: bd8QBm
-      courses:
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - FINAL DISSERTATION
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - ADVANCED DATA MANAGEMENT
-          - AUGMENTED REALITY
-          - COMPUTATIONAL VISION
-          - DEEP LEARNING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - GEOMETRIC MODELING
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-    - id: 4213405
-      first_name: Jason
-      last_name: Mcdonald
-      email: S4213405.@studenti.unige.it
-      password: p7HWVq
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTATIONAL NEUROENGINEERING
-          - DATA VISUALIZATION
-          - HUMAN COMPUTER INTERACTION
-          - IT PROJECT MANAGEMENT
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4645531
-      first_name: James
-      last_name: Wright
-      email: S4645531.@studenti.unige.it
-      password: DF6XlW
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - AUGMENTED REALITY
-          - ADVANCED DATA MANAGEMENT
-          - HIGH PERFORMANCE COMPUTING
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-    - id: 4202920
-      first_name: Nichole
-      last_name: Francis
-      email: S4202920.@studenti.unige.it
-      password: 93LUXe
-      courses:
-          - DISTRIBUTED COMPUTING
-          - MULTIAGENT SYSTEMS
-          - AUGMENTED REALITY
-          - COMPUTATIONAL VISION
-          - NETWORK ANALYSIS
-          - DEEP LEARNING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4158103
-      first_name: Brittney
-      last_name: Jones
-      email: S4158103.@studenti.unige.it
-      password: 4bpDRv
-      courses:
-          - COMPUTATIONAL VISION
-          - DATA WAREHOUSING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-    - id: 4281286
-      first_name: Carl
-      last_name: Montgomery
-      email: S4281286.@studenti.unige.it
-      password: 8GIFkd
-      courses:
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - MULTIAGENT SYSTEMS
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - FINAL DISSERTATION
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DEEP LEARNING
-          - HIGH PERFORMANCE COMPUTING
-    - id: 4042075
-      first_name: Holly
-      last_name: Stokes
-      email: S4042075.@studenti.unige.it
-      password: 1MRaE7
-      courses:
-          - COMPUTATIONAL VISION
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - PREDICTIVE ANALYTICS PROJECT
-          - TOPICS IN COMPUTER SCIENCE
-          - NETWORK ANALYSIS
-    - id: 4722165
-      first_name: Kimberly
-      last_name: Brown
-      email: S4722165.@studenti.unige.it
-      password: T7EFjy
-      courses:
-          - COMPUTATIONAL NEUROENGINEERING
-          - MOBILE DEVELOPMENT
-          - DATA PROTECTION & PRIVACY
-          - NATURAL LANGUAGE PROCESSING
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - PREDICTIVE ANALYTICS PROJECT
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - HUMAN COMPUTER INTERACTION
-          - FINAL DISSERTATION
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-    - id: 4775304
-      first_name: Bradley
-      last_name: Macdonald
-      email: S4775304.@studenti.unige.it
-      password: x5Mh3J
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - MOBILE DEVELOPMENT
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - AUGMENTED REALITY
-          - INTERNET OF THINGS
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - DATA PROTECTION & PRIVACY
-    - id: 4778879
-      first_name: Francisco
-      last_name: Thompson
-      email: S4778879.@studenti.unige.it
-      password: 4R4T4w
-      courses:
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - MOBILE DEVELOPMENT
-          - HUMAN COMPUTER INTERACTION
-          - HIGH PERFORMANCE COMPUTING
-    - id: 4127425
-      first_name: Rebecca
-      last_name: Butler
-      email: S4127425.@studenti.unige.it
-      password: 4UzOiG
-      courses:
-          - COMPUTATIONAL NEUROENGINEERING
-          - INTERNET OF THINGS
-    - id: 4098115
-      first_name: Alex
-      last_name: Stevens
-      email: S4098115.@studenti.unige.it
-      password: 4DoiRf
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - DATA PROTECTION & PRIVACY
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DEEP LEARNING
-          - MULTIAGENT SYSTEMS
-          - MOBILE DEVELOPMENT
-          - DIGITAL FORENSICS
-          - ADVANCED DATA MANAGEMENT
-    - id: 4132222
-      first_name: Susan
-      last_name: Mason
-      email: S4132222.@studenti.unige.it
-      password: BE0hRt
-      courses:
-          - MOBILE DEVELOPMENT
-          - DIGITAL FORENSICS
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - COMPUTER GRAPHICS
-          - DEEP LEARNING
-    - id: 4120464
-      first_name: Megan
-      last_name: Goodman
-      email: S4120464.@studenti.unige.it
-      password: 41M4Th
-      courses:
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTER GRAPHICS
-    - id: 4402681
-      first_name: Mario
-      last_name: Jones
-      email: S4402681.@studenti.unige.it
-      password: PA6WdV
-      courses:
-          - COMPUTATIONAL VISION
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - MULTIAGENT SYSTEMS
-          - NETWORK ANALYSIS
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - COMPUTATIONAL NEUROENGINEERING
-    - id: 4690163
-      first_name: Justin
-      last_name: Huff
-      email: S4690163.@studenti.unige.it
-      password: 7KSGyk
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DATA WAREHOUSING
-          - DEEP LEARNING
-          - HUMAN COMPUTER INTERACTION
-    - id: 4147398
-      first_name: Christina
-      last_name: Ellis
-      email: S4147398.@studenti.unige.it
-      password: A2UZsE
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - MULTIAGENT SYSTEMS
-          - ADVANCED DATA MANAGEMENT
-          - MOBILE DEVELOPMENT
-          - DATA PROTECTION & PRIVACY
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTATIONAL NEUROENGINEERING
-          - FINAL DISSERTATION
-    - id: 4808088
-      first_name: Cindy
-      last_name: Jones
-      email: S4808088.@studenti.unige.it
-      password: 251vDo
-      courses:
-          - DEEP LEARNING
-          - DATA PROTECTION & PRIVACY
-          - COMPUTATIONAL VISION
-          - TOPICS IN COMPUTER SCIENCE
-    - id: 4763860
-      first_name: Christopher
-      last_name: Wise
-      email: S4763860.@studenti.unige.it
-      password: 0LFCsW
-      courses:
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - FINAL DISSERTATION
-          - IT PROJECT MANAGEMENT
-          - AUGMENTED REALITY
-          - HUMAN COMPUTER INTERACTION
-    - id: 4248392
-      first_name: Patricia
-      last_name: Gray
-      email: S4248392.@studenti.unige.it
-      password: Z4FKqh
-      courses:
-          - DIGITAL FORENSICS
-          - FINAL DISSERTATION
-          - NATURAL LANGUAGE PROCESSING
-          - IT PROJECT MANAGEMENT
-          - DATA WAREHOUSING
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - COMPUTER GAMES
-          - AUGMENTED REALITY
-    - id: 4149002
-      first_name: James
-      last_name: Pennington
-      email: S4149002.@studenti.unige.it
-      password: e7fJqs
-      courses:
-          - NETWORK ANALYSIS
-          - PREDICTIVE ANALYTICS PROJECT
-          - HUMAN COMPUTER INTERACTION
-          - GEOMETRIC MODELING
-          - DISTRIBUTED COMPUTING
-          - COMPUTER GAMES
-          - DATA WAREHOUSING
-          - FINAL DISSERTATION
-    - id: 4204237
-      first_name: Erica
-      last_name: Park
-      email: S4204237.@studenti.unige.it
-      password: r5Xetp
-      courses:
-          - ADVANCED DATA MANAGEMENT
-          - DATA PROTECTION & PRIVACY
-          - IT PROJECT MANAGEMENT
-          - NATURAL LANGUAGE PROCESSING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - PREDICTIVE ANALYTICS PROJECT
-    - id: 4730515
-      first_name: Marc
-      last_name: Walker
-      email: S4730515.@studenti.unige.it
-      password: 5Kvfcr
-      courses:
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - MULTIAGENT SYSTEMS
-    - id: 4573665
-      first_name: Erica
-      last_name: Schultz
-      email: S4573665.@studenti.unige.it
-      password: 65Ioyw
-      courses:
-          - INTERNET OF THINGS
-          - COMPUTATIONAL NEUROENGINEERING
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - ADVANCED DATA MANAGEMENT
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - DISTRIBUTED COMPUTING
-          - FINAL DISSERTATION
-    - id: 4085821
-      first_name: Jennifer
-      last_name: Wilson
-      email: S4085821.@studenti.unige.it
-      password: R00Yqq
-      courses:
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - DEEP LEARNING
-          - DATA VISUALIZATION
-          - ADVANCED DATA MANAGEMENT
-    - id: 4832572
-      first_name: Adriana
-      last_name: Armstrong
-      email: S4832572.@studenti.unige.it
-      password: e0YZbk
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - DATA VISUALIZATION
-          - NETWORK ANALYSIS
-          - DATA PROTECTION & PRIVACY
-          - COMPUTER GRAPHICS
-          - DEEP LEARNING
-          - MULTIAGENT SYSTEMS
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - TOPICS IN COMPUTER SCIENCE
-    - id: 4296066
-      first_name: Sandra
-      last_name: Murphy
-      email: S4296066.@studenti.unige.it
-      password: 4RWlQr
-      courses:
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - COMPUTER GAMES
-          - TOPICS IN COMPUTER SCIENCE
-    - id: 4714495
-      first_name: Robert
-      last_name: Kennedy
-      email: S4714495.@studenti.unige.it
-      password: 2g8M1p
-      courses:
-          - DIGITAL FORENSICS
-    - id: 4030444
-      first_name: Amber
-      last_name: Clarke
-      email: S4030444.@studenti.unige.it
-      password: 2M0Bkx
-      courses:
-          - NETWORK ANALYSIS
-          - HIGH PERFORMANCE COMPUTING
-          - COMPUTER GAMES
-          - COMPUTATIONAL VISION
-          - FINAL DISSERTATION
-          - COMPUTATIONAL NEUROENGINEERING
-    - id: 4234033
-      first_name: Miranda
-      last_name: Banks
-      email: S4234033.@studenti.unige.it
-      password: 4G7ePM
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - MULTIAGENT SYSTEMS
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - HIGH PERFORMANCE COMPUTING
-          - COMPUTER GAMES
-    - id: 4912461
-      first_name: Julie
-      last_name: Pollard
-      email: S4912461.@studenti.unige.it
-      password: 5iBdVl
-      courses:
-          - DIGITAL FORENSICS
-          - COMPUTER GAMES
-          - FINAL DISSERTATION
-          - MULTIAGENT SYSTEMS
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - COMPUTATIONAL VISION
-          - COMPUTER GRAPHICS
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - MOBILE DEVELOPMENT
-          - DATA PROTECTION & PRIVACY
-    - id: 4728833
-      first_name: Megan
-      last_name: Ellis
-      email: S4728833.@studenti.unige.it
-      password: 1DifuT
-      courses:
-          - MACHINE LEARNING
-          - HIGH PERFORMANCE COMPUTING
-    - id: 4313209
-      first_name: Elizabeth
-      last_name: Castillo
-      email: S4313209.@studenti.unige.it
-      password: OU9CTv
-      courses:
-          - DATA VISUALIZATION
-          - MULTIAGENT SYSTEMS
-          - NATURAL LANGUAGE PROCESSING
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTER GAMES
-          - IT PROJECT MANAGEMENT
-          - FINAL DISSERTATION
-    - id: 4641225
-      first_name: Albert
-      last_name: Boyd
-      email: S4641225.@studenti.unige.it
-      password: 5bGtnY
-      courses:
-          - COMPUTATIONAL VISION
-    - id: 4394211
-      first_name: Wayne
-      last_name: Lopez
-      email: S4394211.@studenti.unige.it
-      password: h8ZYsQ
-      courses:
-          - IT PROJECT MANAGEMENT
-          - COMPUTATIONAL NEUROENGINEERING
-          - DATA VISUALIZATION
-          - COMPUTATIONAL VISION
-    - id: 4850183
-      first_name: Charles
-      last_name: Campbell
-      email: S4850183.@studenti.unige.it
-      password: l0eCGk
-      courses:
-          - NETWORK ANALYSIS
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - MULTIAGENT SYSTEMS
-    - id: 4893578
-      first_name: Jacob
-      last_name: Williamson
-      email: S4893578.@studenti.unige.it
-      password: aA7bSz
-      courses:
-          - MOBILE DEVELOPMENT
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - ADVANCED DATA MANAGEMENT
-          - COMPUTATIONAL VISION
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - COMPUTER GRAPHICS
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-    - id: 4965841
-      first_name: Patricia
-      last_name: Harris
-      email: S4965841.@studenti.unige.it
-      password: 0uEeid
-      courses:
-          - COMPUTER GAMES
-          - COMPUTER GRAPHICS
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - PREDICTIVE ANALYTICS PROJECT
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - MOBILE DEVELOPMENT
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - TOPICS IN COMPUTER SCIENCE
-    - id: 4465287
-      first_name: David
-      last_name: Brooks
-      email: S4465287.@studenti.unige.it
-      password: 0gKPHq
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - COMPUTATIONAL NEUROENGINEERING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - IT PROJECT MANAGEMENT
-    - id: 4659872
-      first_name: Robin
-      last_name: Alvarez
-      email: S4659872.@studenti.unige.it
-      password: h9XnOw
-      courses:
-          - COMPUTER GAMES
-          - IT PROJECT MANAGEMENT
-          - COMPUTATIONAL VISION
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - INTERNET OF THINGS
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-    - id: 4495810
-      first_name: Gary
-      last_name: Allen
-      email: S4495810.@studenti.unige.it
-      password: K9MfW6
-      courses:
-          - MACHINE LEARNING
-          - HUMAN COMPUTER INTERACTION
-          - FINAL DISSERTATION
-          - IT PROJECT MANAGEMENT
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - GEOMETRIC MODELING
-          - ADDITIONAL USEFUL KNOWLEDGE
-    - id: 4253190
-      first_name: Matthew
-      last_name: Tran
-      email: S4253190.@studenti.unige.it
-      password: r0MBhv
-      courses:
-          - MULTIAGENT SYSTEMS
-          - GEOMETRIC MODELING
-          - MOBILE DEVELOPMENT
-          - NETWORK ANALYSIS
-          - DEEP LEARNING
-          - HIGH PERFORMANCE COMPUTING
-          - PREDICTIVE ANALYTICS PROJECT
-          - TOPICS IN COMPUTER SCIENCE
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-    - id: 4373158
-      first_name: Steven
-      last_name: Chang
-      email: S4373158.@studenti.unige.it
-      password: u7HMgQ
-      courses:
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - DEEP LEARNING
-          - IT PROJECT MANAGEMENT
-          - DATA PROTECTION & PRIVACY
-          - DATA WAREHOUSING
-          - GEOMETRIC MODELING
-          - COMPUTATIONAL NEUROENGINEERING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-    - id: 4054159
-      first_name: Carlos
-      last_name: Figueroa
-      email: S4054159.@studenti.unige.it
-      password: B1WKgg
-      courses:
-          - IT PROJECT MANAGEMENT
-          - NATURAL LANGUAGE PROCESSING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - FINAL DISSERTATION
-    - id: 4638644
-      first_name: Anne
-      last_name: Fleming
-      email: S4638644.@studenti.unige.it
-      password: LR4Yvt
-      courses:
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - HIGH PERFORMANCE COMPUTING
-          - NETWORK ANALYSIS
-          - ADVANCED DATA MANAGEMENT
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - DATA VISUALIZATION
-          - DEEP LEARNING
-          - GEOMETRIC MODELING
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-    - id: 4967811
-      first_name: Danielle
-      last_name: Clark
-      email: S4967811.@studenti.unige.it
-      password: 1m5Jew
-      courses:
-          - COMPUTER GAMES
-          - NETWORK ANALYSIS
-          - COMPUTER GRAPHICS
-          - IT PROJECT MANAGEMENT
-          - HIGH PERFORMANCE COMPUTING
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - NATURAL LANGUAGE PROCESSING
-          - HUMAN COMPUTER INTERACTION
-    - id: 4458361
-      first_name: Christy
-      last_name: Walter
-      email: S4458361.@studenti.unige.it
-      password: 2VFeFd
-      courses:
-          - NATURAL LANGUAGE PROCESSING
-          - FINAL DISSERTATION
-          - ADVANCED DATA MANAGEMENT
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4408151
-      first_name: Jacob
-      last_name: Lynch
-      email: S4408151.@studenti.unige.it
-      password: 6lYLEk
-      courses:
-          - COMPUTATIONAL VISION
-          - DISTRIBUTED COMPUTING
-          - MOBILE DEVELOPMENT
-          - DATA VISUALIZATION
-          - DATA WAREHOUSING
-          - NETWORK ANALYSIS
-          - COMPUTER GRAPHICS
-    - id: 4504696
-      first_name: Andrew
-      last_name: Larsen
-      email: S4504696.@studenti.unige.it
-      password: 83EPdp
-      courses:
-          - HUMAN COMPUTER INTERACTION
-          - INTERNET OF THINGS
-          - COMPUTATIONAL NEUROENGINEERING
-          - PREDICTIVE ANALYTICS PROJECT
-          - ADVANCED DATA MANAGEMENT
-          - COMPUTATIONAL VISION
-    - id: 4683456
-      first_name: Vanessa
-      last_name: Miller
-      email: S4683456.@studenti.unige.it
-      password: 4AAbk4
-      courses:
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - COMPUTATIONAL VISION
-          - DATA WAREHOUSING
-          - DIGITAL FORENSICS
-          - FINAL DISSERTATION
-          - COMPUTATIONAL NEUROENGINEERING
-          - MACHINE LEARNING
-          - ADVANCED DATA MANAGEMENT
-          - IT PROJECT MANAGEMENT
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-    - id: 4520720
-      first_name: Jessica
-      last_name: Jackson
-      email: S4520720.@studenti.unige.it
-      password: o51Nye
-      courses:
-          - ADVANCED DATA MANAGEMENT
-          - AUGMENTED REALITY
-          - COMPUTATIONAL VISION
-          - DISTRIBUTED COMPUTING
-          - PREDICTIVE ANALYTICS PROJECT
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - MACHINE LEARNING
-          - COMPUTATIONAL NEUROENGINEERING
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - DATA PROTECTION & PRIVACY
-    - id: 4254873
-      first_name: Charles
-      last_name: Estrada
-      email: S4254873.@studenti.unige.it
-      password: 2GWok1
-      courses:
-          - COMPUTATIONAL VISION
-          - COMPUTER GAMES
-          - DATA PROTECTION & PRIVACY
-          - DATA WAREHOUSING
-          - AUGMENTED REALITY
-    - id: 4794482
-      first_name: Andrew
-      last_name: Haas
-      email: S4794482.@studenti.unige.it
-      password: 5ILIvl
-      courses:
-          - MACHINE LEARNING AND DATA ANALYSIS
-    - id: 4799759
-      first_name: Daniel
-      last_name: Cunningham
-      email: S4799759.@studenti.unige.it
-      password: 5Qvi6G
-      courses:
-          - DISTRIBUTED COMPUTING
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - DATA PROTECTION & PRIVACY
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - INTERNET OF THINGS
-          - COMPUTER GRAPHICS
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-    - id: 4022135
-      first_name: Debra
-      last_name: Jones
-      email: S4022135.@studenti.unige.it
-      password: r1BgxD
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - NETWORK ANALYSIS
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - ADDITIONAL USEFUL KNOWLEDGE
-    - id: 4284704
-      first_name: Kimberly
-      last_name: Johnson
-      email: S4284704.@studenti.unige.it
-      password: 94uL1v
-      courses:
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - DISTRIBUTED COMPUTING
-          - COMPUTATIONAL VISION
-          - DIGITAL FORENSICS
-          - COMPUTER GRAPHICS
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - DATA VISUALIZATION
-          - TOPICS IN COMPUTER SCIENCE
-          - HUMAN COMPUTER INTERACTION
-          - COMPUTATIONAL NEUROENGINEERING
-    - id: 4378063
-      first_name: Mark
-      last_name: Green
-      email: S4378063.@studenti.unige.it
-      password: 6akDXn
-      courses:
-          - DATA WAREHOUSING
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - AUGMENTED REALITY
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-    - id: 4046630
-      first_name: Joshua
-      last_name: Ferguson
-      email: S4046630.@studenti.unige.it
-      password: K1FxXe
-      courses:
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - DATA VISUALIZATION
-          - DISTRIBUTED COMPUTING
-    - id: 4620396
-      first_name: Jesse
-      last_name: Thomas
-      email: S4620396.@studenti.unige.it
-      password: 9xc4Ka
-      courses:
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - TOPICS IN COMPUTER SCIENCE
-          - DATA PROTECTION & PRIVACY
-    - id: 4357042
-      first_name: Thomas
-      last_name: Green
-      email: S4357042.@studenti.unige.it
-      password: 8IxwF1
-      courses:
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4088051
-      first_name: William
-      last_name: Walker
-      email: S4088051.@studenti.unige.it
-      password: N5Nm7m
-      courses:
-          - DATA WAREHOUSING
-          - HUMAN COMPUTER INTERACTION
-          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
-          - DIGITAL FORENSICS
-    - id: 4534443
-      first_name: Brianna
-      last_name: Hutchinson
-      email: S4534443.@studenti.unige.it
-      password: 4ouVeh
-      courses:
-          - HIGH PERFORMANCE COMPUTING
-          - TOPICS IN COMPUTER SCIENCE
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - MOBILE DEVELOPMENT
-          - DISTRIBUTED COMPUTING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - INTERNET OF THINGS
-          - NETWORK ANALYSIS
-    - id: 4182035
-      first_name: Kristen
-      last_name: George
-      email: S4182035.@studenti.unige.it
-      password: l4PhxG
-      courses:
-          - DIGITAL FORENSICS
-          - MOBILE DEVELOPMENT
-          - HIGH PERFORMANCE COMPUTING
-          - PREDICTIVE ANALYTICS PROJECT
-          - ADVANCED DATA MANAGEMENT
-    - id: 4191461
-      first_name: Timothy
-      last_name: Fischer
-      email: S4191461.@studenti.unige.it
-      password: 2F8HeF
-      courses:
-          - COMPUTATIONAL NEUROENGINEERING
-    - id: 4577293
-      first_name: Kristin
-      last_name: Nielsen
-      email: S4577293.@studenti.unige.it
-      password: 1B2lHh
-      courses:
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - COMPUTATIONAL NEUROENGINEERING
-          - COMPUTER GRAPHICS
-          - DEEP LEARNING
-          - PREDICTIVE ANALYTICS PROJECT
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - NETWORK ANALYSIS
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-    - id: 4353578
-      first_name: Candice
-      last_name: Smith
-      email: S4353578.@studenti.unige.it
-      password: 7R8B5a
-      courses:
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
-          - COMPUTATIONAL NEUROENGINEERING
-          - COMPUTATIONAL VISION
-          - PREDICTIVE ANALYTICS PROJECT
-          - ADVANCED DATA MANAGEMENT
-          - NATURAL LANGUAGE PROCESSING
-          - IT PROJECT MANAGEMENT
-          - DATA PROTECTION & PRIVACY
-          - MACHINE LEARNING
-    - id: 4204738
-      first_name: Leonard
-      last_name: Harris
-      email: S4204738.@studenti.unige.it
-      password: 7qyFea
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - NETWORK ANALYSIS
-          - AUGMENTED REALITY
-          - ADDITIONAL USEFUL KNOWLEDGE
-    - id: 4353934
-      first_name: Samantha
+      first_name: Lori
       last_name: Hernandez
-      email: S4353934.@studenti.unige.it
-      password: Qu0Qid
-      courses:
-          - TOPICS IN COMPUTER SCIENCE
-          - FINAL DISSERTATION
-          - COMPUTER GAMES
-          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
-          - ADDITIONAL USEFUL KNOWLEDGE
-          - AUGMENTED REALITY
-    - id: 4354851
-      first_name: Kristine
-      last_name: Oconnor
-      email: S4354851.@studenti.unige.it
-      password: T1Jcjx
-      courses:
-          - HUMAN COMPUTER INTERACTION
-          - NATURAL LANGUAGE PROCESSING
-          - COMPUTER GAMES
-          - DISTRIBUTED COMPUTING
-          - COMPUTATIONAL NEUROENGINEERING
+      email: S4493407.@studenti.unige.it
+      password: 42674
+      gpa: 25
+      study_plan:
+          - VIRTUALIZATION AND CLOUD COMPUTING
           - INTERNET OF THINGS
-    - id: 4519129
-      first_name: David
-      last_name: Brown
-      email: S4519129.@studenti.unige.it
-      password: 4ADnz1
+          - ADVANCED DATA MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DATA VISUALIZATION
+          - COMPUTATIONAL NEUROENGINEERING
+          - PREDICTIVE ANALYTICS PROJECT
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL VISION
+          - AUGMENTED REALITY
+          - MOBILE DEVELOPMENT
+          - DATA PROTECTION & PRIVACY
+      exams_to_take:
+          - ADVANCED DATA MANAGEMENT
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DATA VISUALIZATION
+          - VIRTUALIZATION AND CLOUD COMPUTING
       courses:
+          - DATA VISUALIZATION
+          - ADVANCED DATA MANAGEMENT
+    - id: 42675
+      first_name: Cynthia
+      last_name: Cooper
+      email: S4739268.@studenti.unige.it
+      password: 42675
+      gpa: 23
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - COMPUTATIONAL VISION
+          - FINAL DISSERTATION
+          - GEOMETRIC MODELING
+          - IT PROJECT MANAGEMENT
+          - NETWORK ANALYSIS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - COMPUTER GAMES
+          - DIGITAL FORENSICS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DEEP LEARNING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - ADDITIONAL USEFUL KNOWLEDGE
           - COMPUTATIONAL VISION
           - MULTIAGENT SYSTEMS
-          - NATURAL LANGUAGE PROCESSING
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - HIGH PERFORMANCE COMPUTING
-    - id: 4769722
-      first_name: Wendy
-      last_name: Martin
-      email: S4769722.@studenti.unige.it
-      password: 3ZDAcl
-      courses:
-          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
-          - COMPUTER GRAPHICS
-          - DIGITAL SIGNAL & IMAGE PROCESSING
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-          - MACHINE LEARNING AND DATA ANALYSIS
-          - COMPUTATIONAL NEUROENGINEERING
-          - TOPICS IN COMPUTER SCIENCE
-    - id: 4071565
-      first_name: Megan
-      last_name: Tucker
-      email: S4071565.@studenti.unige.it
-      password: 7K18Rq
-      courses:
-          - MACHINE LEARNING
-          - DATA PROTECTION & PRIVACY
-          - COMPUTATIONAL VISION
-          - VIRTUALIZATION AND CLOUD COMPUTING
-          - INTERNET OF THINGS
-          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
-    - id: 4013710
-      first_name: David
-      last_name: Martinez
-      email: S4013710.@studenti.unige.it
-      password: 9GTbEM
-      courses:
+          - FINAL DISSERTATION
           - IT PROJECT MANAGEMENT
-          - COMPUTER GRAPHICS
-          - DATA WAREHOUSING
-          - DIGITAL FORENSICS
-          - PREDICTIVE ANALYTICS PROJECT
-          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - GEOMETRIC MODELING
+          - COMPUTER GAMES
+          - COMPUTATIONAL NEUROENGINEERING
+      courses:
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - GEOMETRIC MODELING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTATIONAL VISION
+          - FINAL DISSERTATION
+    - id: 4743939
+      first_name: Grace
+      last_name: Young
+      email: S4743939.@studenti.unige.it
+      password: F9fQgg
+      gpa: 18
+      study_plan:
           - MACHINE LEARNING AND DATA ANALYSIS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DATA PROTECTION & PRIVACY
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DEEP LEARNING
+          - INTERNET OF THINGS
+          - COMPUTATIONAL VISION
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GAMES
+          - DATA VISUALIZATION
+          - HIGH PERFORMANCE COMPUTING
+          - DISTRIBUTED COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+      exams_to_take:
+          - ADVANCED DATA MANAGEMENT
+      courses:
+          - ADVANCED DATA MANAGEMENT
+    - id: 4721904
+      first_name: Sarah
+      last_name: Hale
+      email: S4721904.@studenti.unige.it
+      password: h6RNFc
+      gpa: 19
+      study_plan:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DISTRIBUTED COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - MACHINE LEARNING
+          - COMPUTATIONAL NEUROENGINEERING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - PREDICTIVE ANALYTICS PROJECT
+          - INTERNET OF THINGS
+          - DATA VISUALIZATION
+          - MOBILE DEVELOPMENT
+          - GEOMETRIC MODELING
+          - AUGMENTED REALITY
+          - DATA PROTECTION & PRIVACY
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - COMPUTER GAMES
+      exams_to_take:
+          - DATA VISUALIZATION
+          - MOBILE DEVELOPMENT
+          - DATA PROTECTION & PRIVACY
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - PREDICTIVE ANALYTICS PROJECT
+      courses:
+          - MOBILE DEVELOPMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA PROTECTION & PRIVACY
+    - id: 4155667
+      first_name: Stephanie
+      last_name: Jackson
+      email: S4155667.@studenti.unige.it
+      password: 1RkqFL
+      gpa: 30
+      study_plan:
+          - NATURAL LANGUAGE PROCESSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - PREDICTIVE ANALYTICS PROJECT
+          - COMPUTATIONAL NEUROENGINEERING
+          - DISTRIBUTED COMPUTING
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - INTERNET OF THINGS
+          - MULTIAGENT SYSTEMS
+          - DEEP LEARNING
+          - DIGITAL FORENSICS
+          - MOBILE DEVELOPMENT
           - COMPUTER GAMES
           - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+      exams_to_take:
+          - MULTIAGENT SYSTEMS
           - DEEP LEARNING
-    - id: 4934544
-      first_name: Claudia
-      last_name: Ingram
-      email: S4934544.@studenti.unige.it
-      password: z0HtxX
+          - COMPUTATIONAL NEUROENGINEERING
+          - PREDICTIVE ANALYTICS PROJECT
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTER GAMES
+          - MOBILE DEVELOPMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DISTRIBUTED COMPUTING
+          - INTERNET OF THINGS
+          - COMPUTATIONAL VISION
+          - DIGITAL FORENSICS
+      courses:
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MULTIAGENT SYSTEMS
+          - COMPUTATIONAL VISION
+          - DIGITAL FORENSICS
+          - DEEP LEARNING
+    - id: 4947934
+      first_name: Richard
+      last_name: Wallace
+      email: S4947934.@studenti.unige.it
+      password: gf7BFo
+      gpa: 25
+      study_plan:
+          - HUMAN COMPUTER INTERACTION
+          - FINAL DISSERTATION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DATA WAREHOUSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - PREDICTIVE ANALYTICS PROJECT
+          - DISTRIBUTED COMPUTING
+          - DATA VISUALIZATION
+          - COMPUTATIONAL NEUROENGINEERING
+          - MULTIAGENT SYSTEMS
+          - AUGMENTED REALITY
+          - TOPICS IN COMPUTER SCIENCE
+          - INTERNET OF THINGS
+      exams_to_take:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HUMAN COMPUTER INTERACTION
+          - AUGMENTED REALITY
+          - FINAL DISSERTATION
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - HIGH PERFORMANCE COMPUTING
+          - MULTIAGENT SYSTEMS
+          - PREDICTIVE ANALYTICS PROJECT
+          - TOPICS IN COMPUTER SCIENCE
+          - DISTRIBUTED COMPUTING
+      courses:
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+    - id: 4100332
+      first_name: Carlos
+      last_name: Villarreal
+      email: S4100332.@studenti.unige.it
+      password: 9GFUzq
+      gpa: 27
+      study_plan:
+          - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING
+          - TOPICS IN COMPUTER SCIENCE
+          - DATA PROTECTION & PRIVACY
+          - ADVANCED DATA MANAGEMENT
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DATA VISUALIZATION
+          - AUGMENTED REALITY
+          - DEEP LEARNING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - HUMAN COMPUTER INTERACTION
+      exams_to_take:
+          - DATA VISUALIZATION
+          - DATA PROTECTION & PRIVACY
+          - ADVANCED DATA MANAGEMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - TOPICS IN COMPUTER SCIENCE
+          - DIGITAL FORENSICS
+          - DEEP LEARNING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MULTIAGENT SYSTEMS
+          - MACHINE LEARNING
       courses:
           - ADDITIONAL USEFUL KNOWLEDGE
           - ADVANCED DATA MANAGEMENT
+          - DIGITAL FORENSICS
+          - TOPICS IN COMPUTER SCIENCE
+    - id: 4218100
+      first_name: James
+      last_name: Turner
+      email: S4218100.@studenti.unige.it
+      password: r0kPBj
+      gpa: 18
+      study_plan:
+          - DISTRIBUTED COMPUTING
+          - COMPUTER GRAPHICS
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+          - HIGH PERFORMANCE COMPUTING
+          - GEOMETRIC MODELING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - INTERNET OF THINGS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GAMES
+          - DATA WAREHOUSING
+          - AUGMENTED REALITY
+          - DATA VISUALIZATION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL FORENSICS
+      exams_to_take:
+          - DIGITAL FORENSICS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTER GAMES
+      courses:
+          - COMPUTER GAMES
+    - id: 4418046
+      first_name: Jason
+      last_name: Jones
+      email: S4418046.@studenti.unige.it
+      password: 0ZtoRy
+      gpa: 18
+      study_plan:
+          - DIGITAL FORENSICS
+          - MOBILE DEVELOPMENT
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - HUMAN COMPUTER INTERACTION
+          - HIGH PERFORMANCE COMPUTING
+          - NETWORK ANALYSIS
+          - GEOMETRIC MODELING
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA WAREHOUSING
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+      exams_to_take:
+          - COMPUTATIONAL VISION
+      courses:
+          - COMPUTATIONAL VISION
+    - id: 4531676
+      first_name: Robin
+      last_name: Jones
+      email: S4531676.@studenti.unige.it
+      password: W4ctGl
+      gpa: 20
+      study_plan:
+          - COMPUTER GRAPHICS
+          - TOPICS IN COMPUTER SCIENCE
+          - DATA VISUALIZATION
           - IT PROJECT MANAGEMENT
           - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA WAREHOUSING
+          - DIGITAL FORENSICS
+          - AUGMENTED REALITY
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - INTERNET OF THINGS
+          - ADVANCED DATA MANAGEMENT
+          - DEEP LEARNING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+      exams_to_take:
+          - DIGITAL FORENSICS
+          - TOPICS IN COMPUTER SCIENCE
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - ADVANCED DATA MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - AUGMENTED REALITY
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA VISUALIZATION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DEEP LEARNING
+          - INTERNET OF THINGS
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GRAPHICS
+          - DATA WAREHOUSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+      courses:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+    - id: 4202977
+      first_name: Stephanie
+      last_name: Bartlett
+      email: S4202977.@studenti.unige.it
+      password: 2Ypc1a
+      gpa: 23
+      study_plan:
+          - DEEP LEARNING
+          - DATA VISUALIZATION
+          - DATA PROTECTION & PRIVACY
+          - FINAL DISSERTATION
+          - MACHINE LEARNING
+          - DIGITAL FORENSICS
+          - COMPUTER GAMES
+          - NETWORK ANALYSIS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MOBILE DEVELOPMENT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - MOBILE DEVELOPMENT
+          - NATURAL LANGUAGE PROCESSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DIGITAL FORENSICS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - NETWORK ANALYSIS
+          - DATA VISUALIZATION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DISTRIBUTED COMPUTING
+      courses:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - NETWORK ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MOBILE DEVELOPMENT
+    - id: 4014428
+      first_name: Emily
+      last_name: Fowler
+      email: S4014428.@studenti.unige.it
+      password: 2ISEo8
+      gpa: 22
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - MOBILE DEVELOPMENT
+          - DATA VISUALIZATION
+          - FINAL DISSERTATION
+          - IT PROJECT MANAGEMENT
+          - HIGH PERFORMANCE COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING
+          - NETWORK ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DIGITAL FORENSICS
+          - ADVANCED DATA MANAGEMENT
+          - HUMAN COMPUTER INTERACTION
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MULTIAGENT SYSTEMS
+      courses:
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+    - id: 4071780
+      first_name: Keith
+      last_name: Willis
+      email: S4486683.@studenti.unige.it
+      password: 7LwYtX
+      gpa: 26
+      study_plan:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
           - HIGH PERFORMANCE COMPUTING
           - MULTIAGENT SYSTEMS
           - MOBILE DEVELOPMENT
+          - MACHINE LEARNING
+          - DIGITAL FORENSICS
+          - COMPUTATIONAL NEUROENGINEERING
+          - IT PROJECT MANAGEMENT
+          - DISTRIBUTED COMPUTING
+          - COMPUTER GAMES
           - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+      exams_to_take:
+          - COMPUTER GAMES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MACHINE LEARNING
+          - MULTIAGENT SYSTEMS
+          - NETWORK ANALYSIS
+          - COMPUTER GRAPHICS
+          - IT PROJECT MANAGEMENT
+          - DEEP LEARNING
+          - MOBILE DEVELOPMENT
+          - COMPUTATIONAL NEUROENGINEERING
+      courses:
+          - MACHINE LEARNING
+          - COMPUTER GRAPHICS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+    - id: 4669615
+      first_name: Lauren
+      last_name: Johnson
+      email: S4569054.@studenti.unige.it
+      password: 9AZa6r
+      gpa: 24
+      study_plan:
+          - NETWORK ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA WAREHOUSING
+          - COMPUTATIONAL VISION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - AUGMENTED REALITY
+          - IT PROJECT MANAGEMENT
+          - DATA VISUALIZATION
+          - DIGITAL FORENSICS
+          - MOBILE DEVELOPMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - ADVANCED DATA MANAGEMENT
+      exams_to_take:
+          - DATA WAREHOUSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - ADVANCED DATA MANAGEMENT
+          - DIGITAL FORENSICS
+          - HUMAN COMPUTER INTERACTION
+          - AUGMENTED REALITY
+          - DATA VISUALIZATION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - MOBILE DEVELOPMENT
+          - NETWORK ANALYSIS
+      courses:
+          - HUMAN COMPUTER INTERACTION
+          - DATA VISUALIZATION
+          - NETWORK ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+    - id: 4119723
+      first_name: Ryan
+      last_name: Walker
+      email: S4119723.@studenti.unige.it
+      password: 6JpJoj
+      gpa: 20
+      study_plan:
+          - MACHINE LEARNING
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GAMES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTATIONAL VISION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - TOPICS IN COMPUTER SCIENCE
+          - DATA PROTECTION & PRIVACY
+          - PREDICTIVE ANALYTICS PROJECT
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+          - DIGITAL FORENSICS
+          - COMPUTATIONAL NEUROENGINEERING
+      exams_to_take:
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING
+          - PREDICTIVE ANALYTICS PROJECT
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - HUMAN COMPUTER INTERACTION
+          - TOPICS IN COMPUTER SCIENCE
+          - ADVANCED DATA MANAGEMENT
+          - INTERNET OF THINGS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GAMES
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA PROTECTION & PRIVACY
+          - IT PROJECT MANAGEMENT
+          - DIGITAL FORENSICS
+      courses:
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GAMES
+          - TOPICS IN COMPUTER SCIENCE
+          - HUMAN COMPUTER INTERACTION
+    - id: 12
+      first_name: Ashley
+      last_name: Moore
+      email: S4996131.@studenti.unige.it
+      password: Qs70Fw
+      gpa: 22
+      study_plan:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DISTRIBUTED COMPUTING
+          - HIGH PERFORMANCE COMPUTING
+          - MOBILE DEVELOPMENT
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA VISUALIZATION
+          - COMPUTATIONAL VISION
+          - NATURAL LANGUAGE PROCESSING
+          - FINAL DISSERTATION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DEEP LEARNING
+          - DATA WAREHOUSING
+      exams_to_take:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+      courses:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+    - id: 4860757
+      first_name: Jimmy
+      last_name: Meyers
+      email: S4860757.@studenti.unige.it
+      password: b0HL6n
+      gpa: 18
+      study_plan:
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL VISION
+          - DISTRIBUTED COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - GEOMETRIC MODELING
+          - DATA VISUALIZATION
+          - MULTIAGENT SYSTEMS
+          - COMPUTATIONAL NEUROENGINEERING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MOBILE DEVELOPMENT
+          - COMPUTER GAMES
+          - HIGH PERFORMANCE COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+      exams_to_take:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MOBILE DEVELOPMENT
+          - GEOMETRIC MODELING
+          - DATA PROTECTION & PRIVACY
+          - DATA VISUALIZATION
+          - HUMAN COMPUTER INTERACTION
+          - HIGH PERFORMANCE COMPUTING
+          - MULTIAGENT SYSTEMS
+          - COMPUTATIONAL NEUROENGINEERING
+      courses:
+          - DATA VISUALIZATION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA PROTECTION & PRIVACY
+    - id: 4176060
+      first_name: Teresa
+      last_name: Taylor
+      email: S4176060.@studenti.unige.it
+      password: O8P1li
+      gpa: 30
+      study_plan:
+          - MACHINE LEARNING
+          - DISTRIBUTED COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL NEUROENGINEERING
+          - DEEP LEARNING
+          - COMPUTER GAMES
+          - ADVANCED DATA MANAGEMENT
+          - PREDICTIVE ANALYTICS PROJECT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HIGH PERFORMANCE COMPUTING
+          - DATA VISUALIZATION
+          - DATA PROTECTION & PRIVACY
+          - HUMAN COMPUTER INTERACTION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+      exams_to_take:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - MACHINE LEARNING
+          - COMPUTER GAMES
+          - DATA PROTECTION & PRIVACY
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTATIONAL NEUROENGINEERING
+          - HUMAN COMPUTER INTERACTION
+          - PREDICTIVE ANALYTICS PROJECT
+          - DEEP LEARNING
+          - DISTRIBUTED COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - ADVANCED DATA MANAGEMENT
+      courses:
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA PROTECTION & PRIVACY
+          - HUMAN COMPUTER INTERACTION
+          - DEEP LEARNING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+    - id: 42674
+      first_name: Gabriel
+      last_name: Jones
+      email: S4386153.@studenti.unige.it
+      password: R8RmbO
+      gpa: 20
+      study_plan:
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - COMPUTATIONAL VISION
+          - FINAL DISSERTATION
+          - COMPUTER GAMES
+          - ADVANCED DATA MANAGEMENT
+          - INTERNET OF THINGS
+          - MOBILE DEVELOPMENT
+          - MACHINE LEARNING
+          - COMPUTATIONAL NEUROENGINEERING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DATA VISUALIZATION
+          - MULTIAGENT SYSTEMS
+      exams_to_take:
+          - INTERNET OF THINGS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FINAL DISSERTATION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DATA VISUALIZATION
+      courses:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+    - id: 42675
+      first_name: Michael
+      last_name: Quinn
+      email: S4507463.@studenti.unige.it
+      password: f4jNon
+      gpa: 21
+      study_plan:
+          - MOBILE DEVELOPMENT
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTATIONAL NEUROENGINEERING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - AUGMENTED REALITY
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - MULTIAGENT SYSTEMS
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA VISUALIZATION
+          - GEOMETRIC MODELING
+          - COMPUTER GRAPHICS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DEEP LEARNING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FINAL DISSERTATION
+      exams_to_take:
+          - DEEP LEARNING
+      courses:
+          - DEEP LEARNING
+    - id: 4385129
+      first_name: Anna
+      last_name: Burke
+      email: S4385129.@studenti.unige.it
+      password: 2NZAkk
+      gpa: 30
+      study_plan:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA PROTECTION & PRIVACY
+          - INTERNET OF THINGS
+          - MULTIAGENT SYSTEMS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - HUMAN COMPUTER INTERACTION
+          - HIGH PERFORMANCE COMPUTING
+          - PREDICTIVE ANALYTICS PROJECT
+          - NETWORK ANALYSIS
+          - MOBILE DEVELOPMENT
+          - COMPUTATIONAL VISION
+          - DISTRIBUTED COMPUTING
+          - COMPUTER GRAPHICS
+          - DEEP LEARNING
+      exams_to_take:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+      courses:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DEEP LEARNING
+    - id: 4772672
+      first_name: Dennis
+      last_name: Nunez
+      email: S4772672.@studenti.unige.it
+      password: 97VuEy
+      gpa: 20
+      study_plan:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - TOPICS IN COMPUTER SCIENCE
+          - HUMAN COMPUTER INTERACTION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - COMPUTER GAMES
+          - DATA VISUALIZATION
+          - HIGH PERFORMANCE COMPUTING
+          - DEEP LEARNING
+          - MOBILE DEVELOPMENT
+      exams_to_take:
+          - INTERNET OF THINGS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+      courses:
+          - INTERNET OF THINGS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+    - id: 11
+      first_name: Donna
+      last_name: Diaz
+      email: S4702972.@studenti.unige.it
+      password: 760Lia
+      gpa: 20
+      study_plan:
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA WAREHOUSING
+          - MOBILE DEVELOPMENT
+          - DEEP LEARNING
+          - COMPUTATIONAL VISION
+          - HIGH PERFORMANCE COMPUTING
+          - DISTRIBUTED COMPUTING
+          - IT PROJECT MANAGEMENT
+          - DIGITAL FORENSICS
+          - MULTIAGENT SYSTEMS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTER GRAPHICS
+          - GEOMETRIC MODELING
+          - FINAL DISSERTATION
+      exams_to_take:
+          - COMPUTER GRAPHICS
+          - ADVANCED DATA MANAGEMENT
+          - DISTRIBUTED COMPUTING
+          - IT PROJECT MANAGEMENT
+          - MULTIAGENT SYSTEMS
+      courses:
+          - ADVANCED DATA MANAGEMENT
+    - id: 4634639
+      first_name: Teresa
+      last_name: Alvarez
+      email: S4634639.@studenti.unige.it
+      password: 4xhLZw
+      gpa: 26
+      study_plan:
+          - DATA PROTECTION & PRIVACY
+          - DISTRIBUTED COMPUTING
+          - HIGH PERFORMANCE COMPUTING
+          - NETWORK ANALYSIS
+          - COMPUTER GAMES
+          - IT PROJECT MANAGEMENT
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DIGITAL FORENSICS
+          - ADVANCED DATA MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA WAREHOUSING
+          - MOBILE DEVELOPMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+      exams_to_take:
+          - ADVANCED DATA MANAGEMENT
+          - INTERNET OF THINGS
+          - HIGH PERFORMANCE COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - DATA WAREHOUSING
+          - DIGITAL FORENSICS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - COMPUTER GAMES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MOBILE DEVELOPMENT
+          - IT PROJECT MANAGEMENT
+      courses:
+          - INTERNET OF THINGS
+          - DATA WAREHOUSING
+          - DATA PROTECTION & PRIVACY
+          - ADVANCED DATA MANAGEMENT
+          - IT PROJECT MANAGEMENT
+          - DIGITAL FORENSICS
+    - id: 4240006
+      first_name: Jose
+      last_name: Odom
+      email: S4240006.@studenti.unige.it
+      password: r496Bs
+      gpa: 20
+      study_plan:
+          - COMPUTATIONAL NEUROENGINEERING
+          - MOBILE DEVELOPMENT
+          - NETWORK ANALYSIS
+          - TOPICS IN COMPUTER SCIENCE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL VISION
+          - AUGMENTED REALITY
+          - DATA PROTECTION & PRIVACY
+          - ADVANCED DATA MANAGEMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FINAL DISSERTATION
+          - NATURAL LANGUAGE PROCESSING
+          - HUMAN COMPUTER INTERACTION
+          - HIGH PERFORMANCE COMPUTING
+      exams_to_take:
+          - AUGMENTED REALITY
+          - DATA PROTECTION & PRIVACY
+          - COMPUTATIONAL VISION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - NATURAL LANGUAGE PROCESSING
+          - HIGH PERFORMANCE COMPUTING
+          - MOBILE DEVELOPMENT
+          - HUMAN COMPUTER INTERACTION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - FINAL DISSERTATION
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - NETWORK ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADVANCED DATA MANAGEMENT
+      courses:
+          - AUGMENTED REALITY
+          - FINAL DISSERTATION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+    - id: 4719273
+      first_name: Aimee
+      last_name: Brock
+      email: S4719273.@studenti.unige.it
+      password: 0Z5oOs
+      gpa: 28
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - COMPUTER GAMES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - HIGH PERFORMANCE COMPUTING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - TOPICS IN COMPUTER SCIENCE
+          - NETWORK ANALYSIS
+          - ADVANCED DATA MANAGEMENT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL VISION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - AUGMENTED REALITY
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL VISION
+          - HIGH PERFORMANCE COMPUTING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTER GAMES
+          - NETWORK ANALYSIS
+          - NATURAL LANGUAGE PROCESSING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MULTIAGENT SYSTEMS
+      courses:
+          - COMPUTER GAMES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+    - id: 4202899
+      first_name: Adam
+      last_name: Willis
+      email: S4202899.@studenti.unige.it
+      password: 8XXtgZ
+      gpa: 24
+      study_plan:
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA PROTECTION & PRIVACY
+          - NETWORK ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL VISION
+          - IT PROJECT MANAGEMENT
+          - AUGMENTED REALITY
+          - DATA WAREHOUSING
+          - DIGITAL FORENSICS
+          - DEEP LEARNING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - HUMAN COMPUTER INTERACTION
+          - PREDICTIVE ANALYTICS PROJECT
+          - ADVANCED DATA MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - COMPUTATIONAL VISION
+          - PREDICTIVE ANALYTICS PROJECT
+          - IT PROJECT MANAGEMENT
+      courses:
+          - COMPUTATIONAL VISION
+          - PREDICTIVE ANALYTICS PROJECT
+          - IT PROJECT MANAGEMENT
+          - NETWORK ANALYSIS
+    - id: 4095043
+      first_name: Maria
+      last_name: Monroe
+      email: S4095043.@studenti.unige.it
+      password: 51HSZr
+      gpa: 28
+      study_plan:
+          - FINAL DISSERTATION
+          - NETWORK ANALYSIS
+          - PREDICTIVE ANALYTICS PROJECT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - HIGH PERFORMANCE COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - TOPICS IN COMPUTER SCIENCE
+          - INTERNET OF THINGS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - IT PROJECT MANAGEMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GAMES
+      exams_to_take:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - IT PROJECT MANAGEMENT
+          - INTERNET OF THINGS
+          - HIGH PERFORMANCE COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PREDICTIVE ANALYTICS PROJECT
+          - MULTIAGENT SYSTEMS
+          - NETWORK ANALYSIS
+          - TOPICS IN COMPUTER SCIENCE
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      courses:
+          - HIGH PERFORMANCE COMPUTING
+          - ADVANCED DATA MANAGEMENT
+    - id: 4841588
+      first_name: Katie
+      last_name: Zamora
+      email: S4841588.@studenti.unige.it
+      password: 5YBWPx
+      gpa: 18
+      study_plan:
+          - DIGITAL FORENSICS
+          - HUMAN COMPUTER INTERACTION
+          - NATURAL LANGUAGE PROCESSING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DISTRIBUTED COMPUTING
+          - INTERNET OF THINGS
+          - MOBILE DEVELOPMENT
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - IT PROJECT MANAGEMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTER GAMES
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - TOPICS IN COMPUTER SCIENCE
+      exams_to_take:
+          - ADVANCED DATA MANAGEMENT
+          - TOPICS IN COMPUTER SCIENCE
+          - NATURAL LANGUAGE PROCESSING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MOBILE DEVELOPMENT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - INTERNET OF THINGS
+          - IT PROJECT MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+      courses:
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - ADVANCED DATA MANAGEMENT
+          - IT PROJECT MANAGEMENT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - NATURAL LANGUAGE PROCESSING
+    - id: 4037218
+      first_name: Antonio
+      last_name: Mitchell
+      email: S4037218.@studenti.unige.it
+      password: 5PiAPy
+      gpa: 18
+      study_plan:
+          - COMPUTATIONAL VISION
+          - DIGITAL FORENSICS
+          - NETWORK ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+          - INTERNET OF THINGS
+          - IT PROJECT MANAGEMENT
+          - TOPICS IN COMPUTER SCIENCE
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MOBILE DEVELOPMENT
+          - MULTIAGENT SYSTEMS
+          - COMPUTER GRAPHICS
+          - DATA PROTECTION & PRIVACY
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA WAREHOUSING
+          - HUMAN COMPUTER INTERACTION
+      exams_to_take:
+          - TOPICS IN COMPUTER SCIENCE
+          - IT PROJECT MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GRAPHICS
+          - HUMAN COMPUTER INTERACTION
+          - NETWORK ANALYSIS
+          - DATA WAREHOUSING
+          - COMPUTATIONAL VISION
+          - INTERNET OF THINGS
+          - MOBILE DEVELOPMENT
+          - DATA PROTECTION & PRIVACY
+          - MULTIAGENT SYSTEMS
+          - PREDICTIVE ANALYTICS PROJECT
+          - DIGITAL FORENSICS
+      courses:
+          - NETWORK ANALYSIS
+          - DATA WAREHOUSING
+          - COMPUTATIONAL VISION
+    - id: 4779310
+      first_name: Jacob
+      last_name: Castillo
+      email: S4779310.@studenti.unige.it
+      password: X1iOkc
+      gpa: 30
+      study_plan:
+          - INTERNET OF THINGS
+          - DEEP LEARNING
+          - DATA WAREHOUSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTER GRAPHICS
+          - MULTIAGENT SYSTEMS
+          - HUMAN COMPUTER INTERACTION
+          - TOPICS IN COMPUTER SCIENCE
+          - ADVANCED DATA MANAGEMENT
+          - DATA PROTECTION & PRIVACY
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - FINAL DISSERTATION
+      exams_to_take:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TOPICS IN COMPUTER SCIENCE
+          - DEEP LEARNING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - FINAL DISSERTATION
+          - DATA WAREHOUSING
+          - HUMAN COMPUTER INTERACTION
+          - MULTIAGENT SYSTEMS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - ADVANCED DATA MANAGEMENT
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GRAPHICS
+      courses:
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - INTERNET OF THINGS
+          - HUMAN COMPUTER INTERACTION
+    - id: 4958924
+      first_name: Priscilla
+      last_name: Hodges
+      email: S4958924.@studenti.unige.it
+      password: Q6wsIw
+      gpa: 21
+      study_plan:
+          - DATA WAREHOUSING
+          - ADVANCED DATA MANAGEMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - PREDICTIVE ANALYTICS PROJECT
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GRAPHICS
+          - HIGH PERFORMANCE COMPUTING
+          - NETWORK ANALYSIS
+          - IT PROJECT MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+      exams_to_take:
+          - COMPUTER GRAPHICS
+          - HUMAN COMPUTER INTERACTION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DISTRIBUTED COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DATA WAREHOUSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - NETWORK ANALYSIS
+      courses:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GRAPHICS
+    - id: 4639339
+      first_name: Denise
+      last_name: Smith
+      email: S4639339.@studenti.unige.it
+      password: 0oQynn
+      gpa: 18
+      study_plan:
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA VISUALIZATION
+          - HIGH PERFORMANCE COMPUTING
+          - FINAL DISSERTATION
+          - IT PROJECT MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - GEOMETRIC MODELING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA PROTECTION & PRIVACY
+          - ADVANCED DATA MANAGEMENT
+          - NETWORK ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - INTERNET OF THINGS
+          - DIGITAL FORENSICS
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - GEOMETRIC MODELING
+          - HIGH PERFORMANCE COMPUTING
+      courses:
+          - COMPUTATIONAL NEUROENGINEERING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+    - id: 4458476
+      first_name: Ryan
+      last_name: Cole
+      email: S4458476.@studenti.unige.it
+      password: 1BICOo
+      gpa: 26
+      study_plan:
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DISTRIBUTED COMPUTING
+          - HUMAN COMPUTER INTERACTION
+          - MULTIAGENT SYSTEMS
+          - MOBILE DEVELOPMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - INTERNET OF THINGS
+          - GEOMETRIC MODELING
+          - AUGMENTED REALITY
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - ADVANCED DATA MANAGEMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DIGITAL FORENSICS
+      exams_to_take:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - INTERNET OF THINGS
+          - MOBILE DEVELOPMENT
+          - GEOMETRIC MODELING
+          - MULTIAGENT SYSTEMS
+          - IT PROJECT MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DIGITAL FORENSICS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DISTRIBUTED COMPUTING
+          - AUGMENTED REALITY
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - HUMAN COMPUTER INTERACTION
+          - ADVANCED DATA MANAGEMENT
+      courses:
+          - DIGITAL FORENSICS
+          - IT PROJECT MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+    - id: 4981694
+      first_name: Wendy
+      last_name: Garner
+      email: S4981694.@studenti.unige.it
+      password: 3k4cOf
+      gpa: 18
+      study_plan:
+          - COMPUTER GAMES
+          - COMPUTATIONAL VISION
+          - NATURAL LANGUAGE PROCESSING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DISTRIBUTED COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - DATA PROTECTION & PRIVACY
+          - DIGITAL FORENSICS
+          - FINAL DISSERTATION
+          - HUMAN COMPUTER INTERACTION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DEEP LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - HIGH PERFORMANCE COMPUTING
+          - MACHINE LEARNING
+      exams_to_take:
+          - DEEP LEARNING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MACHINE LEARNING
+          - HIGH PERFORMANCE COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - DATA PROTECTION & PRIVACY
+          - FINAL DISSERTATION
+          - DIGITAL FORENSICS
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTER GAMES
+          - DISTRIBUTED COMPUTING
+          - COMPUTATIONAL VISION
+      courses:
+          - DEEP LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - HIGH PERFORMANCE COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+    - id: 4188873
+      first_name: Patricia
+      last_name: Clark
+      email: S4188873.@studenti.unige.it
+      password: 4DU5Zm
+      gpa: 23
+      study_plan:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MACHINE LEARNING
+          - ADVANCED DATA MANAGEMENT
+          - AUGMENTED REALITY
+          - FINAL DISSERTATION
+          - DEEP LEARNING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DIGITAL FORENSICS
+          - MULTIAGENT SYSTEMS
+          - IT PROJECT MANAGEMENT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+      exams_to_take:
+          - DEEP LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - INTERNET OF THINGS
+          - MACHINE LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - IT PROJECT MANAGEMENT
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - AUGMENTED REALITY
+          - ADVANCED DATA MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+      courses:
+          - ADVANCED DATA MANAGEMENT
+          - DEEP LEARNING
+          - MACHINE LEARNING
+    - id: 4341845
+      first_name: Donna
+      last_name: Skinner
+      email: S4341845.@studenti.unige.it
+      password: 7KKsnL
+      gpa: 19
+      study_plan:
+          - DATA PROTECTION & PRIVACY
+          - DEEP LEARNING
+          - MULTIAGENT SYSTEMS
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTATIONAL VISION
+          - GEOMETRIC MODELING
+          - HIGH PERFORMANCE COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GRAPHICS
+          - IT PROJECT MANAGEMENT
+      exams_to_take:
+          - HIGH PERFORMANCE COMPUTING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GRAPHICS
+          - DEEP LEARNING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTATIONAL VISION
+          - MULTIAGENT SYSTEMS
+          - IT PROJECT MANAGEMENT
+          - DATA PROTECTION & PRIVACY
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DISTRIBUTED COMPUTING
+          - GEOMETRIC MODELING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      courses:
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+          - DEEP LEARNING
+          - DATA PROTECTION & PRIVACY
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+    - id: 4612875
+      first_name: Sierra
+      last_name: Walker
+      email: S4612875.@studenti.unige.it
+      password: d1RFkt
+      gpa: 27
+      study_plan:
+          - AUGMENTED REALITY
+          - MOBILE DEVELOPMENT
+          - NETWORK ANALYSIS
+          - COMPUTER GRAPHICS
+          - COMPUTATIONAL NEUROENGINEERING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA WAREHOUSING
+          - COMPUTER GAMES
+          - GEOMETRIC MODELING
+          - HUMAN COMPUTER INTERACTION
+          - MACHINE LEARNING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - ADVANCED DATA MANAGEMENT
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      exams_to_take:
+          - DATA WAREHOUSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GAMES
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - GEOMETRIC MODELING
+          - MACHINE LEARNING
+      courses:
+          - GEOMETRIC MODELING
+          - COMPUTATIONAL NEUROENGINEERING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - ADVANCED DATA MANAGEMENT
+    - id: 4567123
+      first_name: Jennifer
+      last_name: Skinner
+      email: S4567123.@studenti.unige.it
+      password: Gh4JxX
+      gpa: 25
+      study_plan:
+          - DATA PROTECTION & PRIVACY
+          - INTERNET OF THINGS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - GEOMETRIC MODELING
+          - DIGITAL FORENSICS
+          - DATA WAREHOUSING
+          - COMPUTER GRAPHICS
+          - DEEP LEARNING
+          - MOBILE DEVELOPMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - AUGMENTED REALITY
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+      exams_to_take:
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+      courses:
+          - DIGITAL FORENSICS
+    - id: 4866720
+      first_name: Mark
+      last_name: Sanchez
+      email: S4866720.@studenti.unige.it
+      password: 516Ajb
+      gpa: 27
+      study_plan:
+          - GEOMETRIC MODELING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DEEP LEARNING
+          - DATA VISUALIZATION
+          - DISTRIBUTED COMPUTING
+          - DATA WAREHOUSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - NETWORK ANALYSIS
+          - COMPUTER GAMES
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - DATA WAREHOUSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+      courses:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA WAREHOUSING
+    - id: 4356110
+      first_name: Samuel
+      last_name: Moreno
+      email: S4356110.@studenti.unige.it
+      password: 7Bxayb
+      gpa: 30
+      study_plan:
+          - DEEP LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - FINAL DISSERTATION
+          - COMPUTATIONAL VISION
+          - TOPICS IN COMPUTER SCIENCE
+          - MULTIAGENT SYSTEMS
+          - MOBILE DEVELOPMENT
+          - AUGMENTED REALITY
+          - NATURAL LANGUAGE PROCESSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - DATA WAREHOUSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+      exams_to_take:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - AUGMENTED REALITY
+          - DEEP LEARNING
+          - TOPICS IN COMPUTER SCIENCE
+      courses:
+          - TOPICS IN COMPUTER SCIENCE
+    - id: 4055389
+      first_name: Stacy
+      last_name: Ramos
+      email: S4055389.@studenti.unige.it
+      password: 2tJwKs
+      gpa: 18
+      study_plan:
+          - AUGMENTED REALITY
+          - MOBILE DEVELOPMENT
+          - PREDICTIVE ANALYTICS PROJECT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - MULTIAGENT SYSTEMS
+          - HIGH PERFORMANCE COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DATA WAREHOUSING
+      exams_to_take:
+          - HUMAN COMPUTER INTERACTION
+          - DATA PROTECTION & PRIVACY
+          - MULTIAGENT SYSTEMS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PREDICTIVE ANALYTICS PROJECT
+          - HIGH PERFORMANCE COMPUTING
+          - IT PROJECT MANAGEMENT
+          - DATA WAREHOUSING
+          - MOBILE DEVELOPMENT
+          - NETWORK ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DEEP LEARNING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - AUGMENTED REALITY
+      courses:
+          - DATA WAREHOUSING
+          - HUMAN COMPUTER INTERACTION
+          - IT PROJECT MANAGEMENT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - HIGH PERFORMANCE COMPUTING
+          - AUGMENTED REALITY
+    - id: 4077195
+      first_name: Amanda
+      last_name: Hines
+      email: S4077195.@studenti.unige.it
+      password: W5qWDw
+      gpa: 24
+      study_plan:
+          - COMPUTATIONAL VISION
+          - DISTRIBUTED COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA VISUALIZATION
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DEEP LEARNING
+          - ADVANCED DATA MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA WAREHOUSING
+          - DATA PROTECTION & PRIVACY
+          - COMPUTATIONAL NEUROENGINEERING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - PREDICTIVE ANALYTICS PROJECT
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - ADVANCED DATA MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+          - DATA PROTECTION & PRIVACY
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      courses:
+          - DATA PROTECTION & PRIVACY
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+    - id: 4450387
+      first_name: Brittany
+      last_name: Jones
+      email: S4450387.@studenti.unige.it
+      password: k2S1Hu
+      gpa: 19
+      study_plan:
+          - FINAL DISSERTATION
+          - ADVANCED DATA MANAGEMENT
+          - GEOMETRIC MODELING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - COMPUTATIONAL VISION
+          - PREDICTIVE ANALYTICS PROJECT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTER GAMES
+          - COMPUTATIONAL NEUROENGINEERING
+          - DISTRIBUTED COMPUTING
+          - HUMAN COMPUTER INTERACTION
+          - AUGMENTED REALITY
+          - DIGITAL FORENSICS
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - GEOMETRIC MODELING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+      courses:
+          - GEOMETRIC MODELING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+    - id: 4547504
+      first_name: Alicia
+      last_name: Dixon
+      email: S4547504.@studenti.unige.it
+      password: w4Oqo7
+      gpa: 18
+      study_plan:
+          - DATA PROTECTION & PRIVACY
+          - COMPUTER GAMES
+          - DATA WAREHOUSING
+          - DEEP LEARNING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DATA VISUALIZATION
+          - HIGH PERFORMANCE COMPUTING
+          - AUGMENTED REALITY
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - MOBILE DEVELOPMENT
+          - DIGITAL FORENSICS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - NETWORK ANALYSIS
+          - MACHINE LEARNING AND DATA ANALYSIS
+      exams_to_take:
+          - DATA VISUALIZATION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DEEP LEARNING
+          - DISTRIBUTED COMPUTING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL FORENSICS
+          - HIGH PERFORMANCE COMPUTING
+          - NATURAL LANGUAGE PROCESSING
+      courses:
+          - HIGH PERFORMANCE COMPUTING
+          - DISTRIBUTED COMPUTING
+          - DIGITAL FORENSICS
+    - id: 4425820
+      first_name: John
+      last_name: Taylor
+      email: S4425820.@studenti.unige.it
+      password: pA3M9j
+      gpa: 18
+      study_plan:
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - INTERNET OF THINGS
+          - DATA PROTECTION & PRIVACY
+          - DEEP LEARNING
+          - COMPUTER GRAPHICS
+          - DATA VISUALIZATION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA WAREHOUSING
+          - FINAL DISSERTATION
+          - MOBILE DEVELOPMENT
+          - MULTIAGENT SYSTEMS
+          - NATURAL LANGUAGE PROCESSING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - GEOMETRIC MODELING
+      exams_to_take:
+          - MOBILE DEVELOPMENT
+          - DATA VISUALIZATION
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - NATURAL LANGUAGE PROCESSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+      courses:
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - NATURAL LANGUAGE PROCESSING
+          - DATA VISUALIZATION
+          - MOBILE DEVELOPMENT
+    - id: 4364098
+      first_name: Jay
+      last_name: Rocha
+      email: S4364098.@studenti.unige.it
+      password: 47FqVx
+      gpa: 27
+      study_plan:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GAMES
+          - MACHINE LEARNING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTER GRAPHICS
+          - HUMAN COMPUTER INTERACTION
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - INTERNET OF THINGS
+          - TOPICS IN COMPUTER SCIENCE
+          - MOBILE DEVELOPMENT
+          - NETWORK ANALYSIS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DEEP LEARNING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - AUGMENTED REALITY
+      exams_to_take:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DEEP LEARNING
+          - NETWORK ANALYSIS
+          - COMPUTER GRAPHICS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - AUGMENTED REALITY
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - INTERNET OF THINGS
+          - COMPUTER GAMES
+          - HUMAN COMPUTER INTERACTION
+          - MACHINE LEARNING
+          - MOBILE DEVELOPMENT
+      courses:
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+    - id: 4715226
+      first_name: Holly
+      last_name: Fowler
+      email: S4715226.@studenti.unige.it
+      password: 3bWPdC
+      gpa: 30
+      study_plan:
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - GEOMETRIC MODELING
+          - COMPUTATIONAL NEUROENGINEERING
+          - NETWORK ANALYSIS
+          - IT PROJECT MANAGEMENT
+          - DIGITAL FORENSICS
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - COMPUTER GRAPHICS
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - INTERNET OF THINGS
+          - DIGITAL FORENSICS
+          - COMPUTER GRAPHICS
+          - GEOMETRIC MODELING
+      courses:
+          - GEOMETRIC MODELING
+    - id: 4765912
+      first_name: Micheal
+      last_name: Miller
+      email: S4765912.@studenti.unige.it
+      password: 8N7qus
+      gpa: 22
+      study_plan:
+          - COMPUTATIONAL VISION
+          - ADVANCED DATA MANAGEMENT
+          - HIGH PERFORMANCE COMPUTING
+          - DISTRIBUTED COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - MULTIAGENT SYSTEMS
+          - GEOMETRIC MODELING
+          - DATA WAREHOUSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - COMPUTATIONAL NEUROENGINEERING
+          - AUGMENTED REALITY
+          - INTERNET OF THINGS
+          - FINAL DISSERTATION
+          - DIGITAL FORENSICS
+          - ADDITIONAL USEFUL KNOWLEDGE
+      exams_to_take:
+          - TOPICS IN COMPUTER SCIENCE
+          - AUGMENTED REALITY
+          - COMPUTATIONAL VISION
+          - DISTRIBUTED COMPUTING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL FORENSICS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA WAREHOUSING
+          - GEOMETRIC MODELING
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADVANCED DATA MANAGEMENT
+          - FINAL DISSERTATION
+          - MULTIAGENT SYSTEMS
+      courses:
+          - COMPUTATIONAL NEUROENGINEERING
+    - id: 4861255
+      first_name: David
+      last_name: Hendricks
+      email: S4861255.@studenti.unige.it
+      password: 1EMyz4
+      gpa: 24
+      study_plan:
+          - FINAL DISSERTATION
+          - DEEP LEARNING
+          - GEOMETRIC MODELING
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - MULTIAGENT SYSTEMS
+          - AUGMENTED REALITY
+          - PREDICTIVE ANALYTICS PROJECT
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL VISION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - NATURAL LANGUAGE PROCESSING
+          - ADVANCED DATA MANAGEMENT
+          - INTERNET OF THINGS
+      exams_to_take:
+          - DEEP LEARNING
+          - AUGMENTED REALITY
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - COMPUTATIONAL VISION
+          - HIGH PERFORMANCE COMPUTING
+          - GEOMETRIC MODELING
+          - FINAL DISSERTATION
+          - MULTIAGENT SYSTEMS
+          - NATURAL LANGUAGE PROCESSING
+      courses:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - FINAL DISSERTATION
+    - id: 4425864
+      first_name: Michelle
+      last_name: Wells
+      email: S4425864.@studenti.unige.it
+      password: 6UwO6w
+      gpa: 27
+      study_plan:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - AUGMENTED REALITY
+          - DIGITAL FORENSICS
+          - INTERNET OF THINGS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FINAL DISSERTATION
+          - NATURAL LANGUAGE PROCESSING
+          - ADVANCED DATA MANAGEMENT
+          - MOBILE DEVELOPMENT
+          - GEOMETRIC MODELING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MULTIAGENT SYSTEMS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - MACHINE LEARNING
+          - ADDITIONAL USEFUL KNOWLEDGE
+      exams_to_take:
+          - FINAL DISSERTATION
+          - MULTIAGENT SYSTEMS
+          - NATURAL LANGUAGE PROCESSING
+          - ADVANCED DATA MANAGEMENT
+          - MOBILE DEVELOPMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DIGITAL FORENSICS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - GEOMETRIC MODELING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - AUGMENTED REALITY
+          - MACHINE LEARNING
+      courses:
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - GEOMETRIC MODELING
+          - DIGITAL FORENSICS
+    - id: 4715955
+      first_name: Tasha
+      last_name: Hickman
+      email: S4715955.@studenti.unige.it
+      password: 2GGKCd
+      gpa: 20
+      study_plan:
+          - PREDICTIVE ANALYTICS PROJECT
+          - NATURAL LANGUAGE PROCESSING
+          - AUGMENTED REALITY
+          - HIGH PERFORMANCE COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING
+          - COMPUTATIONAL NEUROENGINEERING
+          - TOPICS IN COMPUTER SCIENCE
+          - COMPUTATIONAL VISION
+          - DIGITAL FORENSICS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+      exams_to_take:
+          - COMPUTATIONAL NEUROENGINEERING
+          - INTERNET OF THINGS
+          - AUGMENTED REALITY
+      courses:
+          - COMPUTATIONAL NEUROENGINEERING
+          - AUGMENTED REALITY
+          - INTERNET OF THINGS
+    - id: 4772458
+      first_name: Heidi
+      last_name: Anthony
+      email: S4772458.@studenti.unige.it
+      password: 33hCPu
+      gpa: 19
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - INTERNET OF THINGS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MACHINE LEARNING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL FORENSICS
+          - NATURAL LANGUAGE PROCESSING
+          - DATA PROTECTION & PRIVACY
+          - FINAL DISSERTATION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GAMES
+          - ADVANCED DATA MANAGEMENT
+      exams_to_take:
+          - INTERNET OF THINGS
+          - COMPUTER GAMES
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DIGITAL FORENSICS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - NATURAL LANGUAGE PROCESSING
+          - FINAL DISSERTATION
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING
+      courses:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MULTIAGENT SYSTEMS
+          - MACHINE LEARNING
+          - COMPUTER GAMES
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTATIONAL NEUROENGINEERING
+    - id: 4318572
+      first_name: Charles
+      last_name: Adkins
+      email: S4318572.@studenti.unige.it
+      password: 6LWTgu
+      gpa: 20
+      study_plan:
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - COMPUTATIONAL VISION
+          - DATA PROTECTION & PRIVACY
+          - NATURAL LANGUAGE PROCESSING
+          - DATA WAREHOUSING
+          - AUGMENTED REALITY
+          - DISTRIBUTED COMPUTING
+          - DEEP LEARNING
+          - COMPUTER GAMES
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - MULTIAGENT SYSTEMS
+          - IT PROJECT MANAGEMENT
+          - ADVANCED DATA MANAGEMENT
+          - NETWORK ANALYSIS
+          - MACHINE LEARNING
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+      courses:
+          - NETWORK ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+    - id: 4899753
+      first_name: Brandon
+      last_name: Baker
+      email: S4899753.@studenti.unige.it
+      password: 0PRJRm
+      gpa: 23
+      study_plan:
+          - DIGITAL FORENSICS
+          - HIGH PERFORMANCE COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - NATURAL LANGUAGE PROCESSING
+          - DISTRIBUTED COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - AUGMENTED REALITY
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - TOPICS IN COMPUTER SCIENCE
+      exams_to_take:
+          - NATURAL LANGUAGE PROCESSING
+          - DIGITAL FORENSICS
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTER GRAPHICS
+          - DATA PROTECTION & PRIVACY
+          - COMPUTATIONAL VISION
+          - TOPICS IN COMPUTER SCIENCE
+      courses:
+          - HIGH PERFORMANCE COMPUTING
+    - id: 4870870
+      first_name: Julie
+      last_name: Chapman
+      email: S4870870.@studenti.unige.it
+      password: LJ6SUo
+      gpa: 27
+      study_plan:
+          - DATA WAREHOUSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - COMPUTER GRAPHICS
+          - ADVANCED DATA MANAGEMENT
+          - DATA PROTECTION & PRIVACY
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TOPICS IN COMPUTER SCIENCE
+          - MOBILE DEVELOPMENT
+          - MULTIAGENT SYSTEMS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MACHINE LEARNING
+      exams_to_take:
+          - DATA PROTECTION & PRIVACY
+      courses:
+          - DATA PROTECTION & PRIVACY
+    - id: 4091721
+      first_name: Noah
+      last_name: Evans
+      email: S4091721.@studenti.unige.it
+      password: 5EwT0g
+      gpa: 21
+      study_plan:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA PROTECTION & PRIVACY
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DISTRIBUTED COMPUTING
+          - HUMAN COMPUTER INTERACTION
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL VISION
+          - AUGMENTED REALITY
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MACHINE LEARNING
+          - DIGITAL FORENSICS
+          - COMPUTER GRAPHICS
+          - IT PROJECT MANAGEMENT
+      exams_to_take:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - IT PROJECT MANAGEMENT
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+      courses:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+    - id: 4730919
+      first_name: Antonio
+      last_name: Lopez
+      email: S4730919.@studenti.unige.it
+      password: ZY2VBm
+      gpa: 24
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+          - MOBILE DEVELOPMENT
+          - COMPUTER GAMES
+          - AUGMENTED REALITY
+          - ADVANCED DATA MANAGEMENT
+          - MACHINE LEARNING
+          - NETWORK ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - GEOMETRIC MODELING
+          - DIGITAL FORENSICS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      exams_to_take:
+          - MACHINE LEARNING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTER GAMES
+          - DISTRIBUTED COMPUTING
+      courses:
+          - COMPUTER GAMES
+          - MACHINE LEARNING
+    - id: 4008796
+      first_name: Danielle
+      last_name: Trevino
+      email: S4008796.@studenti.unige.it
+      password: 2Ga3zK
+      gpa: 24
+      study_plan:
+          - NETWORK ANALYSIS
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADVANCED DATA MANAGEMENT
+          - DISTRIBUTED COMPUTING
+          - COMPUTER GAMES
+          - PREDICTIVE ANALYTICS PROJECT
+          - DEEP LEARNING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DIGITAL FORENSICS
+          - GEOMETRIC MODELING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DATA VISUALIZATION
+          - MACHINE LEARNING
+      exams_to_take:
+          - HIGH PERFORMANCE COMPUTING
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - GEOMETRIC MODELING
+          - DATA VISUALIZATION
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GAMES
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - ADVANCED DATA MANAGEMENT
+      courses:
+          - MACHINE LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DATA VISUALIZATION
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - COMPUTER GAMES
+    - id: 4584184
+      first_name: Lisa
+      last_name: Andrews
+      email: S4584184.@studenti.unige.it
+      password: 9XyOLe
+      gpa: 23
+      study_plan:
+          - PREDICTIVE ANALYTICS PROJECT
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - TOPICS IN COMPUTER SCIENCE
+          - DATA WAREHOUSING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - HIGH PERFORMANCE COMPUTING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MULTIAGENT SYSTEMS
+          - NATURAL LANGUAGE PROCESSING
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA VISUALIZATION
+          - COMPUTATIONAL NEUROENGINEERING
+          - IT PROJECT MANAGEMENT
+      exams_to_take:
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTATIONAL NEUROENGINEERING
+          - NETWORK ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - HIGH PERFORMANCE COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      courses:
+          - NETWORK ANALYSIS
+          - NATURAL LANGUAGE PROCESSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - MULTIAGENT SYSTEMS
+          - COMPUTATIONAL NEUROENGINEERING
+    - id: 4619248
+      first_name: Jane
+      last_name: Alvarez
+      email: S4619248.@studenti.unige.it
+      password: z91CCs
+      gpa: 25
+      study_plan:
+          - COMPUTER GAMES
+          - DATA PROTECTION & PRIVACY
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL VISION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - INTERNET OF THINGS
+          - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - TOPICS IN COMPUTER SCIENCE
+          - IT PROJECT MANAGEMENT
+          - ADVANCED DATA MANAGEMENT
+          - DATA VISUALIZATION
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      exams_to_take:
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - IT PROJECT MANAGEMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA PROTECTION & PRIVACY
+          - NETWORK ANALYSIS
+          - COMPUTER GRAPHICS
+          - ADVANCED DATA MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      courses:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+    - id: 4197183
+      first_name: Mary
+      last_name: Adams
+      email: S4197183.@studenti.unige.it
+      password: 94PGuh
+      gpa: 24
+      study_plan:
+          - GEOMETRIC MODELING
+          - DEEP LEARNING
+          - NATURAL LANGUAGE PROCESSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - INTERNET OF THINGS
+          - DISTRIBUTED COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - FINAL DISSERTATION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - MULTIAGENT SYSTEMS
+          - MACHINE LEARNING
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADDITIONAL USEFUL KNOWLEDGE
+      exams_to_take:
+          - MULTIAGENT SYSTEMS
+          - INTERNET OF THINGS
+          - FINAL DISSERTATION
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - ADVANCED DATA MANAGEMENT
+          - HIGH PERFORMANCE COMPUTING
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING
+          - DEEP LEARNING
+      courses:
+          - DEEP LEARNING
+          - ADVANCED DATA MANAGEMENT
+          - HIGH PERFORMANCE COMPUTING
+          - DISTRIBUTED COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+    - id: 4758123
+      first_name: Maria
+      last_name: Ward
+      email: S4758123.@studenti.unige.it
+      password: 93cTTt
+      gpa: 28
+      study_plan:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - NATURAL LANGUAGE PROCESSING
+          - AUGMENTED REALITY
+          - MACHINE LEARNING
+          - COMPUTER GAMES
+          - DATA PROTECTION & PRIVACY
+          - HIGH PERFORMANCE COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - MOBILE DEVELOPMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - IT PROJECT MANAGEMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+      exams_to_take:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTER GAMES
+          - AUGMENTED REALITY
+          - IT PROJECT MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTATIONAL VISION
+          - TOPICS IN COMPUTER SCIENCE
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MOBILE DEVELOPMENT
+          - COMPUTATIONAL NEUROENGINEERING
+      courses:
+          - COMPUTER GAMES
+          - HIGH PERFORMANCE COMPUTING
+    - id: 4264906
+      first_name: Robert
+      last_name: Lewis
+      email: S4264906.@studenti.unige.it
+      password: 2qxLba
+      gpa: 29
+      study_plan:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - DIGITAL FORENSICS
+          - DISTRIBUTED COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - MULTIAGENT SYSTEMS
+          - PREDICTIVE ANALYTICS PROJECT
+          - HIGH PERFORMANCE COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTER GAMES
+          - FINAL DISSERTATION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA VISUALIZATION
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+      exams_to_take:
+          - MULTIAGENT SYSTEMS
+          - COMPUTER GAMES
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DISTRIBUTED COMPUTING
+          - FINAL DISSERTATION
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - PREDICTIVE ANALYTICS PROJECT
+          - HIGH PERFORMANCE COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DATA VISUALIZATION
+      courses:
+          - IT PROJECT MANAGEMENT
+    - id: 4761104
+      first_name: Frank
+      last_name: Miller
+      email: S4761104.@studenti.unige.it
+      password: aI2Kmr
+      gpa: 25
+      study_plan:
+          - COMPUTER GRAPHICS
+          - NATURAL LANGUAGE PROCESSING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MOBILE DEVELOPMENT
+          - COMPUTATIONAL VISION
+          - COMPUTATIONAL NEUROENGINEERING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - HIGH PERFORMANCE COMPUTING
+          - GEOMETRIC MODELING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DIGITAL FORENSICS
+          - COMPUTER GAMES
+          - DISTRIBUTED COMPUTING
+          - PREDICTIVE ANALYTICS PROJECT
+      exams_to_take:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DISTRIBUTED COMPUTING
+      courses:
+          - DISTRIBUTED COMPUTING
+    - id: 4157599
+      first_name: Patricia
+      last_name: Williams
+      email: S4157599.@studenti.unige.it
+      password: 94LvmH
+      gpa: 25
+      study_plan:
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA VISUALIZATION
+          - TOPICS IN COMPUTER SCIENCE
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA WAREHOUSING
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - NATURAL LANGUAGE PROCESSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - MOBILE DEVELOPMENT
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - AUGMENTED REALITY
+          - COMPUTER GRAPHICS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DISTRIBUTED COMPUTING
+      exams_to_take:
+          - AUGMENTED REALITY
+          - DATA WAREHOUSING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL NEUROENGINEERING
+          - NATURAL LANGUAGE PROCESSING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DATA VISUALIZATION
+          - NETWORK ANALYSIS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DISTRIBUTED COMPUTING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      courses:
+          - AUGMENTED REALITY
+          - DATA VISUALIZATION
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+    - id: 4009854
+      first_name: Joel
+      last_name: Vincent
+      email: S4009854.@studenti.unige.it
+      password: 5Hpu5M
+      gpa: 18
+      study_plan:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - COMPUTATIONAL NEUROENGINEERING
+          - NETWORK ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - DATA WAREHOUSING
+          - PREDICTIVE ANALYTICS PROJECT
+          - INTERNET OF THINGS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTER GAMES
+          - MACHINE LEARNING
+          - DATA VISUALIZATION
+          - FINAL DISSERTATION
+          - DISTRIBUTED COMPUTING
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - FINAL DISSERTATION
+          - HUMAN COMPUTER INTERACTION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - MACHINE LEARNING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA WAREHOUSING
+          - INTERNET OF THINGS
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA VISUALIZATION
+          - COMPUTER GAMES
+      courses:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PREDICTIVE ANALYTICS PROJECT
+          - HUMAN COMPUTER INTERACTION
+          - HIGH PERFORMANCE COMPUTING
+          - DATA VISUALIZATION
+    - id: 4885327
+      first_name: Henry
+      last_name: Mann
+      email: S4885327.@studenti.unige.it
+      password: 7OKExb
+      gpa: 18
+      study_plan:
+          - COMPUTER GAMES
+          - DEEP LEARNING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - IT PROJECT MANAGEMENT
+          - NETWORK ANALYSIS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MULTIAGENT SYSTEMS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA WAREHOUSING
+          - COMPUTATIONAL VISION
+          - AUGMENTED REALITY
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - MOBILE DEVELOPMENT
+          - ADVANCED DATA MANAGEMENT
+      exams_to_take:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - IT PROJECT MANAGEMENT
+          - MULTIAGENT SYSTEMS
+          - COMPUTATIONAL VISION
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - NETWORK ANALYSIS
+          - AUGMENTED REALITY
+      courses:
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+    - id: 4884079
+      first_name: Seth
+      last_name: Williams
+      email: S4884079.@studenti.unige.it
+      password: 3RWdU0
+      gpa: 23
+      study_plan:
+          - TOPICS IN COMPUTER SCIENCE
+          - DIGITAL FORENSICS
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - ADVANCED DATA MANAGEMENT
+          - FINAL DISSERTATION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DEEP LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - GEOMETRIC MODELING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+      exams_to_take:
+          - DATA PROTECTION & PRIVACY
+          - COMPUTATIONAL NEUROENGINEERING
+          - PREDICTIVE ANALYTICS PROJECT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FINAL DISSERTATION
+          - TOPICS IN COMPUTER SCIENCE
+          - DEEP LEARNING
+      courses:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - FINAL DISSERTATION
+          - TOPICS IN COMPUTER SCIENCE
+          - MACHINE LEARNING AND DATA ANALYSIS
+    - id: 4317962
+      first_name: David
+      last_name: Bennett
+      email: S4317962.@studenti.unige.it
+      password: Jg4BQp
+      gpa: 19
+      study_plan:
+          - DATA VISUALIZATION
+          - NETWORK ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DIGITAL FORENSICS
+          - COMPUTER GAMES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA WAREHOUSING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - GEOMETRIC MODELING
+          - FINAL DISSERTATION
+          - ADVANCED DATA MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+          - DATA PROTECTION & PRIVACY
+          - MULTIAGENT SYSTEMS
+      exams_to_take:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA PROTECTION & PRIVACY
+          - DATA WAREHOUSING
+          - FINAL DISSERTATION
+          - DIGITAL FORENSICS
+      courses:
+          - DIGITAL FORENSICS
+          - DATA PROTECTION & PRIVACY
+    - id: 4465652
+      first_name: Nicole
+      last_name: Gay
+      email: S4465652.@studenti.unige.it
+      password: J3Szey
+      gpa: 18
+      study_plan:
+          - DISTRIBUTED COMPUTING
+          - GEOMETRIC MODELING
+          - DIGITAL FORENSICS
+          - COMPUTATIONAL VISION
+          - ADVANCED DATA MANAGEMENT
+          - COMPUTER GRAPHICS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - NATURAL LANGUAGE PROCESSING
+          - IT PROJECT MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA WAREHOUSING
+          - DATA VISUALIZATION
+          - COMPUTATIONAL NEUROENGINEERING
+      exams_to_take:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - ADVANCED DATA MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+      courses:
+          - ADVANCED DATA MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+    - id: 4327476
+      first_name: Kathleen
+      last_name: Murphy
+      email: S4327476.@studenti.unige.it
+      password: Ja7Rw5
+      gpa: 20
+      study_plan:
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTATIONAL VISION
+          - TOPICS IN COMPUTER SCIENCE
+          - MULTIAGENT SYSTEMS
+          - HIGH PERFORMANCE COMPUTING
+          - AUGMENTED REALITY
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL NEUROENGINEERING
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+          - PREDICTIVE ANALYTICS PROJECT
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DATA PROTECTION & PRIVACY
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+      exams_to_take:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTATIONAL VISION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - INTERNET OF THINGS
+      courses:
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - COMPUTATIONAL VISION
+    - id: 4398293
+      first_name: Justin
+      last_name: Oconnell
+      email: S4398293.@studenti.unige.it
+      password: m8ZLNr
+      gpa: 30
+      study_plan:
+          - MACHINE LEARNING
+          - DISTRIBUTED COMPUTING
+          - INTERNET OF THINGS
+          - AUGMENTED REALITY
+          - COMPUTATIONAL VISION
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTER GAMES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DEEP LEARNING
+          - DATA PROTECTION & PRIVACY
+          - PREDICTIVE ANALYTICS PROJECT
+          - IT PROJECT MANAGEMENT
+      exams_to_take:
+          - DATA PROTECTION & PRIVACY
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - AUGMENTED REALITY
+          - INTERNET OF THINGS
+          - PREDICTIVE ANALYTICS PROJECT
+          - COMPUTATIONAL VISION
+          - DEEP LEARNING
+          - MACHINE LEARNING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - NATURAL LANGUAGE PROCESSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTER GAMES
+          - DISTRIBUTED COMPUTING
+      courses:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - AUGMENTED REALITY
+          - DATA PROTECTION & PRIVACY
+    - id: 4508115
+      first_name: Laura
+      last_name: Moreno
+      email: S4508115.@studenti.unige.it
+      password: 0NXkw6
+      gpa: 19
+      study_plan:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - GEOMETRIC MODELING
+          - NATURAL LANGUAGE PROCESSING
+          - HIGH PERFORMANCE COMPUTING
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GRAPHICS
+          - DATA PROTECTION & PRIVACY
+          - MOBILE DEVELOPMENT
+          - DATA WAREHOUSING
+          - TOPICS IN COMPUTER SCIENCE
+          - DIGITAL FORENSICS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - AUGMENTED REALITY
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTATIONAL NEUROENGINEERING
+      exams_to_take:
+          - MOBILE DEVELOPMENT
+      courses:
+          - MOBILE DEVELOPMENT
+    - id: 4130364
+      first_name: Crystal
+      last_name: Davis
+      email: S4130364.@studenti.unige.it
+      password: 8l0rSv
+      gpa: 27
+      study_plan:
+          - NETWORK ANALYSIS
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL VISION
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - DATA PROTECTION & PRIVACY
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL FORENSICS
+          - DEEP LEARNING
+          - INTERNET OF THINGS
+          - HIGH PERFORMANCE COMPUTING
+          - NATURAL LANGUAGE PROCESSING
+      exams_to_take:
+          - DISTRIBUTED COMPUTING
+      courses:
+          - DISTRIBUTED COMPUTING
+    - id: 4736738
+      first_name: Amanda
+      last_name: Wells
+      email: S4736738.@studenti.unige.it
+      password: m9R2Aq
+      gpa: 26
+      study_plan:
+          - GEOMETRIC MODELING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GAMES
+          - TOPICS IN COMPUTER SCIENCE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HIGH PERFORMANCE COMPUTING
+          - FINAL DISSERTATION
+          - MACHINE LEARNING
+          - DEEP LEARNING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GRAPHICS
+          - MULTIAGENT SYSTEMS
+      exams_to_take:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MACHINE LEARNING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+      courses:
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - MACHINE LEARNING
+    - id: 4360959
+      first_name: James
+      last_name: Rios
+      email: S4360959.@studenti.unige.it
+      password: 1Qkemi
+      gpa: 18
+      study_plan:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - NETWORK ANALYSIS
+          - DIGITAL FORENSICS
+          - MULTIAGENT SYSTEMS
+          - FINAL DISSERTATION
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DATA WAREHOUSING
+          - GEOMETRIC MODELING
+          - NATURAL LANGUAGE PROCESSING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - ADVANCED DATA MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - COMPUTER GAMES
+      exams_to_take:
+          - MULTIAGENT SYSTEMS
+          - FINAL DISSERTATION
+          - DIGITAL FORENSICS
+          - NETWORK ANALYSIS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - DATA WAREHOUSING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GAMES
+          - NATURAL LANGUAGE PROCESSING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - ADVANCED DATA MANAGEMENT
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      courses:
+          - NETWORK ANALYSIS
+          - COMPUTER GAMES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - HIGH PERFORMANCE COMPUTING
+          - MULTIAGENT SYSTEMS
+    - id: 4503265
+      first_name: Cody
+      last_name: Savage
+      email: S4503265.@studenti.unige.it
+      password: ua7Vyt
+      gpa: 21
+      study_plan:
+          - NETWORK ANALYSIS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - HUMAN COMPUTER INTERACTION
+          - INTERNET OF THINGS
+          - IT PROJECT MANAGEMENT
+          - AUGMENTED REALITY
+          - DISTRIBUTED COMPUTING
+          - DATA WAREHOUSING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - GEOMETRIC MODELING
+          - COMPUTATIONAL VISION
+          - COMPUTATIONAL NEUROENGINEERING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTER GRAPHICS
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - IT PROJECT MANAGEMENT
+          - COMPUTATIONAL NEUROENGINEERING
+          - DISTRIBUTED COMPUTING
+      courses:
+          - DISTRIBUTED COMPUTING
+          - IT PROJECT MANAGEMENT
+          - NETWORK ANALYSIS
+          - COMPUTATIONAL NEUROENGINEERING
+    - id: 4412440
+      first_name: Jared
+      last_name: Morgan
+      email: S4412440.@studenti.unige.it
+      password: 5BWb86
+      gpa: 20
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL VISION
+          - HIGH PERFORMANCE COMPUTING
+          - DEEP LEARNING
+          - COMPUTER GRAPHICS
+          - NETWORK ANALYSIS
+          - MOBILE DEVELOPMENT
+          - DIGITAL FORENSICS
+          - TOPICS IN COMPUTER SCIENCE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - NATURAL LANGUAGE PROCESSING
+          - PREDICTIVE ANALYTICS PROJECT
+          - FINAL DISSERTATION
+      exams_to_take:
+          - PREDICTIVE ANALYTICS PROJECT
+      courses:
+          - PREDICTIVE ANALYTICS PROJECT
+    - id: 4044505
+      first_name: Mark
+      last_name: Hardy
+      email: S4044505.@studenti.unige.it
+      password: j2diBo
+      gpa: 24
+      study_plan:
+          - COMPUTER GRAPHICS
+          - COMPUTATIONAL NEUROENGINEERING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - NATURAL LANGUAGE PROCESSING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - PREDICTIVE ANALYTICS PROJECT
+          - HIGH PERFORMANCE COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - COMPUTER GAMES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - TOPICS IN COMPUTER SCIENCE
+          - DISTRIBUTED COMPUTING
+      exams_to_take:
+          - MACHINE LEARNING AND DATA ANALYSIS
+      courses:
+          - MACHINE LEARNING AND DATA ANALYSIS
+    - id: 4011145
+      first_name: Sandra
+      last_name: Obrien
+      email: S4011145.@studenti.unige.it
+      password: Q5BqQi
+      gpa: 30
+      study_plan:
+          - TOPICS IN COMPUTER SCIENCE
+          - DIGITAL FORENSICS
+          - PREDICTIVE ANALYTICS PROJECT
+          - ADVANCED DATA MANAGEMENT
+          - IT PROJECT MANAGEMENT
+          - MOBILE DEVELOPMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MULTIAGENT SYSTEMS
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTATIONAL VISION
+          - COMPUTATIONAL NEUROENGINEERING
+          - MACHINE LEARNING
+          - COMPUTER GRAPHICS
+      exams_to_take:
+          - IT PROJECT MANAGEMENT
+          - MACHINE LEARNING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GRAPHICS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - COMPUTATIONAL VISION
+          - COMPUTATIONAL NEUROENGINEERING
+      courses:
+          - COMPUTATIONAL VISION
+          - MACHINE LEARNING
+    - id: 4944669
+      first_name: Kendra
+      last_name: Brown
+      email: S4944669.@studenti.unige.it
+      password: 4EztmI
+      gpa: 29
+      study_plan:
+          - COMPUTER GAMES
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - FINAL DISSERTATION
+          - HIGH PERFORMANCE COMPUTING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - TOPICS IN COMPUTER SCIENCE
+          - AUGMENTED REALITY
+          - COMPUTATIONAL NEUROENGINEERING
+          - NATURAL LANGUAGE PROCESSING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DATA PROTECTION & PRIVACY
+          - MACHINE LEARNING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA VISUALIZATION
+      exams_to_take:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTER GAMES
+          - MACHINE LEARNING
+          - FINAL DISSERTATION
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - DATA PROTECTION & PRIVACY
+          - NATURAL LANGUAGE PROCESSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - COMPUTATIONAL NEUROENGINEERING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - AUGMENTED REALITY
+          - HIGH PERFORMANCE COMPUTING
+      courses:
+          - FINAL DISSERTATION
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - NATURAL LANGUAGE PROCESSING
+          - MACHINE LEARNING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+    - id: 4957400
+      first_name: Nathan
+      last_name: Watson
+      email: S4957400.@studenti.unige.it
+      password: 9XDJuw
+      gpa: 25
+      study_plan:
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTER GAMES
+          - GEOMETRIC MODELING
+          - NETWORK ANALYSIS
+          - MOBILE DEVELOPMENT
+          - TOPICS IN COMPUTER SCIENCE
+          - HIGH PERFORMANCE COMPUTING
+          - IT PROJECT MANAGEMENT
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTATIONAL VISION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MACHINE LEARNING
+      exams_to_take:
+          - MACHINE LEARNING
+          - IT PROJECT MANAGEMENT
+      courses:
+          - MACHINE LEARNING
+          - IT PROJECT MANAGEMENT
+    - id: 4345564
+      first_name: Kristopher
+      last_name: Baker
+      email: S4345564.@studenti.unige.it
+      password: 505FUq
+      gpa: 28
+      study_plan:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DISTRIBUTED COMPUTING
+          - COMPUTATIONAL NEUROENGINEERING
+          - DATA WAREHOUSING
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - DEEP LEARNING
+          - DIGITAL FORENSICS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - PREDICTIVE ANALYTICS PROJECT
+          - MACHINE LEARNING
+          - TOPICS IN COMPUTER SCIENCE
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA PROTECTION & PRIVACY
+          - GEOMETRIC MODELING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      exams_to_take:
+          - DATA PROTECTION & PRIVACY
+          - DIGITAL FORENSICS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DEEP LEARNING
+          - MACHINE LEARNING
+          - GEOMETRIC MODELING
+          - DISTRIBUTED COMPUTING
+          - DATA WAREHOUSING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - COMPUTATIONAL NEUROENGINEERING
+          - PREDICTIVE ANALYTICS PROJECT
+          - MACHINE LEARNING AND DATA ANALYSIS
+      courses:
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DEEP LEARNING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+    - id: 4540411
+      first_name: Eric
+      last_name: Love
+      email: S4540411.@studenti.unige.it
+      password: 49eR1f
+      gpa: 22
+      study_plan:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - COMPUTATIONAL VISION
+          - PREDICTIVE ANALYTICS PROJECT
+          - AUGMENTED REALITY
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - IT PROJECT MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DEEP LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - GEOMETRIC MODELING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MOBILE DEVELOPMENT
+          - DATA VISUALIZATION
+          - MACHINE LEARNING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      exams_to_take:
+          - PREDICTIVE ANALYTICS PROJECT
+          - COMPUTATIONAL VISION
+      courses:
+          - COMPUTATIONAL VISION
+          - PREDICTIVE ANALYTICS PROJECT
+    - id: 4204776
+      first_name: Kevin
+      last_name: Brown
+      email: S4204776.@studenti.unige.it
+      password: pr3KJl
+      gpa: 30
+      study_plan:
+          - DIGITAL FORENSICS
+          - MACHINE LEARNING
+          - PREDICTIVE ANALYTICS PROJECT
+          - MULTIAGENT SYSTEMS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - IT PROJECT MANAGEMENT
+          - DATA VISUALIZATION
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - AUGMENTED REALITY
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - MOBILE DEVELOPMENT
+          - COMPUTER GRAPHICS
+          - COMPUTER GAMES
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - INTERNET OF THINGS
+      exams_to_take:
+          - IT PROJECT MANAGEMENT
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - DATA VISUALIZATION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - MULTIAGENT SYSTEMS
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - MOBILE DEVELOPMENT
+          - COMPUTER GAMES
+          - INTERNET OF THINGS
+      courses:
+          - INTERNET OF THINGS
+          - DATA VISUALIZATION
+          - MOBILE DEVELOPMENT
+    - id: 4939467
+      first_name: Timothy
+      last_name: Aguirre
+      email: S4939467.@studenti.unige.it
+      password: Qmz2Hf
+      gpa: 25
+      study_plan:
+          - TOPICS IN COMPUTER SCIENCE
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GAMES
+          - HIGH PERFORMANCE COMPUTING
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DEEP LEARNING
+          - NETWORK ANALYSIS
+          - DATA WAREHOUSING
+          - DATA PROTECTION & PRIVACY
+          - HUMAN COMPUTER INTERACTION
+          - IT PROJECT MANAGEMENT
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+      exams_to_take:
+          - TOPICS IN COMPUTER SCIENCE
+          - HUMAN COMPUTER INTERACTION
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+      courses:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - TOPICS IN COMPUTER SCIENCE
+    - id: 4782750
+      first_name: Kyle
+      last_name: Smith
+      email: S4782750.@studenti.unige.it
+      password: 2pX6ra
+      gpa: 24
+      study_plan:
+          - ADVANCED DATA MANAGEMENT
+          - DIGITAL FORENSICS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA PROTECTION & PRIVACY
+          - MOBILE DEVELOPMENT
+          - GEOMETRIC MODELING
+          - FINAL DISSERTATION
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - DISTRIBUTED COMPUTING
+          - NETWORK ANALYSIS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HIGH PERFORMANCE COMPUTING
+      exams_to_take:
+          - MOBILE DEVELOPMENT
+          - DISTRIBUTED COMPUTING
+          - HIGH PERFORMANCE COMPUTING
+          - GEOMETRIC MODELING
+          - DIGITAL FORENSICS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      courses:
+          - DISTRIBUTED COMPUTING
+          - GEOMETRIC MODELING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DIGITAL FORENSICS
+          - MOBILE DEVELOPMENT
+    - id: 4566969
+      first_name: Kevin
+      last_name: Thomas
+      email: S4566969.@studenti.unige.it
+      password: 0Olhs0
+      gpa: 30
+      study_plan:
+          - DEEP LEARNING
+          - DATA PROTECTION & PRIVACY
+          - MULTIAGENT SYSTEMS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - TOPICS IN COMPUTER SCIENCE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - ADVANCED DATA MANAGEMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - AUGMENTED REALITY
+          - COMPUTATIONAL VISION
+          - HIGH PERFORMANCE COMPUTING
+          - COMPUTER GRAPHICS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - PREDICTIVE ANALYTICS PROJECT
+          - HUMAN COMPUTER INTERACTION
+      exams_to_take:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - TOPICS IN COMPUTER SCIENCE
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DATA PROTECTION & PRIVACY
+          - ADVANCED DATA MANAGEMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - AUGMENTED REALITY
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL VISION
+      courses:
+          - COMPUTATIONAL VISION
+    - id: 4117922
+      first_name: Teresa
+      last_name: Bishop
+      email: S4117922.@studenti.unige.it
+      password: 6BBPKf
+      gpa: 18
+      study_plan:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - FINAL DISSERTATION
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+          - DATA VISUALIZATION
+          - MOBILE DEVELOPMENT
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GRAPHICS
+          - TOPICS IN COMPUTER SCIENCE
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - INTERNET OF THINGS
+          - DISTRIBUTED COMPUTING
+          - DEEP LEARNING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      exams_to_take:
+          - DATA VISUALIZATION
+          - MULTIAGENT SYSTEMS
+          - DISTRIBUTED COMPUTING
+      courses:
+          - DATA VISUALIZATION
+    - id: 4898134
+      first_name: Michelle
+      last_name: Gross
+      email: S4898134.@studenti.unige.it
+      password: 9BKeZe
+      gpa: 26
+      study_plan:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - INTERNET OF THINGS
+          - PREDICTIVE ANALYTICS PROJECT
+          - DATA VISUALIZATION
+          - HUMAN COMPUTER INTERACTION
+          - MOBILE DEVELOPMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - MACHINE LEARNING
+          - IT PROJECT MANAGEMENT
+          - NATURAL LANGUAGE PROCESSING
+          - ADVANCED DATA MANAGEMENT
+          - NETWORK ANALYSIS
+          - HIGH PERFORMANCE COMPUTING
+          - MULTIAGENT SYSTEMS
+      exams_to_take:
+          - MACHINE LEARNING
+          - INTERNET OF THINGS
+          - PREDICTIVE ANALYTICS PROJECT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+      courses:
+          - INTERNET OF THINGS
+    - id: 4616346
+      first_name: Lisa
+      last_name: Johnson
+      email: S4616346.@studenti.unige.it
+      password: 1Quu3f
+      gpa: 18
+      study_plan:
+          - MULTIAGENT SYSTEMS
+          - DIGITAL FORENSICS
+          - DATA WAREHOUSING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - AUGMENTED REALITY
+          - IT PROJECT MANAGEMENT
+          - DEEP LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - FINAL DISSERTATION
+          - COMPUTATIONAL VISION
+          - NETWORK ANALYSIS
+          - COMPUTER GRAPHICS
+          - GEOMETRIC MODELING
+      exams_to_take:
+          - NETWORK ANALYSIS
+          - MULTIAGENT SYSTEMS
+          - HUMAN COMPUTER INTERACTION
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTER GRAPHICS
+          - COMPUTATIONAL VISION
+          - DATA WAREHOUSING
+          - FINAL DISSERTATION
+          - AUGMENTED REALITY
+          - DIGITAL FORENSICS
+          - DEEP LEARNING
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - GEOMETRIC MODELING
+      courses:
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - AUGMENTED REALITY
+          - IT PROJECT MANAGEMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - COMPUTATIONAL VISION
+    - id: 4188969
+      first_name: Sandra
+      last_name: Hunter
+      email: S4188969.@studenti.unige.it
+      password: 0PUaAh
+      gpa: 26
+      study_plan:
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - TOPICS IN COMPUTER SCIENCE
+          - DISTRIBUTED COMPUTING
+          - ADVANCED DATA MANAGEMENT
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - NATURAL LANGUAGE PROCESSING
+          - COMPUTER GAMES
+          - MACHINE LEARNING
+          - HUMAN COMPUTER INTERACTION
+          - COMPUTATIONAL NEUROENGINEERING
+          - HIGH PERFORMANCE COMPUTING
+          - MOBILE DEVELOPMENT
+          - DEEP LEARNING
+          - PREDICTIVE ANALYTICS PROJECT
+      exams_to_take:
+          - MOBILE DEVELOPMENT
+          - DISTRIBUTED COMPUTING
+          - NATURAL LANGUAGE PROCESSING
+          - HUMAN COMPUTER INTERACTION
+          - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - HIGH PERFORMANCE COMPUTING
+          - TOPICS IN COMPUTER SCIENCE
+      courses:
+          - HIGH PERFORMANCE COMPUTING
+    - id: 11
+      first_name: Kimberly
+      last_name: Garcia
+      email: S4924188.@studenti.unige.it
+      password: 7CPauE
+      gpa: 29
+      study_plan:
+          - TOPICS IN COMPUTER SCIENCE
+          - DIGITAL FORENSICS
+          - GEOMETRIC MODELING
+          - DATA WAREHOUSING
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GRAPHICS
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - ADVANCED DATA MANAGEMENT
+          - DISTRIBUTED COMPUTING
+          - INTERNET OF THINGS
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - FINAL DISSERTATION
+          - DATA VISUALIZATION
+      exams_to_take:
+          - ADVANCED DATA MANAGEMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - GEOMETRIC MODELING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - DATA WAREHOUSING
+          - IT PROJECT MANAGEMENT
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+      courses:
+          - IT PROJECT MANAGEMENT
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA WAREHOUSING
+    - id: 4119891
+      first_name: Christie
+      last_name: Mcknight
+      email: S4119891.@studenti.unige.it
+      password: 8j5OIu
+      gpa: 18
+      study_plan:
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - HIGH PERFORMANCE COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - TOPICS IN COMPUTER SCIENCE
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - INTERNET OF THINGS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - COMPUTER GAMES
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+          - IT PROJECT MANAGEMENT
+          - GEOMETRIC MODELING
+          - COMPUTATIONAL NEUROENGINEERING
+      exams_to_take:
+          - MULTIAGENT SYSTEMS
+          - DATA PROTECTION & PRIVACY
+      courses:
+          - DATA PROTECTION & PRIVACY
+    - id: 4215795
+      first_name: Anthony
+      last_name: Ellis
+      email: S4215795.@studenti.unige.it
+      password: 1EdwiF
+      gpa: 22
+      study_plan:
+          - COMPUTATIONAL NEUROENGINEERING
+          - COMPUTER GAMES
+          - DATA PROTECTION & PRIVACY
+          - DISTRIBUTED COMPUTING
+          - IT PROJECT MANAGEMENT
+          - COMPUTATIONAL VISION
+          - DIGITAL SIGNAL & IMAGE PROCESSING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - MULTIAGENT SYSTEMS
+          - INTERNET OF THINGS
+          - NETWORK ANALYSIS
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - NATURAL LANGUAGE PROCESSING
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - HIGH PERFORMANCE COMPUTING
+      exams_to_take:
+          - COMPUTER GAMES
+          - INTERNET OF THINGS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - IT PROJECT MANAGEMENT
+      courses:
+          - INTERNET OF THINGS
+          - IT PROJECT MANAGEMENT
+          - COMPUTER GAMES
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+    - id: 4949029
+      first_name: Renee
+      last_name: Thompson
+      email: S4949029.@studenti.unige.it
+      password: IS8qMu
+      gpa: 29
+      study_plan:
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTER GRAPHICS
+          - DISTRIBUTED COMPUTING
+          - AUGMENTED REALITY
+          - DEEP LEARNING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - FINAL DISSERTATION
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - HIGH PERFORMANCE COMPUTING
+          - HUMAN COMPUTER INTERACTION
+          - MACHINE LEARNING
+          - NETWORK ANALYSIS
+          - SOFTWARE SYSTEMS DESIGN AND MODELLING
+          - DIGITAL FORENSICS
+      exams_to_take:
+          - AUGMENTED REALITY
+          - NETWORK ANALYSIS
+          - DEEP LEARNING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - HIGH PERFORMANCE COMPUTING
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - DISTRIBUTED COMPUTING
+          - MACHINE LEARNING
+      courses:
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - ADDITIONAL USEFUL KNOWLEDGE
+          - NETWORK ANALYSIS
+    - id: 4695965
+      first_name: Jerry
+      last_name: Nelson
+      email: S4695965.@studenti.unige.it
+      password: C383Gz
+      gpa: 27
+      study_plan:
+          - DATA PROTECTION & PRIVACY
+          - HUMAN COMPUTER INTERACTION
+          - TOPICS IN COMPUTER SCIENCE
+          - MULTIAGENT SYSTEMS
+          - DISTRIBUTED COMPUTING
+          - IT PROJECT MANAGEMENT
+          - ADVANCED DATA MANAGEMENT
+          - GEOMETRIC MODELING
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - COMPUTER GAMES
+          - FINAL DISSERTATION
+          - COMPUTATIONAL NEUROENGINEERING
+          - DIGITAL FORENSICS
+          - AUGMENTED REALITY
+          - NETWORK ANALYSIS
+      exams_to_take:
+          - DATA PROTECTION & PRIVACY
+          - IT PROJECT MANAGEMENT
+          - NETWORK ANALYSIS
+          - TOPICS IN COMPUTER SCIENCE
+          - COMPUTATIONAL NEUROENGINEERING
+          - ADVANCED DATA MANAGEMENT
+          - FINAL DISSERTATION
+          - DIGITAL FORENSICS
+          - AUGMENTED REALITY
+          - DISTRIBUTED COMPUTING
+          - COMPUTER GAMES
+          - MULTIAGENT SYSTEMS
+          - SOFTWARE ENGINEERING FOR DATA ANALYTICS
+          - HUMAN COMPUTER INTERACTION
+          - GEOMETRIC MODELING
+      courses:
+          - DISTRIBUTED COMPUTING
+          - GEOMETRIC MODELING

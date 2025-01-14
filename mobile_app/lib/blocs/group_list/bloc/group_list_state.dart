@@ -10,10 +10,10 @@ final class GroupListInitial extends GroupListState {
 class GroupListLoading extends GroupListState {}
 
 class GroupListSuccess extends GroupListState {
-  final List<Group> myGroups;
+  final List<Group> ownedGroups;
   final List<Group> joinedGroups;
 
-  GroupListSuccess(this.myGroups, this.joinedGroups);
+  GroupListSuccess(this.ownedGroups, this.joinedGroups);
 }
 
 class GroupListFailure extends GroupListState {

@@ -11,8 +11,7 @@ class JoinGroupBloc extends Bloc<JoinGroupEvent, JoinGroupState> {
     on<JoinGroupRequestEvent>((event, emit) async {
       emit(JoinGroupRequestLoading());
       try {
-        final groupCreation = JoinGroupRequest(event.studentId, event.groupId);
-        final response = await groupCreation.send();
+        final response = await JoinGroupRequest(event.groupId).send();
         if (response.isSuccess) {
           emit(JoinGroupRequestSuccess(response.data, event.groupId));
         } else {

@@ -25,7 +25,9 @@ jobs:
       - name: Wait emulator to start
         run: docker compose exec emulator adb wait-for-device
       - name: Run tests
-        run: docker compose run acceptance-tests
+        run: docker compose run acceptance-tests --fail-fast
+        env:
+          FAST: yes
       # - name: Archive result
       #   uses: actions/upload-artifact@v4
       #   with:

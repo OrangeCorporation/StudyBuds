@@ -1,4 +1,4 @@
-import Student from '../models/Student';
+import { Student } from '../models/Student';
 import { NotFoundError } from '../utils/api_error';
 
 export async function getAllStudents() {

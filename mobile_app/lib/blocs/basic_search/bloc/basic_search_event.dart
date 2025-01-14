@@ -1,17 +1,19 @@
 part of 'basic_search_bloc.dart';
 
-sealed class BasicSearchEvent extends Equatable {
-  const BasicSearchEvent();
+sealed class BasicSearchEvent extends Equatable {}
+
+class SuggestedGroupsEvent extends BasicSearchEvent {
+  SuggestedGroupsEvent();
+
+  @override
+  List<Object?> get props => [];
 }
 
 class SearchQueryChanged extends BasicSearchEvent {
-
   final String queryString;
-  final int studentId;
 
-  const SearchQueryChanged(this.queryString, this.studentId);
-  
+  SearchQueryChanged(this.queryString);
+
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [queryString];
 }

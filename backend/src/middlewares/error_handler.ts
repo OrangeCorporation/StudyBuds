@@ -11,7 +11,7 @@ export function errorHandler(
   if (err instanceof ApiError) {
     res.status(err.status).json({
       error: {
-        message: err.details != null ? err.details : err.message,
+        message: err.details !== null ? err.details : err.message,
         status: err.status,
       },
     });

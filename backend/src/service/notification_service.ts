@@ -1,6 +1,16 @@
 import admin from 'firebase-admin';
-import Notification, { NotificationType } from '../models/Notification';
+import { camelCase } from 'lodash';
+import { QueryTypes } from "sequelize";
+import sequelize from "../config/database";
 import { getErrorMessage } from '../utils/api_error';
+import { Notification } from '../models/Notification';
+
+export enum NotificationType{
+    JOIN_REQUEST="join_request",
+    ACCEPT="accept",
+    REJECT="reject",
+}
+
 
 const NOTIFICATION_TEMPLATES:{[key in NotificationType]: {title:string,body:string}}={
     [NotificationType.JOIN_REQUEST]: {
@@ -26,16 +36,49 @@ function getNotificationTemplate(notificationType: NotificationType, studentName
     return { title, body };
 }
 
-export async function getStudentNotifications(studentId: number) {
-    const data = await Notification.findAll({
-        where: {
-            studentId: studentId
-        }
-    });
-    return data;
+interface NotificationResult {
+    id: number;
+    studentId: number;
+    joinRequestId: number;
+    notificationType: string;
+    message: string;
+    createdAt: Date;
+    joinRequestStatus: string;
 }
 
-export async function saveNotification(studentId:number, joinRequestId:number, notificationType:string, message: string) {
+export async function getStudentNotifications(studentId: number): Promise<NotificationResult[]> {
+    const query = `
+    SELECT
+        n.id AS id,
+        n.student_id AS "studentId",
+        n.join_request_id AS "joinRequestId",
+        n.notification_type AS "notificationType",
+        n.message AS "message",
+        n.created_at AS "createdAt",
+        jr.status AS "joinRequestStatus"
+    FROM
+        studybuds.notification n
+    INNER JOIN
+        studybuds.join_request jr
+    ON
+        n.join_request_id = jr.id
+    WHERE
+        n.student_id = :studentId
+    `;
+
+    const results = await sequelize.query<any>(query, {
+        replacements: { studentId },
+        type: QueryTypes.SELECT,
+    });
+
+    return results.map((row) => {
+        return Object.fromEntries(
+            Object.entries(row).map(([key, value]) => [camelCase(key), value])
+        ) as NotificationResult;
+    });
+}
+
+export async function saveNotification(studentId:number, joinRequestId:number, notificationType:NotificationType, message: string) {
     const result = await Notification.create({
         studentId: studentId,
         joinRequestId: joinRequestId,

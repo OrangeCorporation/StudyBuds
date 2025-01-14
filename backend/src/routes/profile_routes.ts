@@ -5,7 +5,7 @@ import { asyncWrapper } from '../utils/wrapper';
 
 const router: Router = Router();
 
-router.get('/:studentId', asyncWrapper(getProfileById));
+router.get('', asyncWrapper(getProfileById));
 router.post('/edit_telegram_account', asyncWrapper(editTelegramId));
 
 

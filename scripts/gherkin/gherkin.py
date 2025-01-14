@@ -33,7 +33,16 @@ def entry():
 
 def main(id: int | None):
     output = check_output(
-        ["gh","issue","list","-L5000","-lUser Story","--json","title,number,body"]
+        [
+            "gh",
+            "issue",
+            "list",
+            "-L5000",
+            "-lUser Story",
+            "--json",
+            "title,number,body",
+            "-sall",
+        ]
     )
     data = loads(output)
     for elem in data:
@@ -42,7 +51,8 @@ def main(id: int | None):
             continue
         title = elem["title"]
         body = elem["body"]
-        filename = f"{n}-{'-'.join(title.replace('-', ' ').lower().split())}.feature"
+        tag_name = "-".join(title.replace("-", " ").lower().split())
+        filename = f"{n}-{tag_name}.feature"
         print("------------")
         print(filename)
         if DEFAULT in body:
@@ -50,8 +60,13 @@ def main(id: int | None):
             continue
         _, gherkin = body.split(START)
         gherkin = GHERKIN_TEMPLATE.format(title, gherkin)
+        gherkin = add_tags(gherkin, tag_name)
         print(gherkin)
         (OUTPUT_DIR / filename).write_text(gherkin)
+
+
+def add_tags(gherkin: str, title: str) -> str:
+    return gherkin.replace("Scenario:", f"@{title}\nScenario:")
 
 
 if __name__ == "__main__":

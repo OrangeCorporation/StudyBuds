@@ -3,9 +3,9 @@ import 'package:study_buds/network/network_service.dart';
 import 'package:study_buds/network/response/profile_response.dart';
 
 class ProfileRequest extends BaseHttpRequest<ProfileResponseBuilder, dynamic> {
-  ProfileRequest(int studentId)
+  ProfileRequest()
       : super(
             httpVerb: HttpVerb.GET,
-            endPoint: "/profile/$studentId",
+            endPoint: "/profile",
             responseBuilder: ProfileResponseBuilder());
 }

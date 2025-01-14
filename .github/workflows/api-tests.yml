@@ -1,0 +1,29 @@
+name: Api tests
+on:
+  # schedule:
+  #   - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start the backend
+        run: docker compose up -d backend postgres
+      - name: Prepare the database schema
+        run: docker compose run --rm migration
+      - name: Run tests
+        run: docker compose run --rm api-testing
+      # - name: Archive result
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: sprint_burndown_chart
+      #     path: |
+      #       ./tmp/plot.svg
+      #       ./tmp/data.csv

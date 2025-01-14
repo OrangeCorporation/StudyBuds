@@ -5,12 +5,11 @@ sealed class JoinRequestEvent extends Equatable {
 }
 
 class ChangeJoinRequestStatusEvent extends JoinRequestEvent {
-  final int studentId;
   final int joinRequestId;
   final bool isAccepted;
 
   const ChangeJoinRequestStatusEvent(
-      this.studentId, this.joinRequestId, this.isAccepted);
+      this.joinRequestId, this.isAccepted);
 
   @override
   // TODO: implement props

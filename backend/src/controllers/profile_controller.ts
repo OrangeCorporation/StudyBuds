@@ -1,9 +1,9 @@
 import { Request } from "express";
+import { getStudentId } from "../middlewares/auth_middleware";
 import { getProfileService } from "../service/profile_service";
-import { validateInt } from "../utils/validation_error";
 
 export async function getProfileById(req: Request) {
-  const studentId = validateInt(req.params, "studentId");
+  const studentId = getStudentId(req);
 
   const result = await getProfileService(studentId);
   // Remove the 'courses' field

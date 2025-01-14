@@ -8,11 +8,3 @@ export interface GroupController {
     getAllGroups: (req: Request, res: Response) => void;
 }
 
-// Dynamically load the groupController module based on MOCK_DATA
-export async function loadGroupController(): Promise<GroupController> {
-    if (process.env.MOCK_DATA === "true") {
-        return import("../mockup_controllers/groupController");
-    } else {
-        return import("../controllers/group_controller");
-    }
-}

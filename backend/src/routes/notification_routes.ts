@@ -9,7 +9,7 @@ const router: Router = Router();
 router.post('/token', asyncWrapper(saveToken));
 
 // Route to fetch a student's all notification
-router.get('/list/:studentId', asyncWrapper(getStudentsAllNotification));
+router.get('/list', asyncWrapper(getStudentsAllNotification));
 
 router.post('/test', asyncWrapper(testNotif));
 

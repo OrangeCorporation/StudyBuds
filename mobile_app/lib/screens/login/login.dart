@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_buds/utils/auth_utils.dart';
+import 'package:study_buds/utils/push_notification.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key, required this.title});
@@ -73,8 +74,10 @@ class Login extends StatelessWidget {
                     children: [
                       FilledButton.icon(
                         key: const Key('login_button'),
-                        onPressed: () =>
+                        onPressed: () => {
                             AuthUtils.authenticateWithUnige(context),
+                            PushNotificationService.instance.retrievePushNotificationToken()
+                        },
                         icon: const Icon(
                           Icons.person_rounded,
                           size: 18,

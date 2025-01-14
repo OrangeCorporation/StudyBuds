@@ -4,10 +4,10 @@ import 'package:study_buds/network/response/fetch_my_group_list_response.dart';
 
 class FetchMyGroupListRequest
     extends BaseHttpRequest<FetchMyGroupListResponseBuilder, dynamic> {
-  FetchMyGroupListRequest(int studentId)
+  FetchMyGroupListRequest()
       : super(
           httpVerb: HttpVerb.GET,
-          endPoint: "/groups/joined_groups/$studentId",
+          endPoint: "/groups/joined_groups",
           responseBuilder: FetchMyGroupListResponseBuilder(),
         );
 }

@@ -35,13 +35,13 @@ class GroupList extends StatelessWidget {
             ),
           ),
           body: BlocProvider(
-            create: (_) => GroupListBloc()..add(FetchMyGroupListEvent(10)),
+            create: (_) => GroupListBloc()..add(FetchMyGroupListEvent()),
             child: Scaffold(
               body: BlocConsumer<GroupListBloc, GroupListState>(
                 listener: (context, state) {
                   if (state is GroupListSuccess) {
                     joinedGroupList = state.joinedGroups;
-                    ownedGroupList = state.myGroups;
+                    ownedGroupList = state.ownedGroups;
                   }
                 },
                 builder: (context, state) {
@@ -84,28 +84,29 @@ class GroupListTab extends StatelessWidget {
               itemBuilder: (context, index) {
                 final group = groups[index];
                 return Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 2.0, horizontal: 16.0),
-                  // Add vertical and horizontal padding
-                  child: MultiProvider(
-                  providers: [
-                    Provider<GroupDetailsBloc>(create: (_) => GroupDetailsBloc()),
-                    Provider<JoinGroupBloc>(create: (_) => JoinGroupBloc())],
-                    child: GroupCard(
-                      backgroundColor: Colors.white,
-                      buttonLabel: isJoinedScreen
-                          ? "Leave the group"
-                          : "Change settings",
-                      additionalButtonLabel:
-                          isJoinedScreen ? "See more" : "Delete the group",
-                      additionalButtonColor: isJoinedScreen
-                          ? Theme.of(context).colorScheme.primary
-                          : Colors.red,
-                      group: group,
-                      index: index,
-                    ),
-                  )
-                  );
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 2.0, horizontal: 16.0),
+                    // Add vertical and horizontal padding
+                    child: MultiProvider(
+                      providers: [
+                        Provider<GroupDetailsBloc>(
+                            create: (_) => GroupDetailsBloc()),
+                        Provider<JoinGroupBloc>(create: (_) => JoinGroupBloc())
+                      ],
+                      child: GroupCard(
+                        backgroundColor: Colors.white,
+                        buttonLabel: isJoinedScreen
+                            ? "Leave the group"
+                            : "Change settings",
+                        additionalButtonLabel:
+                            isJoinedScreen ? "See more" : "Delete the group",
+                        additionalButtonColor: isJoinedScreen
+                            ? Theme.of(context).colorScheme.primary
+                            : Colors.red,
+                        group: group,
+                        index: index,
+                      ),
+                    ));
               },
             )
           : Padding(

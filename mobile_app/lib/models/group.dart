@@ -1,61 +1,70 @@
+import 'package:study_buds/models/student.dart';
+
 class Group {
   final int? id;
   final String name;
-  final String course;
   final String description;
-  final int members;
+  final String course;
   final bool isPublic;
-  final String telegramLink;
-  final int studentId;
-  final String? status;
+  final String? telegramLink;
+  final int? ownerId;
+  final int? membersLimit;
+  final int membersCount;
+  final List<Student>? members;
+  final String joinRequestStatus;
 
-  Group(
-      {this.id,
-      required this.name,
-      required this.course,
-      required this.description,
-      required this.members,
-      required this.isPublic,
-      required this.telegramLink,
-      required this.studentId,
-      this.status});
+  Group({
+    this.id,
+    required this.name,
+    required this.description,
+    required this.course,
+    required this.isPublic,
+    required this.telegramLink,
+    required this.ownerId,
+    required this.membersLimit,
+    this.membersCount = 1,
+    this.joinRequestStatus = '',
+    required this.members,
+  });
 
-  // Static method to parse a JSON string into a list of Group instances
+  factory Group.fromJson(Map<String, dynamic> json) {
+    return Group(
+      id: json['id'],
+      name: json['name'],
+      description: json['description'] ?? '',
+      course: json['course'] ?? '',
+      isPublic: json['isPublic'],
+      telegramLink: json['telegramLink'],
+      ownerId: json['ownerId'],
+      joinRequestStatus: json['requestStatus'] ?? '',
+      membersLimit: json['membersLimit'],
+      membersCount: json['membersCount'],
+      members: json['members'] != null
+          ? (json['members'] as List<dynamic>)
+              .map((member) => Student.fromJson(member))
+              .toList()
+          : [],
+    );
+  }
+
   static List<Group> fromJsonList(List<dynamic> jsonArray) {
-    print(jsonArray);
-    List<Group> res = jsonArray.map((model) => Group.fromJson(model)).toList();
-    return res;
+    return jsonArray.map((model) => Group.fromJson(model)).toList();
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'id': this.id,
-      'name': this.name,
-      'description': this.description,
-      'course': this.course,
-      'isPublic': this.isPublic,
-      'membersLimit': this.members,
-      'telegramLink': this.telegramLink,
-      'studentId': 123,
+      'id': id,
+      'name': name,
+      'description': description,
+      'course': course,
+      'isPublic': isPublic,
+      'telegramLink': telegramLink,
+      'ownerId': 123,
+      'membersLimit': membersLimit,
+      'membersCount': membersCount,
+      'members': members != null
+          ? members?.map((member) => member.toJson()).toList()
+          : [],
     };
-  }
-
-  // Factory constructor to create a Group from JSON
-  factory Group.fromJson(Map<String, dynamic> json) {
-    int parseInt(String? value, [int defaultValue = 0]) {
-      return int.tryParse(value ?? '') ?? defaultValue;
-    }
-
-    return Group(
-      id: json['id'],
-      name: json['name'] ?? 'No Name',
-      course: json['course'] ?? 'No Course',
-      description: json['description'] ?? 'No Description',
-      members: parseInt(json['memberCount']),
-      isPublic: json['isPublic'],
-      studentId: parseInt(json['studentId']),
-      telegramLink: json['telegramLink'] ?? '',
-      status: json['status'] ?? null,
-    );
   }
 }

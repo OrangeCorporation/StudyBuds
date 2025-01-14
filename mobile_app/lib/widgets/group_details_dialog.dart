@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:study_buds/models/group_details_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/group.dart';
@@ -8,13 +7,11 @@ import '../widgets/custom_text_button.dart';
 class GroupDetailsDialog extends StatelessWidget {
   final Group group;
   final bool isOwner;
-  final GroupDetails groupDetails;
 
   const GroupDetailsDialog({
     super.key,
     required this.group,
     this.isOwner = false,
-    required this.groupDetails,
   });
 
   @override
@@ -34,6 +31,7 @@ class GroupDetailsDialog extends StatelessWidget {
                 children: [
                   Text(
                     group.name,
+                    key: const ValueKey('group_details_name'),
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
@@ -46,6 +44,8 @@ class GroupDetailsDialog extends StatelessWidget {
                       group.isPublic
                           ? Icons.lock_open_rounded
                           : Icons.lock_rounded,
+                      key: ValueKey('group_details_type_icon'),
+                      // Key for group type icon
                       size: 16,
                     ),
                   ),
@@ -54,6 +54,7 @@ class GroupDetailsDialog extends StatelessWidget {
               const SizedBox(height: 4),
               Text(
                 group.course,
+                key: ValueKey('group_details_course'), // Key for course name
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                   fontWeight: FontWeight.w500,
@@ -71,6 +72,8 @@ class GroupDetailsDialog extends StatelessWidget {
               const SizedBox(height: 4),
               Text(
                 group.description,
+                key: ValueKey('group_details_description'),
+                // Key for full description
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                 ),
@@ -88,7 +91,9 @@ class GroupDetailsDialog extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    '• ${group.members} members',
+                    '• ${group.membersCount} members',
+                    key: ValueKey('group_details_members_count'),
+                    // Key for group members count
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.w500,
@@ -101,7 +106,7 @@ class GroupDetailsDialog extends StatelessWidget {
                 spacing: 4.0,
                 runSpacing: 4.0,
                 children: List.generate(
-                  group.members > 10 ? 10 : group.members,
+                  group.membersCount > 10 ? 10 : group.membersCount,
                   (index) {
                     return Container(
                       width: 24.0,
@@ -125,7 +130,7 @@ class GroupDetailsDialog extends StatelessWidget {
                     );
                   },
                 )..addAll(
-                    group.members > 10
+                    group.membersCount > 10
                         ? [
                             Container(
                               width: 24.0,
@@ -150,6 +155,8 @@ class GroupDetailsDialog extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
                   child: GestureDetector(
+                    key: ValueKey('group_details_modify_members'),
+                    // Key for modify option
                     onTap: () {
                       print('Modify clicked');
                     },
@@ -164,7 +171,7 @@ class GroupDetailsDialog extends StatelessWidget {
                   ),
                 ),
               const SizedBox(height: 12),
-              if (groupDetails.isPublic) ...[
+              if (group.telegramLink != null) ...[
                 Text(
                   'Telegram Link ',
                   style: TextStyle(
@@ -175,7 +182,7 @@ class GroupDetailsDialog extends StatelessWidget {
                 const SizedBox(height: 4),
                 GestureDetector(
                   onTap: () async {
-                    final url = Uri.parse(groupDetails.telegramLink);
+                    final url = Uri.parse(group.telegramLink!);
                     if (await canLaunchUrl(url)) {
                       await launchUrl(url);
                     } else {
@@ -183,7 +190,7 @@ class GroupDetailsDialog extends StatelessWidget {
                     }
                   },
                   child: Text(
-                    groupDetails.telegramLink,
+                    group.telegramLink!,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
                       fontWeight: FontWeight.w500,
@@ -196,6 +203,7 @@ class GroupDetailsDialog extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   CustomTextButton(
+                    key: const ValueKey('group_details_close_button'),
                     label: 'Close',
                     onPressed: () {
                       Navigator.pop(context);

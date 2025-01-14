@@ -1,0 +1,10 @@
+{
+  "dialect": "postgres",
+  "caseModel": "p",
+  "caseProp": "c",
+  "caseFile": "p",
+  "lang": "ts",
+  "additional": {
+    "timestamps": false
+  }
+}

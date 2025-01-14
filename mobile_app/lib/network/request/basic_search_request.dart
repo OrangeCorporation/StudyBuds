@@ -5,10 +5,10 @@ import '../../network/base_http_request.dart';
 
 class BasicSearchRequest
     extends BaseHttpRequest<GroupSearchResponseBuilder, List<dynamic>> {
-  BasicSearchRequest({required String query, required int studentId})
+  BasicSearchRequest({required String query})
       : super(
           httpVerb: HttpVerb.GET,
-          endPoint: "/groups/basic_search/$query/$studentId",
+          endPoint: "/groups/basic_search/$query",
           responseBuilder: GroupSearchResponseBuilder(),
         );
 }

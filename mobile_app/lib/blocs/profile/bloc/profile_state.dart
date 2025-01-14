@@ -3,7 +3,6 @@ part of 'profile_bloc.dart';
 abstract class ProfileState extends Equatable {
   const ProfileState();
 
-  // Add isLoading as a computed property for all states
   bool get isLoading => false;
 
   @override
@@ -18,9 +17,9 @@ class ProfileLoading extends ProfileState {
 }
 
 class ProfileLoaded extends ProfileState {
-  final Profile profile;
+  final Student student;
 
-  const ProfileLoaded(this.profile);
+  const ProfileLoaded(this.student);
 
   @override
   List<Object> get props => [];
@@ -32,9 +31,9 @@ class ProfileSaving extends ProfileState {
 }
 
 class ProfileSaveSuccess extends ProfileState {
-  final Profile profile;
+  final Student student;
 
-  const ProfileSaveSuccess(this.profile);
+  const ProfileSaveSuccess(this.student);
 }
 
 class ProfileSaveFailed extends ProfileState {

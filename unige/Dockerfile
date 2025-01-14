@@ -5,8 +5,8 @@ WORKDIR /app
 ADD pyproject.toml uv.lock ./
 
 # Sync the project into a new environment, using the frozen lockfile
-RUN uv sync --frozen
+RUN uv --no-cache sync --frozen
 ADD main.py ./
 
-ENTRYPOINT ["uv", "run"]
+ENTRYPOINT ["uv", "--no-cache", "run"]
 CMD ["fastapi","dev","--host=0.0.0.0","main.py"]

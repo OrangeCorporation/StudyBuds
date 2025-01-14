@@ -229,15 +229,16 @@ class _GroupCreationScreenState extends State<GroupCreationScreen> {
                                         name: nameController.text,
                                         description: descriptionController.text,
                                         course: selectedCourse,
-                                        members: membersLimitController
-                                                .text.isNotEmpty
+                                        membersLimit: membersLimitController
+                                            .text.isNotEmpty
                                             ? int.parse(
-                                                membersLimitController.text)
+                                            membersLimitController.text)
                                             : 2,
+                                        members: [],
                                         telegramLink:
                                             telegramLinkController.text,
                                         isPublic: !isPrivateGroup,
-                                        studentId: 10),
+                                        ownerId: 10),
                                   ));
                             },
                           ),

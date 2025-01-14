@@ -1,4 +1,4 @@
-import FbToken from '../models/FbToken';
+import { FbToken } from "../models/FbToken";
 
 export async function saveFbToken(studentId:number, token:string) {
     const result = await FbToken.create({

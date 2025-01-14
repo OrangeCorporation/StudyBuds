@@ -1,10 +1,10 @@
 import { Strategy as SamlStrategy } from "@node-saml/passport-saml";
 import { Request, Response, Router } from "express";
-import jwt from "jsonwebtoken";
 import passport from "passport";
 import { fetch, toPassportConfig } from "passport-saml-metadata";
-import { JWT_SECRET } from "../config/secrets";
 import { ENTITY_ID, IDP_ENTRYPOINT, IDP_METADATA } from "../config/unigeapi";
+import { validateInt } from "../utils/validation_error";
+import { generateToken } from "../service/login_service";
 
 const router: Router = Router();
 
@@ -42,7 +42,7 @@ router.get("/", passport.authenticate("saml"));
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 router.post("/", passport.authenticate("saml", { session: false }), (req: Request, res: Response) => {
-    const token = jwt.sign({ user: req.user }, JWT_SECRET, { expiresIn: "1h" });
+    const token = generateToken(req.user);
     // res.redirect(`myapp://auth?token=${token}`);
     res.send(`
         <!DOCTYPE html>

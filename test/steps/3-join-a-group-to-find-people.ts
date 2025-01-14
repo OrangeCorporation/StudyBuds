@@ -1,22 +1,32 @@
-import { Given, When, Then } from "@cucumber/cucumber";
+import {Given, Then, Before, When} from "@cucumber/cucumber";
+import assert from "assert";
 import { byValueKey } from "appium-flutter-finder";
 import { driver } from "./all";
-import { BottomBarIcon, go_to_page, waitForElementByValue, login_guest } from "../utils/utils";
+import { waitForElementByValue,getBottomBarIcon,go_to_page } from "../utils/utils";
+import {initDB} from "../utils/mock-data.ts";
+import { Student } from "../../backend/src/models/Student.ts";
+import { StudentGroup } from "../../backend/src/models/StudentGroup.ts";
+import { GroupMembers } from "../../backend/src/models/GroupMembers.ts";
+import { JoinRequest } from "../../backend/src/models/JoinRequest.ts";
 
-
-Given("I am on the search page and logged in", async () => {
-  await login_guest(driver);
-  await go_to_page(driver, BottomBarIcon.search);
-});
-
-Given("I type {string} in the search bar", async function (groupName: string) {
-  const searchBar = byValueKey("search_bar");
-  await driver.elementSendKeys(searchBar, groupName);
-  const searchButton = byValueKey("search_button");
-  await driver.elementClick(searchButton);
+Before({tags: "@join-a-group-to-find-people"},async function () {
+  const student1=10;
+  const student2=11;
+  const group1=7;
+  await initDB([
+    new Student({studentId: student1,telegramAccount:4848}),
+    new Student({studentId: student2,telegramAccount:4849}),
+    new StudentGroup({id:group1,name:"aya",course:"Capstone",adminId:student2,membersLimit:10,isPublic:false,gpa:29}),
+    new GroupMembers({studentId: student1,groupId: group1}),
+    new JoinRequest({id:13,groupId:group1,studentId:student1,status:"pending"})
+  ])
 });
 
 Given("I already have sent a join request to the group", async function () { });
+
+Then("I go to the {string} page", async function (page: string) {
+  await go_to_page(driver, getBottomBarIcon(page));
+});
 
 
 Then("The {string} button is displayed to indicate that a request is already pending", async function (buttonLabel: string) {
@@ -24,32 +34,16 @@ Then("The {string} button is displayed to indicate that a request is already pen
 });
 
 
+When("I attempt to send another join request", async function () {
+  const group1=7;//same as the db
 
+  const joinRequestButton = byValueKey("join_button_"+group1);
 
+  try {
+    await driver.elementClick(joinRequestButton);
+    assert.fail("The Join group button is clickable, but it should be disabled!");
+  } catch (e) {
+    console.log("The Join group button is correctly unclickable.");
+  }
 
-// When("I attempt to send another join request", async function () {
-//   const joinRequestButton = byValueKey("send_join_request_btn");
-
-// try {
-//   await driver.elementClick(joinRequestButton);
-//   assert.fail("The Join group button is clickable, but it should be disabled!");
-// } catch (e) {
-//   console.log("The Join group button is correctly unclickable.");
-// }
-// });
-
-
-//   const joinRequestButton = byValueKey("send_join_request_btn");
-
-//   const buttonText = await driver.getElementText(joinRequestButton);
-//   assert.strictEqual(
-//     buttonText,
-//     "Pending...",
-//     Expected button text to be "Pending...", but got "${buttonText}".
-//   );
-//   console.log(The ${buttonLabel} button is correctly disabled and displays "Pending...".);
-// });
-
-
-
-
+});

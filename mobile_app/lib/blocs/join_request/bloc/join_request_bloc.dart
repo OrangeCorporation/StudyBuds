@@ -11,10 +11,11 @@ class JoinRequestBloc extends Bloc<JoinRequestEvent, JoinRequestState> {
     on<ChangeJoinRequestStatusEvent>((event, emit) async {
       emit(JoinRequestLoading());
       try {
-        final changeJoinRequestStatus = UpdateJoinRequest(
-            event.studentId, event.joinRequestId, event.isAccepted);
+        final changeJoinRequestStatus =
+            UpdateJoinRequest(event.joinRequestId, event.isAccepted);
         final response = await changeJoinRequestStatus.send();
         if (response.isSuccess) {
+          print('Join request status changed successfully BUGSSSS.');
           emit(JoinRequestSuccess(response.data));
         } else {
           emit(JoinRequestFailed(response.data));
@@ -25,4 +26,3 @@ class JoinRequestBloc extends Bloc<JoinRequestEvent, JoinRequestState> {
     });
   }
 }
-

@@ -48,7 +48,6 @@
               jdk17
             ];
             packages = [
-              nodePackages.pnpm
               nodejs
               just
               nodePackages.vega-lite

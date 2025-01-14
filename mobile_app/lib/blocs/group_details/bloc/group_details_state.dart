@@ -8,9 +8,9 @@ class GroupDetailsInitial extends GroupDetailsState {}
 class GroupDetailsLoading extends GroupDetailsState {}
 
 class GroupDetailsSuccess extends GroupDetailsState {
-  final GroupDetails groupDetails;
+  final Group group;
 
-  GroupDetailsSuccess(this.groupDetails);
+  GroupDetailsSuccess(this.group);
 }
 
 class GroupDetailsFailure extends GroupDetailsState {

@@ -1,22 +1,18 @@
 import assert from "assert";
-import { Op } from "sequelize";
-import Group from "../models/Group";
-import GroupMembers from "../models/GroupMembers";
-
-Group.hasMany(GroupMembers, { foreignKey: "group_id" });
-GroupMembers.hasOne(Group, { foreignKey: "id" });
 
 interface JoinedGroupList {
-  ownedGroups: Partial<Group>[];
-  joinedGroups: Partial<Group>[];
+  ownedGroups: Partial<StudentGroup>[];
+  joinedGroups: Partial<StudentGroup>[];
 }
 
-import { literal } from "sequelize";
+import { literal, Op } from "sequelize";
+import { GroupMembers } from "../models/GroupMembers";
+import { StudentGroup } from "../models/StudentGroup";
 
 async function getAllJoinedGroupList(
   studentId: number
-): Promise<(Partial<Group> & { membersCount: number })[]> {
-  const result = await Group.findAll({
+): Promise<(Partial<StudentGroup> & { membersCount: number })[]> {
+  const result = await StudentGroup.findAll({
     attributes: [
       "id",
       "name",
@@ -24,31 +20,33 @@ async function getAllJoinedGroupList(
       "course",
       "isPublic",
       "adminId",
+      "telegramLink",
       [
-        literal(`(
+        literal(`CAST((
           SELECT COUNT(*)
           FROM studybuds.group_members AS gm
-          WHERE gm.group_id = "Group".id
-        )`),
-        "memberCount",
+          WHERE gm.group_id = "StudentGroup".id
+        ) AS INTEGER)`),
+        "membersCount",
       ],
     ],
     include: {
       model: GroupMembers,
       required: true,
       attributes: [],
+      as: "groupMembers",
       where: { studentId: { [Op.eq]: studentId } },
     },
   });
 
   return result.map((group: any) => ({
     ...group.toJSON(),
-    membersCount: group.getDataValue("memberCount"),
+    membersCount: group.getDataValue("membersCount"),
   }));
 }
 
 function splitJoinedGroupList(
-  input: (Partial<Group> & { membersCount?: number })[],
+  input: (Partial<StudentGroup> & { membersCount?: number })[],
   studentId: number
 ): JoinedGroupList {
   const ownedGroups = input

@@ -1,17 +1,25 @@
 Feature: Profile
 
+@profile
 Scenario: Profile
-    Given I logged in
-    When I open the profile page
-    Then I see my studentId "10", fullname "Noah White", telegram id "36"
+    Given I do the login as "10" "10"
+    When I go to the "profile" page
+    Then I see my "studentId" "10"
+    And I see my "fullname" "Noah White"
+    And I see my "telegramId" "36"
+    And I do the logout
 
+@profile
 Scenario: Telegram Id
-    Given I logged in
-    When I open the profile page
-    And I edit the Telegram Id field to the value "77"
-    Then The telegram id field is modified to the value I entered, "77"
+    Given I do the login as "10" "10"
+    When I go to the "profile" page
+    And I fill out the "telegramId" with "77"
+    Then I see my "telegramId" "77"
+    And I do the logout
 
+@profile
 Scenario: Profile Information is Not Editable
-    Given I logged in
-    When I open the profile page
-    Then all fields are locked or disabled from editing except the telegram user id
+    Given I do the login as "10" "10"
+    When I go to the "profile" page
+    Then all fields are locked or disabled from editing except the telegramId
+    And I do the logout

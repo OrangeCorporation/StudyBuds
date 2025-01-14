@@ -6,18 +6,21 @@ import '../../network/base_http_request.dart';
 
 class GroupCreationRequest
     extends BaseHttpRequest<GroupCreationResponseBuilder, dynamic> {
-  GroupCreationRequest(Group group) : super(
+  GroupCreationRequest(Group group)
+      : super(
           httpVerb: HttpVerb.POST,
-          endPoint:"/groups/create",
+          endPoint: "/groups/create",
           responseBuilder: GroupCreationResponseBuilder(),
           parameters: {
             'name': group.name,
-            'description': group.description,
             'course': group.course,
+            'description': group.description,
             'isPublic': group.isPublic,
-            'membersLimit': group.members,
             'telegramLink': group.telegramLink,
-            'studentId': group.studentId,
+            'studentId': group.ownerId,
+            'membersCount': group.membersCount,
+            'membersLimit': group.membersLimit,
+            'members': group.members
           },
         );
 }

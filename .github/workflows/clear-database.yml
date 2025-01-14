@@ -1,0 +1,20 @@
+name: "Clear database"
+on:
+  workflow_dispatch:
+jobs:
+  clear-database:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          sudo chmod 600 ~/.ssh/id_ed25519
+          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+      - name: Remote deployment
+        run: ssh ${{secrets.SSH_HOST}} 'cd orange/StudyBuds && docker compose run --rm database-data'

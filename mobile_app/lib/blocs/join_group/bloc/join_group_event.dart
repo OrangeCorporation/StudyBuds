@@ -8,10 +8,9 @@ sealed class JoinGroupEvent extends Equatable {
 
 
 class JoinGroupRequestEvent extends JoinGroupEvent {
-  final int studentId;
   final int groupId;
   
-  const JoinGroupRequestEvent(this.studentId, this.groupId);
+  const JoinGroupRequestEvent(this.groupId);
   
   @override
   // TODO: implement props

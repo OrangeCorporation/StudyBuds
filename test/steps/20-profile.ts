@@ -1,40 +1,32 @@
+import { byValueKey } from 'appium-flutter-finder';
 import assert from "assert";
-import { Given, When, Then } from "@cucumber/cucumber";
+import {Given, When, Then, Before} from "@cucumber/cucumber";
 import {
     BottomBarIcon,
     editTextField,
     go_to_page,
     UiId,
     waitForElementByValue,
-    login_guest,
 } from "../utils/utils";
 import { driver } from "./all";
+import {initDB} from "../utils/mock-data.ts";
+import { Student } from "../../backend/src/models/Student.ts";
 
 // let driver: WebdriverIO.Browser;
 // Before(() => driver = getDriver())
 
-// vars to pass content among functions
-let _telegramIdValue: string;
-let _newTelegramIdValue: string;
-
-Given("I logged in", async () => {
-    await login_guest(driver);
+Before({tags: "@profile"},async function () {
+    const student1=10;
+    await initDB([
+        new Student({studentId: student1,telegramAccount:36})
+    ])
 });
 
-When("I open the profile page", async function () {
-    await go_to_page(driver, BottomBarIcon.profile);
-});
 
 Then(
-    "I see my studentId {string}, fullname {string}, telegram id {string}",
-    async function (studentIdValue: string, fullNameValue: string, telegramIdValue: string) {
-        _telegramIdValue = telegramIdValue;
-
-        await Promise.all([
-            waitForElementByValue(driver, fullNameValue),
-            waitForElementByValue(driver, studentIdValue),
-            waitForElementByValue(driver, telegramIdValue),
-        ]);
+    "I see my {string} {string}",
+    async function (editTextName: string, value: string) {
+        await waitForElementByValue(driver, value);
     }
 );
 
@@ -48,17 +40,17 @@ When(
 Then(
     "The telegram id field is modified to the value I entered, {string}",
     async function (newTelegramIdValue: string) {
-        _newTelegramIdValue = newTelegramIdValue;
-        await waitForElementByValue(driver, newTelegramIdValue);
-        await editTextField(driver, UiId.telegramAccountIdTextField, _telegramIdValue);
+        await editTextField(driver, UiId.telegramAccountIdTextField, newTelegramIdValue);
         await go_to_page(driver, BottomBarIcon.home);
         await go_to_page(driver, BottomBarIcon.profile);
-        await waitForElementByValue(driver, _telegramIdValue);
+        const telegramId = await byValueKey(UiId.telegramAccountIdTextField); 
+        const telegramText = await driver.getElementText(telegramId);
+        assert.strictEqual(telegramText, newTelegramIdValue);
     }
 );
 
 Then(
-    "all fields are locked or disabled from editing except the telegram user id",
+    "all fields are locked or disabled from editing except the telegramId",
     async function () {
         try {
             await editTextField(driver, UiId.fullNameTextField, "New Name");
@@ -75,10 +67,12 @@ Then(
         }
 
         try {
-            await editTextField(driver, UiId.telegramAccountIdTextField, _newTelegramIdValue);
-            await waitForElementByValue(driver, _newTelegramIdValue);
-            await editTextField(driver, UiId.telegramAccountIdTextField, _telegramIdValue);
-            await waitForElementByValue(driver, _telegramIdValue);
+            const telegramId = await byValueKey(UiId.telegramAccountIdTextField); 
+            const telegramText = await driver.getElementText(telegramId);
+            await editTextField(driver, UiId.telegramAccountIdTextField, "10");
+            await waitForElementByValue(driver, "10");
+            await editTextField(driver, UiId.telegramAccountIdTextField, telegramText);
+            await waitForElementByValue(driver, telegramText);
             console.log("Telegram ID field is editable as expected");
         } catch (e) {
             console.log("Telegram account id should be editable");

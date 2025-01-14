@@ -5,9 +5,8 @@ sealed class NotificationListEvent extends Equatable {
 }
 
 class FetchNotificationListEvent extends NotificationListEvent {
-  final int studentId;
 
-  const FetchNotificationListEvent(this.studentId);
+  const FetchNotificationListEvent();
 
   @override
   // TODO: implement props

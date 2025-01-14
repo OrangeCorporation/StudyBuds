@@ -11,8 +11,6 @@ sealed class GroupListEvent extends Equatable {
 }
 
 class FetchMyGroupListEvent extends GroupListEvent {
-  final int studentId;
-
-  const FetchMyGroupListEvent(this.studentId);
+  const FetchMyGroupListEvent();
 
 }

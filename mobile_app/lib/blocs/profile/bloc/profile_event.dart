@@ -8,15 +8,13 @@ abstract class ProfileEvent extends Equatable {
 }
 
 class FetchProfileDetailsEvent extends ProfileEvent {
-  final int studentId;
-  FetchProfileDetailsEvent(this.studentId);
+  FetchProfileDetailsEvent();
 }
 
 class SaveProfileDetailsEvent extends ProfileEvent {
-  final int studentId;
   final int telegramAccountId;
 
-  const SaveProfileDetailsEvent(this.studentId, this.telegramAccountId);
+  const SaveProfileDetailsEvent( this.telegramAccountId);
 
   @override
   List<Object> get props => [telegramAccountId];
