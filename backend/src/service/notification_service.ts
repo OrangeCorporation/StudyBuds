@@ -1,9 +1,10 @@
 import admin from 'firebase-admin';
+import { Message } from 'firebase-admin/lib/messaging/messaging-api';
 import { camelCase } from 'lodash';
 import { QueryTypes } from "sequelize";
 import sequelize from "../config/database";
-import { getErrorMessage } from '../utils/api_error';
 import { Notification } from '../models/Notification';
+import { getErrorMessage } from '../utils/api_error';
 
 export enum NotificationType{
     JOIN_REQUEST="join_request",
@@ -88,6 +89,16 @@ export async function saveNotification(studentId:number, joinRequestId:number, n
     return result;
 }
 
+async function sendNotificationToFirebase(message: Message) {
+    try {
+        console.log(message);
+        const response = await admin.messaging().send(message);
+        console.log('Notification sent successfully:', response);
+    } catch (e) {
+        console.error('Failed to send push notification:', getErrorMessage(e));
+    }
+}
+
 export async function sendPushNotification(studentId: number, joinRequestId: number, token: string, notificationType: NotificationType, studentName: string, groupName: string) {
     try {
         const template=getNotificationTemplate(notificationType, studentName, groupName);
@@ -95,11 +106,9 @@ export async function sendPushNotification(studentId: number, joinRequestId: num
             notification: template,
             token,
         };
-
-        const response = await admin.messaging().send(message);
-        console.log('Notification sent successfully:', response);
-
+    
         await saveNotification(studentId, joinRequestId, notificationType, template.body);
+        sendNotificationToFirebase(message);
     } catch (error) {
         console.error('Failed to send push notification:', getErrorMessage(error));
         // throw error;
@@ -113,8 +122,12 @@ export async function testNotification(token:string, msg:string) {
             token,
         };
 
-        const response = await admin.messaging().send(message);
-        console.log('Notification sent successfully:', response);
+        console.log('jj');
+
+        sendNotificationToFirebase(message);
+        // const response = await admin.messaging().send(message);
+
+        // console.log('Notification sent successfully:', response);
 
 }
 

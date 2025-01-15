@@ -68,7 +68,7 @@ async function main() {
             course: "Capstone",
             adminId: student,
             membersLimit: 100,
-            isPublic: false,
+            isPublic: true,
             gpa: 18,
             telegramLink: "https://t.me/joinrequest",
         }),

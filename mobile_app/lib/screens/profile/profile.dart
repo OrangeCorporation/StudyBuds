@@ -52,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             if (state is ProfileLoaded) {
               setState(() {
                 student = state.student;
-                telegramController.text = student!.telegramId.toString();
+                telegramController.text = (student!.telegramId??"").toString();
               });
             }
             if (state is ProfileSaveSuccess) {

@@ -34,6 +34,7 @@ courses:
     - TRUSTWORTHY ARTIFICIAL INTELLIGENCE
     - ADVANCED DATA MANAGEMENT
     - FINAL DISSERTATION
+    - BINARY ANALYSIS AND SECURE CODING
 students:
     - id: 10
       first_name: Noah
@@ -3527,3 +3528,34 @@ students:
       courses:
           - DISTRIBUTED COMPUTING
           - GEOMETRIC MODELING
+    - id: 4943369
+      first_name: Riccardo
+      last_name: Isola
+      email: S4943369.@studenti.unige.it
+      password: 4943369
+      gpa: 30
+      study_plan:
+          - MACHINE LEARNING AND DATA ANALYSIS
+          - VIRTUALIZATION AND CLOUD COMPUTING
+          - DATA PROTECTION & PRIVACY
+          - DISTRIBUTED COMPUTING
+          - PRINCIPLES AND PARADIGMS OF PROGRAMMING LANGUAGES
+          - IOT
+          - DIGITAL FORENSICS
+          - MOBILE DEVELOPMENT
+          - FUNCTIONAL AND SECURITY TESTING TECHNIQUES
+          - NETWORK ANALYSIS
+          - BINARY ANALYSIS AND SECURE CODING
+          - CAPSTONE PROJECT
+          - DECENTRALIZED SYSTEMS
+          - HIGH PERFORMANCE COMPUTING
+          - FINAL DISSERTATION
+      exams_to_take:
+          - BINARY ANALYSIS AND SECURE CODING
+          - CAPSTONE PROJECT
+          - DECENTRALIZED SYSTEMS
+          - FINAL DISSERTATION
+      courses:
+          - BINARY ANALYSIS AND SECURE CODING
+          - CAPSTONE PROJECT
+          - DECENTRALIZED SYSTEMS

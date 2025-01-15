@@ -1,7 +1,7 @@
 {
   "type": "service_account",
   "project_id": "studybuds-116d5",
-  "private_key_id": "bf16633ba4c0d9b6e8494bb363dcfdd704b7efa1",
+  "private_key_id": "91eee6ce67a09bc866857da443a3f03b021af451",
   "client_email": "firebase-adminsdk-ojiyp@studybuds-116d5.iam.gserviceaccount.com",
   "client_id": "112852498622285375472",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",

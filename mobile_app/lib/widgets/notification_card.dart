@@ -121,7 +121,8 @@ class NotificationCard extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  key: ValueKey(notification.joinRequestId),
+                                  key: ValueKey(
+                                      "notification_status_${notification.id}"),
                                   notification.joinRequestStatus + 'ed',
                                   style: TextStyle(
                                     fontSize: 16,

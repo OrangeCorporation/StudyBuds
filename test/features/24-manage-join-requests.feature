@@ -17,7 +17,7 @@ Scenario: Accept join request
     And a student sends a join request to that group
     When I go to the "notifications" page
     And I open the notification with id "1"
-    And I click accept
+    And I click "accept"
     Then The user receives the invitation link of Telegram group
     And a notification is sent to him
     And I go to the "profile" page
@@ -30,7 +30,7 @@ Scenario: Refuse join request
     And a student sends a join request to that group
     When I go to the "notifications" page
     And I open the notification with id "1"
-    And I click refuse
+    And I click "reject"
     Then The user does not receive the invitation link of Telegram group
     And a notification is sent to him about the refusal
     And I go to the "profile" page

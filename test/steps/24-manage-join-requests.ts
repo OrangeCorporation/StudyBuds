@@ -55,16 +55,11 @@ When("I open the notification with id {string}", async function (id: string) {
     await clickButton(driver, `btn_${id}`);
 });
 
-When("I click accept", async function () {
-    await waitForElement(driver, "accept");
+When("I click {string}", async function (btn: string) {
+    await waitForElement(driver, btn);
     console.log("Waiting accept");
-    await clickButton(driver, "accept");
+    await clickButton(driver, btn);
     console.log("Clicked accept");
-});
-
-When("I click refuse", async function () {
-    await waitForElement(driver, "reject");
-    await clickButton(driver, "reject");
 });
 
 Then("The user receives the invitation link of Telegram group", async function () {});

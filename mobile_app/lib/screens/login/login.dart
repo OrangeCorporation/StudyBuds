@@ -95,62 +95,6 @@ class Login extends StatelessWidget {
                       )
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(0, 16, 0, 8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 8.0),
-                          child: SizedBox(
-                            width: 25, // Adjust the width as needed
-                            child: Divider(
-                              color: Colors.grey,
-                              thickness: 1,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 2.0),
-                          child: Text(
-                            "OR",
-                            style: TextStyle(fontSize: 12),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 8.0),
-                          child: SizedBox(
-                            width: 25, // Adjust the width as needed
-                            child: Divider(
-                              color: Colors.grey,
-                              thickness: 1,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton.icon(
-                        key: const Key('guest_button'),
-                        onPressed: () {
-                          Navigator.pushReplacementNamed(context, '/home');
-                        },
-                        label: const Text("Continue as a guest"),
-                        icon: const Icon(Icons.login_rounded),
-                        style: ButtonStyle(
-                          foregroundColor: WidgetStateProperty.all<Color>(
-                            Theme.of(context).colorScheme.secondary,
-                          ),
-                          iconColor: WidgetStateProperty.all<Color>(
-                            Theme.of(context).colorScheme.secondary,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
                   Expanded(
                       child: Padding(
                     padding: const EdgeInsets.only(bottom: 16.0),
