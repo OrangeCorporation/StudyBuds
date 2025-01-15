@@ -1,25 +1,29 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
+import 'package:hive_flutter/hive_flutter.dart'; // Import Hive
 import 'package:study_buds/firebase_options.dart';
 import 'package:study_buds/screens/login/login.dart';
 import 'package:study_buds/screens/main.dart';
 import 'package:study_buds/utils/auth_utils.dart';
 import 'package:study_buds/utils/push_notification.dart';
+import 'package:study_buds/models/student.dart'; // Import Student model for Hive adapter
 import 'package:study_buds/utils/static_env.dart';
 import 'telegram/telegram_bot.dart';
-
 void main() async {
   if (DRIVER) enableFlutterDriverExtension(); // Keep DRIVER testing logic
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  // Initialize Push Notifications
-  PushNotificationService.instance.retrievePushNotificationToken();
+  // Initialize Hive
+  await Hive.initFlutter(); // Initialize Hive for Flutter
+  Hive.registerAdapter(StudentAdapter()); // Register the Hive adapter for Student
+  await Hive.openBox<Student>('profiles'); // Open the Hive box for profiles
+    // Initialize Push Notifications
+    PushNotificationService.instance.retrievePushNotificationToken();
 
   //Start Telegram Bot
   TelegramBot.getTelegramId();
-
+  
   // Check if the user is authenticated
   final isAuthenticated = await AuthUtils.isAuthenticated();
   runApp(MyApp(isAuthenticated: isAuthenticated));
@@ -51,7 +55,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => const MainScreen(),
         '/login': (context) =>
-            const Login(key: Key("login_page"), title: "Login"),
+        const Login(key: Key("login_page"), title: "Login"),
       },
     );
   }
