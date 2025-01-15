@@ -1,7 +1,19 @@
-class Student {
+import 'package:hive/hive.dart';
+
+part 'student.g.dart'; // This file will be generated
+
+@HiveType(typeId: 0) // Assign a unique typeId for this model
+class Student extends HiveObject {
+  @HiveField(0)
   final int id;
+
+  @HiveField(1)
   final String firstName;
+
+  @HiveField(2)
   final String lastName;
+
+  @HiveField(3)
   final int? telegramId;
 
   Student({
