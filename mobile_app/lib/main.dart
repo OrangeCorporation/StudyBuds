@@ -1,12 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:study_buds/firebase_options.dart';
+import 'package:study_buds/models/response_body.dart';
 import 'package:study_buds/screens/login/login.dart';
 import 'package:study_buds/screens/main.dart';
 import 'package:study_buds/utils/auth_utils.dart';
 import 'package:study_buds/utils/push_notification.dart';
 import 'package:study_buds/utils/static_env.dart';
+
 import 'telegram/telegram_bot.dart';
 void main() async {
   if (DRIVER) enableFlutterDriverExtension(); // Keep DRIVER testing logic
@@ -16,12 +19,49 @@ void main() async {
     // Initialize Push Notifications
     PushNotificationService.instance.retrievePushNotificationToken();
 
+  await Hive.initFlutter();
+
+  // Register the ResponseBody Adapter
+  Hive.registerAdapter(ResponseBodyAdapter());
+  
   //Start Telegram Bot
   TelegramBot.getTelegramId();
   
   // Check if the user is authenticated
   final isAuthenticated = await AuthUtils.isAuthenticated();
+
+  fetchAndCacheExample();
   runApp(MyApp(isAuthenticated: isAuthenticated));
+}
+
+Future<void> saveResponseBody(ResponseBody responseBody) async {
+  var box = await Hive.openBox<ResponseBody>('responseBox');
+  await box.put('response_body', responseBody);
+  await box.close(); // Always close the box when done
+}
+
+Future<ResponseBody?> getResponseBody() async {
+  var box = await Hive.openBox<ResponseBody>('responseBox');
+  final response = box.get('response_body');
+  await box.close(); // Always close the box when done
+  return response;
+}
+
+
+void fetchAndCacheExample() async {
+  // Example ResponseBody
+  var responseBody = ResponseBody(id: '123', data: 'Sample data');
+
+  // Save the response
+  await saveResponseBody(responseBody);
+
+  // Retrieve and print the cached response
+  var cachedResponse = await getResponseBody();
+  if (cachedResponse != null) {
+    print('Cached Response: ${cachedResponse.data}');
+  } else {
+    print('No cached response found');
+  }
 }
 
 class MyApp extends StatelessWidget {

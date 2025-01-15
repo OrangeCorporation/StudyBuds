@@ -89,7 +89,7 @@ services:
             - /tmp
             - /var/run
         ports:
-            - "5432:5432"
+            - "5433:5433"
         read_only: true
 
     database-data:
