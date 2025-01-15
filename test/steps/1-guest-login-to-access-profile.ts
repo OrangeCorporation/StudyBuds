@@ -1,5 +1,5 @@
 import { byValueKey, byText } from "appium-flutter-finder";
-import { BottomBarIcon, go_to_page, UiId } from "./../utils/utils";
+import { BottomBarIcon, go_to_page, login, UiId } from "./../utils/utils";
 import { Given, When, Then, Before } from "@cucumber/cucumber";
 import { driver } from "./all";
 import { do_logout } from "../utils/utils";
@@ -44,39 +44,7 @@ Then("I can see my profile username {string}", async (username: string) => {
 When(
     "I input my Unige credentials username {string} and password {string}",
     async (username: string, password: string) => {
-    
-            await driver.waitUntil(
-                async () => {
-                    const contexts = await driver.getContexts();
-                    return contexts.includes("WEBVIEW_chrome");
-                },
-                { timeout: 10_000, timeoutMsg: "WEBVIEW_chrome context not found" }
-            );
-
-            await driver.switchContext("WEBVIEW_chrome");
-            driver.$('//input[@id="username"]').waitForDisplayed({ timeout: 10_000 });
-
-            await Promise.all([
-                driver.$('//input[@id="username"]').setValue(username),
-                driver.$('//input[@id="password"]').setValue(password),
-            ]);
-            const button = await driver.$('//button[contains(text(), "Login")]');
-
-            //await driver.$('//input[@id="password"]').addValue("\uE007");
-
-            //await button.waitForEnabled()
-            await button.click();
-
-            await driver.waitUntil(
-                async () => {
-                    const contexts = await driver.getContexts();
-                    return contexts.includes("FLUTTER");
-                },
-                { timeout: 10_000, timeoutMsg: "FLUTTER context not found" }
-            );
-
-            await driver.switchContext("FLUTTER");
-        
+        await login(driver,username,password);
     }
 );
 

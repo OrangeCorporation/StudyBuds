@@ -34,6 +34,9 @@ const opts = {
         "appium:webviewConnectRetries": 10, // Retries for WebView connection
         "appium:enableWebviewDetailsCollection": true, // Collect WebView details
         "appium:ensureWebviewsHavePages": true, // Ensures WebView has pages before switching
+        'appium:chromeOptions': {
+                'args': ['--disable-fre'],
+            },
     },
 };
 

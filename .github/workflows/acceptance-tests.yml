@@ -26,6 +26,10 @@ jobs:
         run: docker compose exec emulator adb wait-for-device
       - name: Run database migrations
         run: docker compose run migration
+      - name: Google Chrome sucks
+        run: docker compose exec adb shell am set-debug-app --persistent com.android.chrome
+      - name: Google Chrome sucks2
+        run: docker compose exec emulator adb shell 'echo "chrome --disable-fre --no-default-browser-check --no-first-run" > /data/local/tmp/chrome-command-line'
       - name: Run tests
         run: docker compose run acceptance-tests --fail-fast
       # - name: Archive result

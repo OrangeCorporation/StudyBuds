@@ -154,6 +154,8 @@ export async function login(driver: WebdriverIO.Browser, username: string, passw
 
     console.log("Clicking submit button...");
     await submitButton.click();
+    await driver.pause(1000);
+    await submitButton.doubleClick();
 
     // Switch back to Flutter context
     console.log("Waiting for the webview to close...");
