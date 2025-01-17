@@ -32,6 +32,23 @@ class TelegramBot {
 
         print('User ID: $userId');
       });
+
+      teledart.onChatMember().listen(
+        (update) {
+          print('-----------------');
+          print(update.inviteLink);
+          print(update.from?.id);
+          print(update.newChatMember?.toString());
+          print(update.oldChatMember?.toString());
+        }
+      );
+
+      teledart.onMyChatMember().listen((onData) {
+        print('==============');
+        print(onData);
+        print(onData.inviteLink);
+        print(onData.from?.id);
+      });
     } catch (e) {
       print('Error: $e');
     }
