@@ -4,6 +4,7 @@
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/axios": "^0.14.4",
+    "@types/sequelize": "^4.28.20",
     "appium": "^2.15.0",
     "appium-flutter-driver": "^2.11.0",
     "eslint": "^9.13.0",
