@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const BOT_TOKEN = '7855238014:AAEi5IPgdFs_BJkERi0Wei_za72GTsv8x_8';
 if (!BOT_TOKEN) throw new Error("Telegram Bot Token is not defined in .env file");
 const TELEGRAM_API_BASE = `https://api.telegram.org/bot${BOT_TOKEN}`;
 
@@ -15,7 +15,7 @@ export async function isUserInGroup(userId: string, groupId: string): Promise<bo
         const { status } = response.data.result;
         return ["member", "administrator", "creator"].includes(status);
     } catch (error) {
-        console.error("Failed to verify user membership:", error.response?.data || error.message);
+        // console.error("Failed to verify user membership:", error.response?.data || error.message);
         throw new Error("Failed to verify if the user is in the group.");
     }
 }
@@ -27,7 +27,7 @@ export async function getGroupTitleFromBot(groupId: string): Promise<string> {
         });
         return response.data.result.title;
     } catch (error) {
-        console.error("Failed to get group title:", error.response?.data || error.message);
+        // console.error("Failed to get group title:", error.response?.data || error.message);
         throw new Error("Failed to get the group title.");
     }
 }
